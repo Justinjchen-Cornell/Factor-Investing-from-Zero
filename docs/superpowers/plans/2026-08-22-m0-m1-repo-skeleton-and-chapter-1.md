@@ -33,7 +33,7 @@
 - Consumes: 无（首任务）
 - Produces: Task 2 的结构测试依赖这四个文件存在；`requirements.txt` 是全项目依赖清单
 
-- [ ] **Step 1: 写入 `.gitignore`**
+- [x] **Step 1: 写入 `.gitignore`**
 
 ```gitignore
 # Python
@@ -51,14 +51,14 @@ data/cache/
 *.log
 ```
 
-- [ ] **Step 2: 写入 `.gitattributes`（统一 LF，避免 Windows CRLF 噪音）**
+- [x] **Step 2: 写入 `.gitattributes`（统一 LF，避免 Windows CRLF 噪音）**
 
 ```gitattributes
 * text=auto eol=lf
 *.png binary
 ```
 
-- [ ] **Step 3: 写入 `requirements.txt`（锁定本机已验证版本）**
+- [x] **Step 3: 写入 `requirements.txt`（锁定本机已验证版本）**
 
 ```
 pandas==2.3.3
@@ -72,7 +72,7 @@ nbclient==0.11.0
 pytest==9.1.1
 ```
 
-- [ ] **Step 4: 写入 `LICENSE`（MIT）**
+- [x] **Step 4: 写入 `LICENSE`（MIT）**
 
 ```
 MIT License
@@ -98,7 +98,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-- [ ] **Step 5: 验证并提交**
+- [x] **Step 5: 验证并提交**
 
 Run: `git add .gitignore .gitattributes requirements.txt LICENSE && git commit -m "chore: add project base files (gitignore, license, requirements)"`
 Expected: commit 成功，`git status` 干净。
@@ -115,7 +115,7 @@ Expected: commit 成功，`git status` 干净。
 - Consumes: Task 1 的四个基础文件
 - Produces: 结构测试将成为全项目常驻护栏（后续每章都受其约束）；`factor_zero` 是第2章起工具库的包根
 
-- [ ] **Step 1: 写入测试（先写测试，TDD）**
+- [x] **Step 1: 写入测试（先写测试，TDD）**
 
 ```python
 """课程结构冒烟测试：保证仓库骨架与每章「三件套」模板不退化。
@@ -172,7 +172,7 @@ def test_chapter_lecture_has_template_markers():
         assert marker in readme, f"第1章讲义缺少模板标记 {marker}"
 ```
 
-- [ ] **Step 2: 写入 `src/factor_zero/__init__.py`**
+- [x] **Step 2: 写入 `src/factor_zero/__init__.py`**
 
 ```python
 """factor_zero —— 从零开始学因子：方法实现工具库。
@@ -182,12 +182,12 @@ def test_chapter_lecture_has_template_markers():
 """
 ```
 
-- [ ] **Step 3: 运行测试，确认"预期失败"集合**
+- [x] **Step 3: 运行测试，确认"预期失败"集合**
 
 Run: `python -m pytest tests/test_course_structure.py -v`
 Expected: 5 个失败（README.md 缺失、chapters/ 缺失、第1章缺失、讲义标记缺失 —— 均为**预期失败**，由 Task 5/6 修复）；`test_repo_skeleton_files_exist` 与 `test_requirements_pins_versions` 通过。
 
-- [ ] **Step 4: 提交**
+- [x] **Step 4: 提交**
 
 Run: `git add tests/test_course_structure.py src/factor_zero/__init__.py && git commit -m "test: add course structure smoke tests and factor_zero package skeleton"`
 Expected: 提交成功。失败测试在 Task 5/6 中修复后全绿。
@@ -205,7 +205,7 @@ Expected: 提交成功。失败测试在 Task 5/6 中修复后全绿。
 - Consumes: 无（直接调 akshare / numpy）
 - Produces: `teaching_sample.csv`（列：asset, factor_a_exposure, factor_b_exposure, idio_risk）—— 第1章 notebook 与第2章排序法教学使用；`a_share_snapshot/` —— 第3章起因子实证使用；`manifest.json` 记录数据来源与生成时间
 
-- [ ] **Step 1: 先写数据测试（TDD）**
+- [x] **Step 1: 先写数据测试（TDD）**
 
 ```python
 """示例数据完整性测试：数据管道产出的文件必须满足课程使用约定。"""
@@ -250,12 +250,12 @@ def test_a_share_fundamentals_schema():
     assert fund["pb"].notna().any(), "pb 不应全为空"
 ```
 
-- [ ] **Step 2: 运行测试确认失败**
+- [x] **Step 2: 运行测试确认失败**
 
 Run: `python -m pytest tests/test_sample_data.py -v`
 Expected: 全部 FAIL（`data/sample/` 尚不存在）。
 
-- [ ] **Step 3: 写入 `scripts/make_sample_data.py`**
+- [x] **Step 3: 写入 `scripts/make_sample_data.py`**
 
 ```python
 """生成并刷新示例数据（进 git，读者离线可用）。
@@ -420,17 +420,17 @@ if __name__ == "__main__":
     main()
 ```
 
-- [ ] **Step 4: 运行生成脚本**
+- [x] **Step 4: 运行生成脚本**
 
 Run: `python scripts/make_sample_data.py`
 Expected: 输出每只股票 `[akshare] xxx ok (N 行)`，结尾 `完成：source=akshare, 股票数≈90`；`data/sample/` 下生成 4 类文件。若网络失败则 `source=synthetic`（同样满足测试）。
 
-- [ ] **Step 5: 运行数据测试确认通过**
+- [x] **Step 5: 运行数据测试确认通过**
 
 Run: `python -m pytest tests/test_sample_data.py -v`
 Expected: 4 个测试全部 PASS。
 
-- [ ] **Step 6: 提交**
+- [x] **Step 6: 提交**
 
 Run: `git add scripts/make_sample_data.py tests/test_sample_data.py data/sample && git commit -m "feat: add sample data pipeline and generated sample datasets"`
 Expected: 提交成功。⚠️ 确认 `data/cache/` 未被加入（.gitignore 生效）。
@@ -446,7 +446,7 @@ Expected: 提交成功。⚠️ 确认 `data/cache/` 未被加入（.gitignore �
 - Consumes: `data/cache/`（.gitignore 已排除）
 - Produces: `data/cache/daily/{code}.csv` —— 读者自行扩展数据时使用；与本课程代码接口一致（列：date, open, high, low, close, volume）
 
-- [ ] **Step 1: 写入脚本**
+- [x] **Step 1: 写入脚本**
 
 ```python
 """按股票代码列表下载日线数据到 data/cache/（不进 git，读者自用扩展）。
@@ -517,12 +517,12 @@ if __name__ == "__main__":
     main()
 ```
 
-- [ ] **Step 2: 验证 CLI**
+- [x] **Step 2: 验证 CLI**
 
 Run: `python scripts/download_data.py --help`
 Expected: 打印 usage 说明，退出码 0。
 
-- [ ] **Step 3: 提交**
+- [x] **Step 3: 提交**
 
 Run: `git add scripts/download_data.py && git commit -m "feat: add full-market download script for readers"`
 Expected: 提交成功。
@@ -538,7 +538,7 @@ Expected: 提交成功。
 - Consumes: Task 1 基础文件；Task 2 的 `test_readme_has_required_sections` 将在此修复
 - Produces: 项目门面（GitHub 首页渲染）；含"章节导航"供 M1 后章节链接持续更新
 
-- [ ] **Step 1: 写入 README.md**
+- [x] **Step 1: 写入 README.md**
 
 ```markdown
 # Factor-Investing-from-Zero · 从零开始学因子
@@ -612,12 +612,12 @@ jupyter lab chapters/01-factor-basics/notebooks/
 "Factor Investing: Methods and Practice". All rights of the book belong to its authors and publisher.*
 ```
 
-- [ ] **Step 2: 运行结构测试**
+- [x] **Step 2: 运行结构测试**
 
 Run: `python -m pytest tests/test_course_structure.py -v`
 Expected: `test_repo_skeleton_files_exist`、`test_requirements_pins_versions`、`test_readme_has_required_sections` 通过；章节相关 3 个测试仍失败（预期，Task 6 修复）。
 
-- [ ] **Step 3: 提交**
+- [x] **Step 3: 提交**
 
 Run: `git add README.md && git commit -m "docs: add bilingual README homepage"`
 Expected: 提交成功。
@@ -635,7 +635,7 @@ Expected: 提交成功。
 - Consumes: Task 2 的讲义标记测试
 - Produces: 课程模板范本（M1 之后的章节照此撰写）；notebook 与练习的"母版"
 
-- [ ] **Step 1: 写入讲义（原创讲解 + 比喻式，对照原书第1章）**
+- [x] **Step 1: 写入讲义（原创讲解 + 比喻式，对照原书第1章）**
 
 ```markdown
 # 第1章 因子投资基础
@@ -791,12 +791,12 @@ Ross (1976) 提出套利定价理论（APT），把公式推广成**多因子模
 > 用数字亲手验证 βλ+α 的世界。
 ```
 
-- [ ] **Step 2: 创建占位目录并运行结构测试**
+- [x] **Step 2: 创建占位目录并运行结构测试**
 
 Run: `mkdir -p chapters/01-factor-basics/notebooks chapters/01-factor-basics/exercises/solutions && touch chapters/01-factor-basics/notebooks/.gitkeep chapters/01-factor-basics/exercises/solutions/.gitkeep && python -m pytest tests/test_course_structure.py -v`
 Expected: 结构测试全部通过（README 标记 ✓、第1章三件套 ✓）。Task 2 的预期失败至此全部修复。
 
-- [ ] **Step 3: 提交**
+- [x] **Step 3: 提交**
 
 Run: `git add chapters/01-factor-basics && git commit -m "feat(ch1): add chapter 1 lecture (factor basics)"`
 Expected: 提交成功。
@@ -814,7 +814,7 @@ Expected: 提交成功。
 - Consumes: `data/sample/teaching_sample.csv`（Task 3）
 - Produces: 可执行 notebook（含图，演示式 1.3 与式 1.6）；后续每章的 notebook 都通过 `build_notebooks.py` 追加构建函数
 
-- [ ] **Step 1: 写入构建器 `scripts/build_notebooks.py`（含第1章 notebook 完整内容）**
+- [x] **Step 1: 写入构建器 `scripts/build_notebooks.py`（含第1章 notebook 完整内容）**
 
 ```python
 """构建课程 notebooks（用 nbformat 生成 .ipynb，保证可复现）。
@@ -963,12 +963,12 @@ if __name__ == "__main__":
     main()
 ```
 
-- [ ] **Step 2: 运行构建器并确认 notebook 生成**
+- [x] **Step 2: 运行构建器并确认 notebook 生成**
 
 Run: `python scripts/build_notebooks.py`
 Expected: `built .../notebooks/01.1-unified-view.ipynb`；文件存在且可被 `nbformat.read` 解析。
 
-- [ ] **Step 3: 写入执行护栏测试 `tests/test_notebooks.py`**
+- [x] **Step 3: 写入执行护栏测试 `tests/test_notebooks.py`**
 
 ```python
 """Notebook 执行护栏：仓库内所有 notebook 必须能从头跑到尾（课程完成标准之一）。"""
@@ -997,12 +997,12 @@ def test_all_notebooks_execute():
         # nbclient 遇到异常会直接抛出，走到这里即视为执行成功
 ```
 
-- [ ] **Step 4: 运行执行护栏**
+- [x] **Step 4: 运行执行护栏**
 
 Run: `python -m pytest tests/test_notebooks.py -v`
 Expected: 2 个测试 PASS（notebook 从头执行成功，输出含图）。
 
-- [ ] **Step 5: 提交**
+- [x] **Step 5: 提交**
 
 Run: `git add scripts/build_notebooks.py tests/test_notebooks.py chapters/01-factor-basics/notebooks && git commit -m "feat(ch1): add unified-view notebook with executable guard"`
 Expected: 提交成功。
@@ -1020,7 +1020,7 @@ Expected: 提交成功。
 - Consumes: 讲义（Task 6）与 notebook（Task 7）
 - Produces: 读者自测材料；检查站答案
 
-- [ ] **Step 1: 写入 `EXERCISES.md`**
+- [x] **Step 1: 写入 `EXERCISES.md`**
 
 ```markdown
 # 第1章 练习
@@ -1063,7 +1063,7 @@ Expected: 提交成功。
 3. 这个数量级差异说明了什么？（提示：Barra CNE6）
 ```
 
-- [ ] **Step 2: 写入 `SOLUTIONS.md`**
+- [x] **Step 2: 写入 `SOLUTIONS.md`**
 
 ```markdown
 # 第1章 练习参考答案
@@ -1099,12 +1099,12 @@ Expected: 提交成功。
 3. 这就是"降维"：把不可估计的问题变成可估计、可解释的问题——Barra 用 1 国 + 9 风格 + 行业因子刻画 3000+ 股票的风险结构。
 ```
 
-- [ ] **Step 3: 删除 .gitkeep 占位并验证**
+- [x] **Step 3: 删除 .gitkeep 占位并验证**
 
 Run: `rm chapters/01-factor-basics/notebooks/.gitkeep chapters/01-factor-basics/exercises/solutions/.gitkeep && python -m pytest tests/ -v`
 Expected: 全部测试 PASS（结构、数据、notebook 执行）。
 
-- [ ] **Step 4: 提交**
+- [x] **Step 4: 提交**
 
 Run: `git add -A chapters/01-factor-basics && git commit -m "feat(ch1): add exercises and solutions"`
 Expected: 提交成功。
@@ -1119,33 +1119,33 @@ Expected: 提交成功。
 - Consumes: Task 1~8 全部产物
 - Produces: `origin/main` 上的首个可公开版本（对应设计文档 M0+M1）
 
-- [ ] **Step 1: 配置 git 凭据助手（gh 已登录）**
+- [x] **Step 1: 配置 git 凭据助手（gh 已登录）**
 
 Run: `gh auth setup-git`
 Expected: 输出 `✓ Set up git to use GitHub as credential helper` 之类的成功提示。
 
-- [ ] **Step 2: 全量测试**
+- [x] **Step 2: 全量测试**
 
 Run: `python -m pytest tests/ -v`
 Expected: 全部 PASS（约 12 个测试）。
 
-- [ ] **Step 3: 最终检查仓库状态**
+- [x] **Step 3: 最终检查仓库状态**
 
 Run: `git status` 与 `git log --oneline`
 Expected: 工作区干净；日志包含 Task 1~8 的提交。
 
-- [ ] **Step 4: 添加远端并推送**
+- [x] **Step 4: 添加远端并推送**
 
 Run: `git remote add origin https://github.com/Justinjchen-Cornell/Factor-Investing-from-Zero.git && git push -u origin main`
 Expected: `main -> main` 推送成功；`gh repo view Justinjchen-Cornell/Factor-Investing-from-Zero` 可看到 README 渲染。
 
-- [ ] **Step 5: 验收打卡（对照设计文档 DoD）**
+- [x] **Step 5: 验收打卡（对照设计文档 DoD）**
 
-- [ ] 讲义无 TODO，公式用代码块/LaTeX 标记，标注原书小节 ✅（Task 6 内容自查）
-- [ ] notebook 执行通过 ✅（Task 7 护栏测试）
-- [ ] 练习与检查站有答案 ✅（Task 8）
-- [ ] pytest 全绿 ✅（Step 2）
-- [ ] 内容原创、README 含版权声明 ✅（Task 5）
-- [ ] 提醒用户：发布完成后轮换 GitHub token（安全）
+- [x] 讲义无 TODO，公式用代码块/LaTeX 标记，标注原书小节 ✅（Task 6 内容自查）
+- [x] notebook 执行通过 ✅（Task 7 护栏测试）
+- [x] 练习与检查站有答案 ✅（Task 8）
+- [x] pytest 全绿 ✅（Step 2）
+- [x] 内容原创、README 含版权声明 ✅（Task 5）
+- [x] 提醒用户：发布完成后轮换 GitHub token（安全）
 
 **M0+M1 完成。下一计划：M2（第2章方法论，排序法/FM/GRS/NW + factor_zero 核心实现）。**
