@@ -1,0 +1,5 @@
+asset,factor_a_exposure,factor_b_exposure,idio_risk
+stock_1,1.2,0.8,0.02
+stock_2,1.1,1.3,0.015
+stock_3,0.9,-0.8,0.012
+stock_4,0.8,-1.3,0.01
