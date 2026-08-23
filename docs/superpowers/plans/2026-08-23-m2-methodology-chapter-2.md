@@ -1083,6 +1083,107 @@ Expected: 提交成功。
 
 ---
 
+### Task 8: notebook 2.3 —— 异象检验 + GRS + 正交化
+
+**Files:**
+- Create: `chapters/02-methodology/notebooks/2.3-anomaly-and-grs.ipynb`
+
+**Interfaces:**
+- Consumes: `factor_zero.data_sim`（T4）、`factor_zero.regression`（T3）、`factor_zero.statistics`（T2）
+- Produces: 可执行 notebook：注入 α 造异象 → 检验 → GRS 模型比较 → 正交化
+
+- [ ] **Step 1: 在 `scripts/build_notebooks.py` 末尾追加完整构建函数**
+
+```python
+def build_2_3() -> nbf.NotebookNode:
+    nb = nbf.v4.new_notebook()
+    nb.metadata = {"kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"}}
+    c = []
+    c.append(nbf.v4.new_markdown_cell(
+        "# 2.3 异象检验 + GRS + 正交化\n\n"
+        "对应原书 2.4~2.6 节。今天当医生：\n\n"
+        "1. **造一个异象**：给某资产注入真实 α，看时序回归能不能把它揪出来（含 NW 修正）；\n"
+        "2. **GRS 体检**：三个因子够不够？\n"
+        "3. **正交化**：去掉重复信息后，因子还剩多少增量。"
+    ))
+    c.append(nbf.v4.new_code_cell(CH2_SETUP))
+    c.append(nbf.v4.new_code_cell(
+        "from factor_zero.statistics import newey_west_vcov, grs_test\n"
+        "from factor_zero.regression import time_series_betas\n"
+        "rng = np.random.default_rng(99)\n"
+        "T, N, K = 240, 8, 3\n"
+        "beta = rng.uniform(0.5, 1.5, size=(N, K))\n"
+        "lam = np.array([0.006, 0.004, 0.002])\n"
+        "f = rng.multivariate_normal(lam, np.diag([0.02**2]*K), size=T)\n"
+        "alpha_true = np.zeros(N); alpha_true[0] = 0.008\n"
+        "r = alpha_true + f @ beta.T + rng.normal(0, 0.01, size=(T, N))\n"
+        "print('注入真相：资产0 α=0.8%/月，其余为0')"
+    ))
+    c.append(nbf.v4.new_markdown_cell(
+        "## 1) 时序回归检验异象（2.4.1 节）\n\n"
+        "对每个资产回归 r = α + βf + ε。对比 **OLS 标准误 vs Newey-West 标准误**。"
+    ))
+    c.append(nbf.v4.new_code_cell(
+        "fdf = pd.DataFrame(f, columns=['F1','F2','F3'])\n"
+        "alphas, betas, resid = time_series_betas(pd.DataFrame(r, columns=[f'a{i}' for i in range(N)]), fdf)\n"
+        "rows = []\n"
+        "for i in range(N):\n"
+        "    X = np.column_stack([np.ones(T), f])\n"
+        "    e = resid.iloc[:, i].to_numpy()\n"
+        "    vcov_ols = np.linalg.inv(X.T @ X) * (e @ e / (T - K - 1))\n"
+        "    vcov_nw = newey_west_vcov(X, e)\n"
+        "    rows.append({'资产': i, 'α估计(%/月)': alphas.iloc[i]*100,\n"
+        "                 'OLS t': alphas.iloc[i]/np.sqrt(vcov_ols[0,0]),\n"
+        "                 'NW t': alphas.iloc[i]/np.sqrt(vcov_nw[0,0]),\n"
+        "                 '真相α': alpha_true[i]*100})\n"
+        "pd.DataFrame(rows).round(3)"
+    ))
+    c.append(nbf.v4.new_markdown_cell(
+        "## 2) GRS 体检：3 因子模型够吗？（2.5.1 节）\n\n"
+        "GRS 联合检验所有 α 是否为零。异象存在 → 模型被拒绝（p 值小）。"
+    ))
+    c.append(nbf.v4.new_code_cell(
+        "F, p = grs_test(alphas.to_numpy(), resid.to_numpy(), f)\n"
+        "print(f'GRS F = {F:.3f}, p 值 = {p:.6f}')\n"
+        "print('p < 0.05 → 模型被拒绝：存在模型解释不了的异象' if p < 0.05 else 'p ≥ 0.05 → 模型通过体检')"
+    ))
+    c.append(nbf.v4.new_markdown_cell(
+        "## 3) 正交化：只听增量信息（2.6 节）\n\n"
+        "假设 F2 ≈ F3（高度相关）——把 F3 对 F2 回归，**残差 = F3 的纯新增信息**。"
+    ))
+    c.append(nbf.v4.new_code_cell(
+        "f2 = f[:, 1]; f3 = f[:, 2]\n"
+        "beta_f3 = np.polyfit(f2, f3, 1)\n"
+        "f3_orth = f3 - (beta_f3[0] * f2 + beta_f3[1])  # 残差\n"
+        "print(f'F2 与 F3 相关系数: {np.corrcoef(f2, f3)[0,1]:.3f}')\n"
+        "print(f'F2 与 F3正交化后的相关系数: {np.corrcoef(f2, f3_orth)[0,1]:.10f}')\n"
+        "print('→ 正交化后相关性归零，残差就是 F3 独有的信息')"
+    ))
+    c.append(nbf.v4.new_markdown_cell(
+        "## 小结\n\n"
+        "- **异象检验** = 回归 α 显著 ≠ 0（别忘了 NW 眼镜）；\n"
+        "- **GRS** = 把一群资产的 α 打包查，模型好不好看 p 值；\n"
+        "- **正交化** = 残差即增量，业界构建因子前的标准动作。\n\n"
+        "> 下一章：把这些方法用到 A 股七大因子上（第3章）。"
+    ))
+    nb.cells = c
+    return nb
+```
+
+- [ ] **Step 2: 更新 main() 并构建**
+
+Run: `main()` 中 notebooks 字典加 `"2.3-anomaly-and-grs": build_2_3()`，运行 `python scripts/build_notebooks.py`
+Expected: 四个 notebook 生成。
+
+- [ ] **Step 3: 执行护栏**
+
+Run: `python -m pytest tests/test_notebooks.py -v`
+Expected: PASS（四个 notebook 执行通过）。
+
+- [ ] **Step 4: 提交**
+
+Run: `git add scripts/build_notebooks.py chapters/02-methodology/notebooks && git commit -m "feat(ch2): add anomaly/GRS/orthogonalization notebook"`
+Expected: 提交成功。
 ### Task 9: 第2章练习与答案
 
 **Files:**
@@ -1219,104 +1320,3 @@ Expected: 全部提交推送成功。
 
 **M2 完成。下一计划：M3（第3章 主流因子解读——七大因子 A 股实证）。**
 
-### Task 8: notebook 2.3 —— 异象检验 + GRS + 正交化
-
-**Files:**
-- Create: `chapters/02-methodology/notebooks/2.3-anomaly-and-grs.ipynb`
-
-**Interfaces:**
-- Consumes: `factor_zero.data_sim`（T4）、`factor_zero.regression`（T3）、`factor_zero.statistics`（T2）
-- Produces: 可执行 notebook：注入 α 造异象 → 检验 → GRS 模型比较 → 正交化
-
-- [ ] **Step 1: 在 `scripts/build_notebooks.py` 末尾追加完整构建函数**
-
-```python
-def build_2_3() -> nbf.NotebookNode:
-    nb = nbf.v4.new_notebook()
-    nb.metadata = {"kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"}}
-    c = []
-    c.append(nbf.v4.new_markdown_cell(
-        "# 2.3 异象检验 + GRS + 正交化\n\n"
-        "对应原书 2.4~2.6 节。今天当医生：\n\n"
-        "1. **造一个异象**：给某资产注入真实 α，看时序回归能不能把它揪出来（含 NW 修正）；\n"
-        "2. **GRS 体检**：三个因子够不够？\n"
-        "3. **正交化**：去掉重复信息后，因子还剩多少增量。"
-    ))
-    c.append(nbf.v4.new_code_cell(CH2_SETUP))
-    c.append(nbf.v4.new_code_cell(
-        "from factor_zero.statistics import newey_west_vcov, grs_test\n"
-        "from factor_zero.regression import time_series_betas\n"
-        "rng = np.random.default_rng(99)\n"
-        "T, N, K = 240, 8, 3\n"
-        "beta = rng.uniform(0.5, 1.5, size=(N, K))\n"
-        "lam = np.array([0.006, 0.004, 0.002])\n"
-        "f = rng.multivariate_normal(lam, np.diag([0.02**2]*K), size=T)\n"
-        "alpha_true = np.zeros(N); alpha_true[0] = 0.008\n"
-        "r = alpha_true + f @ beta.T + rng.normal(0, 0.01, size=(T, N))\n"
-        "print('注入真相：资产0 α=0.8%/月，其余为0')"
-    ))
-    c.append(nbf.v4.new_markdown_cell(
-        "## 1) 时序回归检验异象（2.4.1 节）\n\n"
-        "对每个资产回归 r = α + βf + ε。对比 **OLS 标准误 vs Newey-West 标准误**。"
-    ))
-    c.append(nbf.v4.new_code_cell(
-        "fdf = pd.DataFrame(f, columns=['F1','F2','F3'])\n"
-        "alphas, betas, resid = time_series_betas(pd.DataFrame(r, columns=[f'a{i}' for i in range(N)]), fdf)\n"
-        "rows = []\n"
-        "for i in range(N):\n"
-        "    X = np.column_stack([np.ones(T), f])\n"
-        "    e = resid.iloc[:, i].to_numpy()\n"
-        "    vcov_ols = np.linalg.inv(X.T @ X) * (e @ e / (T - K - 1))\n"
-        "    vcov_nw = newey_west_vcov(X, e)\n"
-        "    rows.append({'资产': i, 'α估计(%/月)': alphas.iloc[i]*100,\n"
-        "                 'OLS t': alphas.iloc[i]/np.sqrt(vcov_ols[0,0]),\n"
-        "                 'NW t': alphas.iloc[i]/np.sqrt(vcov_nw[0,0]),\n"
-        "                 '真相α': alpha_true[i]*100})\n"
-        "pd.DataFrame(rows).round(3)"
-    ))
-    c.append(nbf.v4.new_markdown_cell(
-        "## 2) GRS 体检：3 因子模型够吗？（2.5.1 节）\n\n"
-        "GRS 联合检验所有 α 是否为零。异象存在 → 模型被拒绝（p 值小）。"
-    ))
-    c.append(nbf.v4.new_code_cell(
-        "F, p = grs_test(alphas.to_numpy(), resid.to_numpy(), f)\n"
-        "print(f'GRS F = {F:.3f}, p 值 = {p:.6f}')\n"
-        "print('p < 0.05 → 模型被拒绝：存在模型解释不了的异象' if p < 0.05 else 'p ≥ 0.05 → 模型通过体检')"
-    ))
-    c.append(nbf.v4.new_markdown_cell(
-        "## 3) 正交化：只听增量信息（2.6 节）\n\n"
-        "假设 F2 ≈ F3（高度相关）——把 F3 对 F2 回归，**残差 = F3 的纯新增信息**。"
-    ))
-    c.append(nbf.v4.new_code_cell(
-        "f2 = f[:, 1]; f3 = f[:, 2]\n"
-        "beta_f3 = np.polyfit(f2, f3, 1)\n"
-        "f3_orth = f3 - (beta_f3[0] * f2 + beta_f3[1])  # 残差\n"
-        "print(f'F2 与 F3 相关系数: {np.corrcoef(f2, f3)[0,1]:.3f}')\n"
-        "print(f'F2 与 F3正交化后的相关系数: {np.corrcoef(f2, f3_orth)[0,1]:.10f}')\n"
-        "print('→ 正交化后相关性归零，残差就是 F3 独有的信息')"
-    ))
-    c.append(nbf.v4.new_markdown_cell(
-        "## 小结\n\n"
-        "- **异象检验** = 回归 α 显著 ≠ 0（别忘了 NW 眼镜）；\n"
-        "- **GRS** = 把一群资产的 α 打包查，模型好不好看 p 值；\n"
-        "- **正交化** = 残差即增量，业界构建因子前的标准动作。\n\n"
-        "> 下一章：把这些方法用到 A 股七大因子上（第3章）。"
-    ))
-    nb.cells = c
-    return nb
-```
-
-- [ ] **Step 2: 更新 main() 并构建**
-
-Run: `main()` 中 notebooks 字典加 `"2.3-anomaly-and-grs": build_2_3()`，运行 `python scripts/build_notebooks.py`
-Expected: 四个 notebook 生成。
-
-- [ ] **Step 3: 执行护栏**
-
-Run: `python -m pytest tests/test_notebooks.py -v`
-Expected: PASS（四个 notebook 执行通过）。
-
-- [ ] **Step 4: 提交**
-
-Run: `git add scripts/build_notebooks.py chapters/02-methodology/notebooks && git commit -m "feat(ch2): add anomaly/GRS/orthogonalization notebook"`
-Expected: 提交成功。
