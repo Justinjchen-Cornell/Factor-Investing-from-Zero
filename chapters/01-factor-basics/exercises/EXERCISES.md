@@ -24,7 +24,7 @@
 
 ## 练习 4：读图（分析题）
 
-打开 `notebooks/01.1-unified-view.ipynb`，把 `alpha` 数组全部改成 0 重新运行：
+打开 `notebooks/01.1-unified-formula.ipynb`，把 `alpha` 数组全部改成 0 重新运行：
 
 1. 图中红色竖线发生了什么变化？
 2. 这说明了 α 在"截面视角"下的几何含义？
