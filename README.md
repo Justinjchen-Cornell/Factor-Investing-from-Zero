@@ -48,8 +48,11 @@ jupyter lab chapters/01-factor-basics/notebooks/
 
 ## 数据说明 / Data
 
-- `data/sample/`：预生成示例数据（教学小样本 + A股快照，进 git，离线可用）
+- `data/sample/`：预生成示例数据（教学小样本 + **87 只 A 股真实行情快照** 2018-2024，进 git，离线可用）
+  - 日线来自**腾讯/新浪/efinance 多源兜底链**（`scripts/data_sources.py`：东财→efinance→新浪→腾讯→腾讯直连）
+  - 基本面（PB/PE/总市值）来自**腾讯实时行情**（2026-09 快照，教学演示用）
 - `data/cache/`：可选下载的全市场数据（`python scripts/download_data.py --all-sample`）
+- 需要真实数据时：`python scripts/make_sample_data.py` 自动走兜底链刷新
 
 ## 延伸阅读 / Further Reading
 

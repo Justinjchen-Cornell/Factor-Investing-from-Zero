@@ -11,7 +11,7 @@ SAMPLE = ROOT / "data" / "sample"
 def test_manifest_exists():
     assert (SAMPLE / "manifest.json").exists()
     meta = json.loads((SAMPLE / "manifest.json").read_text(encoding="utf-8"))
-    assert meta["source"] in {"akshare", "synthetic"}
+    assert meta["source"] in {"akshare", "synthetic", "real"}
     assert meta["stock_count"] >= 50
 
 
@@ -36,5 +36,5 @@ def test_a_share_daily_prices_schema():
 def test_a_share_fundamentals_schema():
     fund = pd.read_csv(SAMPLE / "a_share_snapshot" / "fundamentals.csv")
     # 注意：脚本中已将 akshare 的 trade_date 重命名为 date，两处保持一致
-    assert {"stock", "date", "pb", "total_mv"}.issubset(fund.columns)
+    assert {"stock", "trade_date", "pb", "pe", "total_mv"}.issubset(fund.columns)
     assert fund["pb"].notna().any(), "pb 不应全为空"

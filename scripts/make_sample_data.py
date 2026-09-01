@@ -47,34 +47,20 @@ def make_teaching_sample() -> pd.DataFrame:
     })
 
 
-def fetch_akshare_daily(code: str) -> pd.DataFrame:
-    """akshare 日线；失败抛异常由上层兜底。"""
-    import akshare as ak
-
-    df = ak.stock_zh_a_hist(
-        symbol=code, period="daily",
-        start_date=START.replace("-", ""), end_date=END.replace("-", ""),
-        adjust="qfq",
-    )
-    return pd.DataFrame({
-        "date": pd.to_datetime(df["日期"]),
-        "open": df["开盘"],
-        "high": df["最高"],
-        "low": df["最低"],
-        "close": df["收盘"],
-        "volume": df["成交量"],
-    }).sort_values("date").reset_index(drop=True)
+def fetch_daily_chain(code: str) -> pd.DataFrame:
+    """使用统一数据源兜底链获取日线（东财→efinance→新浪→腾讯→腾讯直连）。"""
+    import sys as _sys
+    _sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from data_sources import fetch_daily
+    return fetch_daily(code, START, END)
 
 
-def fetch_akshare_fundamentals(code: str) -> pd.DataFrame:
-    """akshare 估值指标（乐咕乐股）：pb / 总市值 等。"""
-    import akshare as ak
-
-    df = ak.stock_a_indicator_lg(symbol=code)
-    df = df.rename(columns={"trade_date": "date"})
-    df = df[["date", "pb", "total_mv"]].dropna(subset=["pb"])
-    df["stock"] = code
-    return df[["stock", "date", "pb", "total_mv"]].sort_values("date").reset_index(drop=True)
+def fetch_fundamentals_chain() -> pd.DataFrame:
+    """全市场估值快照（新浪 stock_zh_a_spot）：pb / 总市值。"""
+    import sys as _sys
+    _sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from data_sources import fetch_fundamentals_snapshot
+    return fetch_fundamentals_snapshot()
 
 
 def synth_daily(code: str, seed: int) -> pd.DataFrame:
@@ -114,25 +100,27 @@ def main() -> None:
     # 1) 教学小样本
     make_teaching_sample().to_csv(SAMPLE / "teaching_sample.csv", index=False)
 
-    # 2) A股快照：akshare 实下，失败回退合成
-    source = "akshare"
+    # 2) A股快照：真实数据兜底链，全部失败回退合成
+    source = "real"
     fund_frames, ok_codes = [], []
     try:
         for code in STOCKS:
             try:
-                df = fetch_akshare_daily(code)
-                fund = fetch_akshare_fundamentals(code)
-                if len(df) < 1200 or len(fund) < 60:  # 数据量不足视为失败
+                df = fetch_daily_chain(code)
+                if len(df) < 1200:  # 数据量不足视为失败
                     raise ValueError(f"{code} 数据量不足")
                 df.to_csv(daily_dir / f"{code}.csv", index=False)
-                fund_frames.append(fund)
                 ok_codes.append(code)
-                print(f"[akshare] {code} ok ({len(df)} 行)")
+                print(f"[real] {code} ok ({len(df)} 行)")
             except Exception as exc:  # noqa: BLE001 —— 单只失败不中断
-                print(f"[akshare] {code} 失败: {exc}")
-            time.sleep(0.15)
+                print(f"[real] {code} 失败: {exc}")
         if len(ok_codes) < 50:
-            raise RuntimeError(f"akshare 仅成功 {len(ok_codes)} 只，不足 50，回退合成")
+            raise RuntimeError(f"真实数据仅成功 {len(ok_codes)} 只，不足 50，回退合成")
+        try:
+            fund_frames = [fetch_fundamentals_chain(ok_codes)]
+        except Exception as exc:  # noqa: BLE001
+            print(f"[warn] 估值快照失败（{exc}），基本面用合成补")
+            fund_frames = [synth_fundamentals(ok_codes)]
     except Exception as exc:  # noqa: BLE001
         print(f"[fallback] 使用合成数据: {exc}")
         source = "synthetic"

@@ -7,3 +7,4 @@ akshare==1.18.64
 nbformat==5.10.4
 nbclient==0.11.0
 pytest==9.1.1
+efinance==0.6.13

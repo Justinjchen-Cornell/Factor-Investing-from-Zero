@@ -18,18 +18,11 @@ CACHE = ROOT / "data" / "cache"
 
 
 def download(code: str, start: str, end: str) -> pd.DataFrame:
-    import akshare as ak
-
-    df = ak.stock_zh_a_hist(
-        symbol=code, period="daily",
-        start_date=start.replace("-", ""), end_date=end.replace("-", ""),
-        adjust="qfq",
-    )
-    return pd.DataFrame({
-        "date": pd.to_datetime(df["日期"]),
-        "open": df["开盘"], "high": df["最高"],
-        "low": df["最低"], "close": df["收盘"], "volume": df["成交量"],
-    }).sort_values("date").reset_index(drop=True)
+    import sys as _sys
+    from pathlib import Path as _Path
+    _sys.path.insert(0, str(_Path(__file__).resolve().parent))
+    from data_sources import fetch_daily
+    return fetch_daily(code, start, end)
 
 
 def main() -> None:
