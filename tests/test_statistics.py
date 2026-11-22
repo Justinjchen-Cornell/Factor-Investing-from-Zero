@@ -54,3 +54,14 @@ def test_grs_no_alpha_not_rejected():
         resid_stack[:, i] = e
     F, p = grs_test(np.array(alphas), resid_stack, f)
     assert p > 0.05, f"alpha=0 时 GRS 不应拒绝，p={p:.4f}"
+
+
+def test_factor_summary_keys_and_t_sign():
+    from factor_zero.statistics import factor_summary
+    rng = np.random.default_rng(0)
+    r = pd.Series(rng.normal(0.005, 0.02, size=120))
+    s = factor_summary(r)
+    for key in ["mean_ann", "vol_ann", "sharpe", "t_stat", "max_drawdown", "win_rate"]:
+        assert key in s
+    assert s["t_stat"] > 0
+    assert -1 <= s["max_drawdown"] <= 0

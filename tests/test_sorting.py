@@ -45,3 +45,17 @@ def test_monotonicity_perfect_positive():
     port = pd.DataFrame({g: [0.01 * g] for g in range(1, 11)})
     res = monotonicity_test(port)
     assert abs(res["rho"] - 1.0) < 1e-9
+
+
+def test_long_short_factor_direction():
+    from factor_zero.sorting import long_short_factor
+    # 2 期、4 只股票：A/B 低排序值，C/D 高排序值；高组每期收益更高
+    idx = pd.to_datetime(["2020-01-31", "2020-02-29", "2020-03-31"])
+    sort_values = pd.DataFrame({"A": [1, 1, 1], "B": [2, 2, 2],
+                                "C": [3, 3, 3], "D": [4, 4, 4]}, index=idx)
+    ret = pd.DataFrame({"A": [0.01, 0.01, 0.01], "B": [0.01, 0.01, 0.01],
+                        "C": [0.05, 0.05, 0.05], "D": [0.05, 0.05, 0.05]}, index=idx)
+    high, _, _ = long_short_factor(sort_values, ret, n_groups=2, high_minus_low=True)
+    low, _, _ = long_short_factor(sort_values, ret, n_groups=2, high_minus_low=False)
+    assert (high > 0).all()
+    np.testing.assert_allclose(high.values, -low.values)

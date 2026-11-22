@@ -47,3 +47,36 @@ def earnings_yield(fundamentals: pd.DataFrame) -> pd.DataFrame:
     f = f.rename(columns={"trade_date": "date"})
     f["ep"] = 1.0 / f["pe"]
     return f.pivot(index="date", columns="stock", values="ep")
+
+
+def build_factor_returns(panel: dict, n_groups: int = 10) -> pd.DataFrame:
+    """从第3章面板构造七大因子收益率（MKT/SMB/HML/WML/RMW/CMA/TURN）。
+
+    方向约定
+    --------
+    - MKT：市值加权市场收益（示意，未减无风险利率）
+    - SMB：小市值 − 大市值
+    - HML：高 BM − 低 BM
+    - WML：高动量 − 低动量（12-1）
+    - RMW：高 ROE − 低 ROE
+    - CMA：低投资 − 高投资（保守 − 激进）
+    - TURN：低换手 − 高换手（A 股“低换手溢价”方向）
+    """
+    from .sorting import long_short_factor
+
+    ret = panel["ret"]
+    out = {"MKT": panel["market"]}
+    specs = {
+        "SMB": ("size", False),
+        "HML": ("bm", True),
+        "WML": ("momentum", True),
+        "RMW": ("roe", True),
+        "CMA": ("investment", False),
+        "TURN": ("turnover", False),
+    }
+    for name, (key, high_minus_low) in specs.items():
+        factor_ret, _, _ = long_short_factor(
+            panel[key], ret, n_groups=n_groups, high_minus_low=high_minus_low
+        )
+        out[name] = factor_ret
+    return pd.DataFrame(out)

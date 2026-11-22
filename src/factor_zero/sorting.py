@@ -66,3 +66,46 @@ def monotonicity_test(port_ret: pd.DataFrame) -> dict:
     means = port_ret.mean().reindex(group_order)
     rho = means.rank().corr(pd.Series(range(1, len(group_order) + 1), index=group_order))
     return {"rho": rho, "group_means": means}
+
+
+def long_short_factor(
+    sort_values: pd.DataFrame,
+    ret: pd.DataFrame,
+    n_groups: int = 10,
+    high_minus_low: bool = True,
+    lag: int = 1,
+) -> tuple[pd.Series, pd.DataFrame, pd.DataFrame]:
+    """逐期排序并构建多空因子组合（第3章配套）。
+
+    参数
+    ----
+    sort_values : DataFrame(T×N) 排序变量（如 BM、动量、ROE）
+    ret : DataFrame(T×N) 收益率
+    n_groups : 分组数 L
+    high_minus_low : True 表示做多高组、做空低组；False 反过来
+    lag : 用 t 期排序变量，持有 t+lag 期收益（默认 1，避免未来函数）
+
+    返回
+    ----
+    (factor_ret: Series, portfolio_ret: DataFrame(T×L), groups: DataFrame(T×N))
+    """
+    if lag < 1:
+        raise ValueError("lag 必须 >= 1")
+    common = sort_values.index.intersection(ret.index).sort_values()
+    group_dict = {}
+    for t in range(len(common) - lag):
+        d, d_next = common[t], common[t + lag]
+        sv = sort_values.loc[d].dropna()
+        if len(sv) < n_groups:
+            continue
+        group_dict[d_next] = quantile_group(sv, n_groups=n_groups)
+
+    groups = pd.DataFrame(group_dict).T.reindex(
+        index=ret.index, columns=ret.columns
+    )
+    port = sort_portfolios(ret, groups, n_groups=n_groups)
+    if high_minus_low:
+        spread = port[n_groups] - port[1]
+    else:
+        spread = port[1] - port[n_groups]
+    return spread.dropna(), port, groups

@@ -72,3 +72,27 @@ def grs_test(
     F = scalar * (alphas @ np.linalg.inv(Sigma_e) @ alphas)
     p = 1 - stats.f.cdf(F, N, T - N - K)
     return float(F), float(p)
+
+
+def factor_summary(factor_ret: pd.Series, periods_per_year: int = 12) -> dict:
+    """因子收益率序列的绩效汇总（第3章配套）。
+
+    返回年化收益、年化波动、Sharpe、NW t 值、最大回撤、胜率。
+    """
+    r = factor_ret.dropna()
+    if len(r) < 2:
+        return {}
+    mean_ann = float(r.mean() * periods_per_year)
+    vol_ann = float(r.std() * np.sqrt(periods_per_year))
+    sharpe = mean_ann / vol_ann if vol_ann > 1e-12 else np.nan
+    t_stat, _ = nw_t_stat(r)
+    nav = (1 + r).cumprod()
+    mdd = float((nav / nav.cummax() - 1).min())
+    return {
+        "mean_ann": mean_ann,
+        "vol_ann": vol_ann,
+        "sharpe": float(sharpe),
+        "t_stat": float(t_stat),
+        "max_drawdown": mdd,
+        "win_rate": float((r > 0).mean()),
+    }
