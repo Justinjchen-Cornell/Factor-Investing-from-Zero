@@ -22,7 +22,7 @@
 
 ## 🧸 亲子版教学网页 / Parent-Child Web Course
 
-给 4–7 岁孩子的第 1–2 章：**不讲公式，只种种子。** 用水果摊、松果、三个篮子、排队和公平比较，陪孩子体验「观察、等待、分散、比较、记录」。
+给 4–7 岁孩子的第 1–3 章：**不讲公式，只种种子。** 用水果摊、松果、三个篮子、排队、公平比较和七种果子性格，陪孩子体验「观察、等待、分散、比较、多角度看」。
 
 👉 **[打开亲子版教学网页](docs/index.html)** ｜ 线上版：https://justinjchen-cornell.github.io/Factor-Investing-from-Zero/
 
@@ -39,6 +39,12 @@
 | [第 3 课：多试几次才算数](docs/chapter-02/lesson-3.html) | 一次赢可能只是运气——样本量启蒙 |
 | [果子排行榜](docs/chapter-02/game.html) | 按价格排 vs 按甜度排 + 可打印排行榜、公平检查表、10 次测试表 |
 | [第 2 章家长指南](docs/chapter-02/parent-guide.html) | 三颗种子、10 分钟模板、4 周计划、话术与书单 |
+| **[第 3 章 · 七种果子，七种性格](docs/chapter-03/index.html)** | **市场、规模、价值、动量、盈利、投资、换手率** |
+| [第 1 课：果园的天气 + 大果子小果子](docs/chapter-03/lesson-1.html) | 市场与规模——一起动，但小果子动得更大 |
+| [第 2 课：便宜的果子 + 会下金蛋的树](docs/chapter-03/lesson-2.html) | 价值与质量——便宜不等于好；好树也要看好价格 |
+| [第 3 课：跑得快、太热闹、长新枝](docs/chapter-03/lesson-3.html) | 动量、拥挤、投资——“看起来很好”不等于“一定好” |
+| [七种性格卡](docs/chapter-03/game.html) | 7 轮配对游戏 + 可打印角色卡、果园观察表 |
+| [第 3 章家长指南](docs/chapter-03/parent-guide.html) | 七个角色对照表、4 周计划、话术、书单 |
 
 > 每次 10 分钟，家长陪同，不涉及真实金钱。星星进度保存在本机浏览器。
 > *10 minutes per session, parent-led, no real money. Progress is stored locally in the browser.*

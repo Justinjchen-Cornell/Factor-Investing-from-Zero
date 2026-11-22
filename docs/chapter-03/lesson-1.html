@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 1 课 · 果园的天气 + 大果子小果子｜小松鼠的果子课</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../index.html"><span class="logo">🐿️</span><span>小松鼠的果子课</span></a>
+    <nav class="nav">
+      <a href="../index.html">首页</a>
+      <a href="../chapter-01/index.html">第 1 章</a>
+      <a href="../chapter-02/index.html">第 2 章</a>
+      <a class="active" href="index.html">第 3 章</a>
+      <a href="parent-guide.html">家长指南</a>
+      <button id="parentToggle" type="button">家长模式</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="lesson-head">
+    <div class="meta">
+      <span class="badge">第 1 课 · 市场与大小</span>
+      <h1>果园的天气 + 大果子小果子</h1>
+      <p class="sub">所有果子一起动，但小果子动得更大——长得快，也更危险。</p>
+    </div>
+    <div class="lesson-tools">
+      <button class="btn secondary small" data-read-target="#story-text" type="button">🔊 读给我听</button>
+      <span class="sticker" data-progress="ch3-l1" title="第 1 课星星">⭐</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="story">
+      <h2>果园的天气</h2>
+      <div id="story-text">
+        <p class="big">果园里有很多果树。天气好的时候，所有果子都长大一点。</p>
+        <p>可是，大果子和小果子的反应不一样：</p>
+        <p>小果子长得更快，但也更容易被风吹落。</p>
+        <p>这就像市场里的大公司和小公司：<span class="highlight">一起动，但动得不一样。</span></p>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h3>🌤️ 玩一玩：天气变了，果子怎么变？</h3>
+      <p class="hint">点一个天气按钮，观察四个价格牌。</p>
+      <div class="button-row">
+        <button class="btn" data-weather="good" type="button">☀️ 好天气</button>
+        <button class="btn secondary" data-weather="bad" type="button">🌧️ 坏天气</button>
+        <button class="btn ghost" data-weather="windy" type="button">🍂 起风了</button>
+      </div>
+
+      <div class="fruit-row four">
+        <div class="fruit-card" data-fruit="bigApple">
+          <div class="fruit-emoji">🍎</div><div class="fruit-name">大苹果</div>
+          <div class="price">6 枚果币</div><div class="trend">—</div>
+        </div>
+        <div class="fruit-card" data-fruit="smallApple">
+          <div class="fruit-emoji">🍎</div><div class="fruit-name">小苹果</div>
+          <div class="price">4 枚果币</div><div class="trend">—</div>
+        </div>
+        <div class="fruit-card" data-fruit="bigPear">
+          <div class="fruit-emoji">🍐</div><div class="fruit-name">大梨</div>
+          <div class="price">5 枚果币</div><div class="trend">—</div>
+        </div>
+        <div class="fruit-card" data-fruit="smallPear">
+          <div class="fruit-emoji">🍐</div><div class="fruit-name">小梨</div>
+          <div class="price">4 枚果币</div><div class="trend">—</div>
+        </div>
+      </div>
+      <div class="message" id="weatherMsg">先点一个天气按钮吧。</div>
+    </div>
+
+    <div class="activity">
+      <h3>🔍 再看一眼：谁动得更大？</h3>
+      <p class="hint">同样是好天气，大苹果涨 1 枚，小苹果涨 2 枚。为什么？</p>
+      <div class="button-row">
+        <button class="btn ghost" id="sizeBtn" type="button">看看“大小”的秘密</button>
+      </div>
+      <div class="message" id="sizeMsg">大果子和小果子，对同一个天气的反应不一样。</div>
+    </div>
+
+    <div class="parent-note">
+      <h4>👨‍👩‍👧 家长提示：这一课真正在种什么种子？</h4>
+      <p><strong>市场 + 规模。</strong>“果园天气”是市场因子：所有股票都会受大盘影响。“大果子小果子”是规模因子：小公司可能长得更快，但波动和风险也更大。</p>
+      <p>不要说“小果子一定更好”。小盘股有“小盘股溢价”的说法，但不是每年都有效，也可能跌得更惨。这一课只让孩子体验：<strong>同一个原因，不同东西反应大小不同；高收益往往伴随高风险。</strong></p>
+      <p>生活延伸：大树和小树在风里的表现；大船和小船在浪里的表现。问孩子：“谁动得更大？为什么？”</p>
+    </div>
+
+    <div class="section" style="padding-left:0;padding-right:0;">
+      <h2>问一问</h2>
+      <div class="questions">
+        <div class="question">
+          为什么天气一变，所有果子都动？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q1" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q1">因为它们生活在同一个果园里，遇到的是同一个天气。市场里的股票也一样，会受到大盘的共同影响。</div>
+        </div>
+        <div class="question">
+          小果子长得快，是不是一定更好？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q2" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q2">不一定。小果子长得快，但也更容易被风吹落。高收益的背后，往往是高风险。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-row" style="margin-top:24px;">
+      <button class="btn" data-done="ch3-l1" type="button">⭐ 我完成了，贴上星星</button>
+      <a class="btn ghost" href="lesson-2.html">下一课：便宜的果子 + 会下金蛋的树 →</a>
+    </div>
+
+    <div class="lesson-nav">
+      <a class="btn ghost" href="index.html">← 返回第 3 章</a>
+      <a class="btn ghost" href="../index.html">🏠 首页</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>🐿️ 第 1 课 · 市场与大小</span>
+    <span>仅供亲子启蒙，不构成投资建议</span>
+  </div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function () {
+  const fruits = {
+    bigApple:   { base: 6 },
+    smallApple: { base: 4 },
+    bigPear:    { base: 5 },
+    smallPear:  { base: 4 }
+  };
+  const weathers = {
+    good: {
+      deltas: { bigApple: 1, smallApple: 2, bigPear: 1, smallPear: 2 },
+      msg: "☀️ 好天气，所有果子都长大——但小果子长得更快！"
+    },
+    bad: {
+      deltas: { bigApple: -1, smallApple: -2, bigPear: -1, smallPear: -2 },
+      msg: "🌧️ 坏天气，所有果子都变小——小果子跌得更多。"
+    },
+    windy: {
+      deltas: { bigApple: 0, smallApple: -3, bigPear: 0, smallPear: -3 },
+      msg: "🍂 起风了，大果子稳稳的，小果子容易被吹落——动得更大，也更危险。"
+    }
+  };
+
+  function render(key) {
+    const w = weathers[key];
+    Object.keys(fruits).forEach(function (fruitKey) {
+      const card = document.querySelector('[data-fruit="' + fruitKey + '"]');
+      const delta = w.deltas[fruitKey];
+      card.querySelector(".price").textContent = (fruits[fruitKey].base + delta) + " 枚果币";
+      card.classList.remove("up", "down");
+      const trend = card.querySelector(".trend");
+      if (delta > 0) {
+        card.classList.add("up");
+        trend.textContent = "↑ +" + delta;
+      } else if (delta < 0) {
+        card.classList.add("down");
+        trend.textContent = "↓ " + delta;
+      } else {
+        trend.textContent = "—";
+      }
+    });
+    document.getElementById("weatherMsg").textContent = w.msg;
+  }
+
+  document.querySelectorAll("[data-weather]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      render(btn.getAttribute("data-weather"));
+    });
+  });
+
+  document.getElementById("sizeBtn").addEventListener("click", function () {
+    document.getElementById("sizeMsg").className = "message good";
+    document.getElementById("sizeMsg").textContent =
+      "小果子对天气更敏感：好天气涨 2 枚，坏天气跌 2 枚，起风时甚至被吹落；大果子只动 1 枚，或者不动。同一个原因，反应大小不同。";
+    this.textContent = "已经看到啦";
+  });
+})();
+</script>
+</body>
+</html>

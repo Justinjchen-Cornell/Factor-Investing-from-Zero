@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>七种性格卡 · 亲子游戏｜小松鼠的果子课</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../index.html"><span class="logo">🐿️</span><span>小松鼠的果子课</span></a>
+    <nav class="nav">
+      <a href="../index.html">首页</a>
+      <a href="../chapter-01/index.html">第 1 章</a>
+      <a href="../chapter-02/index.html">第 2 章</a>
+      <a class="active" href="index.html">第 3 章</a>
+      <a href="parent-guide.html">家长指南</a>
+      <button id="parentToggle" type="button">家长模式</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="lesson-head">
+    <div class="meta">
+      <span class="badge">第 3 章 · 亲子游戏</span>
+      <h1>七种性格卡</h1>
+      <p class="sub">看场景，找出对应的果子角色。7 轮配对，不考记忆力，只练观察。</p>
+    </div>
+    <div class="lesson-tools">
+      <button class="btn secondary small" data-read-target="#game-intro" type="button">🔊 读给我听</button>
+      <span class="sticker" data-progress="ch3-game" title="游戏星星">⭐</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="story">
+      <h2>果园里的七位小伙伴</h2>
+      <div id="game-intro">
+        <p class="big">果园里有七位小伙伴，每个都有自己的性格。</p>
+        <p>下面每次出现一个场景，请你找出：这是哪位小伙伴的故事？</p>
+        <p class="tiny">点卡片作答。答错没关系，看看正确答案，再试下一题。</p>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h3>🃏 开始配对</h3>
+      <div class="stats">
+        <div class="stat"><b id="roundInfo">1 / 7</b><span>第几轮</span></div>
+        <div class="stat"><b id="scoreInfo">0</b><span>答对</span></div>
+      </div>
+      <div class="story" style="box-shadow:none;background:var(--orange-soft);margin:16px 0;">
+        <p class="big" id="scenarioText" style="margin:0;">加载中…</p>
+      </div>
+      <div class="char-grid" id="charGrid"></div>
+      <div class="message" id="gameMsg">点一张卡片，看看是不是它。</div>
+      <div class="button-row">
+        <button class="btn" id="nextBtn" type="button" style="display:none;">下一题 →</button>
+        <button class="btn ghost" id="restartBtn" type="button">重新开始</button>
+      </div>
+    </div>
+
+    <div class="parent-note">
+      <h4>👨‍👩‍👧 家长提示：这一课真正在种什么种子？</h4>
+      <p>七张卡分别对应：市场、规模、价值、动量、盈利/质量、投资、换手率/拥挤。孩子不需要记住术语，只要能说出“这是果园天气”“这是小果子”“这是排队长的摊子”。</p>
+      <p>答错时问：“你觉得这个场景在说哪件事？”让孩子先解释，再一起看答案。不要变成考试。</p>
+      <p>七张卡可以打印出来，当成家庭聊天卡：每天抽一张，看看生活里有没有对应的例子。</p>
+    </div>
+
+    <div class="section" style="padding-left:0;padding-right:0;">
+      <h2>问一问</h2>
+      <div class="questions">
+        <div class="question">
+          七个小伙伴里，你最喜欢哪一个？为什么？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q1" data-label="看提示" type="button">看提示</button></div>
+          <div class="reveal" id="q1">没有标准答案。可以继续问：“它有什么优点？有什么缺点？”</div>
+        </div>
+        <div class="question">
+          有没有一个“永远最好”的小伙伴？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q2" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q2">没有。每个小伙伴都有表现好的时候，也有表现差的时候。要看情况，也要看价格。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-row" style="margin-top:24px;">
+      <button class="btn" data-done="ch3-game" type="button">⭐ 我完成了，贴上星星</button>
+      <a class="btn ghost" href="parent-guide.html">读家长指南 →</a>
+    </div>
+
+    <div class="lesson-nav">
+      <a class="btn ghost" href="lesson-3.html">← 上一课</a>
+      <a class="btn ghost" href="../index.html">🏠 首页</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="card">
+      <div class="section-head">
+        <h2>可打印角色卡</h2>
+        <button class="btn ghost small" onclick="window.print()" type="button">🖨️ 打印这一页</button>
+      </div>
+      <p class="muted">打印后剪开，每天抽一张，在生活里找对应的例子。</p>
+
+      <h3>🃏 七种性格卡（剪开）</h3>
+      <div class="char-grid">
+        <div class="char-card"><div class="char-emoji">🌤️</div><div class="char-name">市场果子</div><div class="char-trait">果园天气一变，它跟着变。</div></div>
+        <div class="char-card"><div class="char-emoji">🍎</div><div class="char-name">小果子</div><div class="char-trait">长得快，也容易被风吹落。</div></div>
+        <div class="char-card"><div class="char-emoji">💰</div><div class="char-name">便宜果子</div><div class="char-trait">同样的东西，价格更低。</div></div>
+        <div class="char-card"><div class="char-emoji">🏃</div><div class="char-name">跑得快果子</div><div class="char-trait">滚起来很快，可能突然停。</div></div>
+        <div class="char-card"><div class="char-emoji">🌳</div><div class="char-name">金蛋树</div><div class="char-trait">每年结很多果子。</div></div>
+        <div class="char-card"><div class="char-emoji">🌱</div><div class="char-name">新枝树</div><div class="char-trait">把营养用来长新枝。</div></div>
+        <div class="char-card"><div class="char-emoji">🧺</div><div class="char-name">热闹果子</div><div class="char-trait">摊子前排队最长。</div></div>
+      </div>
+
+      <h3 style="margin-top:28px;">📋 果园观察表（今天遇到了谁？）</h3>
+      <div style="overflow-x:auto;">
+        <table class="factor-table">
+          <thead>
+            <tr><th>日期</th><th>我遇到的小伙伴</th><th>发生了什么事？</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>第 1 天</td><td></td><td></td></tr>
+            <tr><td>第 2 天</td><td></td><td></td></tr>
+            <tr><td>第 3 天</td><td></td><td></td></tr>
+            <tr><td>第 4 天</td><td></td><td></td></tr>
+            <tr><td>第 5 天</td><td></td><td></td></tr>
+            <tr><td>第 6 天</td><td></td><td></td></tr>
+            <tr><td>第 7 天</td><td></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="tiny" style="margin-top:10px;">小提示：不要求每天写。遇到有趣的事情再写，重点是“看见”和“说出来”。</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>🐿️ 七种性格卡 · 第 3 章亲子游戏</span>
+    <span>仅供亲子启蒙，不构成投资建议</span>
+  </div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function () {
+  const chars = [
+    { key: "market",    name: "市场果子",   emoji: "🌤️", trait: "果园天气一变，它跟着变。" },
+    { key: "small",     name: "小果子",     emoji: "🍎", trait: "长得快，也容易被风吹落。" },
+    { key: "cheap",     name: "便宜果子",   emoji: "💰", trait: "同样的东西，价格更低。" },
+    { key: "momentum",  name: "跑得快果子", emoji: "🏃", trait: "滚起来很快，可能突然停。" },
+    { key: "gold",      name: "金蛋树",     emoji: "🌳", trait: "每年结很多果子。" },
+    { key: "newbranch", name: "新枝树",     emoji: "🌱", trait: "把营养用来长新枝。" },
+    { key: "crowd",     name: "热闹果子",   emoji: "🧺", trait: "摊子前排队最长。" }
+  ];
+  const scenarios = [
+    { text: "今天果园天气很好，所有果子都长大了一点。", answer: "market" },
+    { text: "一阵风吹来，小果子被吹落了，大果子还稳稳的。", answer: "small" },
+    { text: "同样的苹果，左边摊子卖 3 枚，右边卖 5 枚。", answer: "cheap" },
+    { text: "这个果子已经滚得很快，大家觉得它还会继续滚。", answer: "momentum" },
+    { text: "这棵树每年都结很多果子，大家都说它会下金蛋。", answer: "gold" },
+    { text: "这棵树把营养都用来长新枝，明年可能结更多果子。", answer: "newbranch" },
+    { text: "这个摊子前面排了很长的队，大家都想买。", answer: "crowd" }
+  ];
+
+  let order = [];
+  let round = 0;
+  let score = 0;
+  let answered = false;
+
+  function shuffle(arr) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+
+  function byKey(key) {
+    return chars.find(function (c) { return c.key === key; });
+  }
+
+  function setMsg(text, cls) {
+    const m = document.getElementById("gameMsg");
+    m.className = "message" + (cls ? " " + cls : "");
+    m.textContent = text;
+  }
+
+  function renderChars() {
+    const grid = document.getElementById("charGrid");
+    grid.innerHTML = "";
+    chars.forEach(function (c) {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "char-card";
+      btn.setAttribute("data-key", c.key);
+      btn.innerHTML = '<div class="char-emoji">' + c.emoji + '</div>'
+        + '<div class="char-name">' + c.name + '</div>'
+        + '<div class="char-trait">' + c.trait + '</div>';
+      btn.addEventListener("click", function () { choose(c.key, btn); });
+      grid.appendChild(btn);
+    });
+  }
+
+  function showScenario() {
+    if (round >= order.length) { end(); return; }
+    const s = order[round];
+    document.getElementById("scenarioText").textContent = s.text;
+    document.getElementById("roundInfo").textContent = (round + 1) + " / " + order.length;
+    document.getElementById("scoreInfo").textContent = score;
+    document.getElementById("nextBtn").style.display = "none";
+    document.querySelectorAll("#charGrid .char-card").forEach(function (el) {
+      el.classList.remove("correct", "wrong", "reveal-answer");
+    });
+    setMsg("点一张卡片，看看是不是它。", "");
+    answered = false;
+  }
+
+  function choose(key, btn) {
+    if (answered) return;
+    answered = true;
+    const s = order[round];
+    const ok = key === s.answer;
+    if (ok) {
+      score += 1;
+      btn.classList.add("correct");
+      setMsg("✅ 答对了！这是「" + byKey(s.answer).name + "」的故事。", "good");
+    } else {
+      btn.classList.add("wrong");
+      const correctBtn = document.querySelector('#charGrid .char-card[data-key="' + s.answer + '"]');
+      if (correctBtn) correctBtn.classList.add("reveal-answer");
+      setMsg("❌ 再想想。正确答案是「" + byKey(s.answer).name + "」：" + byKey(s.answer).trait, "warn");
+    }
+    document.getElementById("scoreInfo").textContent = score;
+    document.getElementById("nextBtn").style.display = "inline-flex";
+  }
+
+  function next() {
+    round += 1;
+    if (round >= order.length) { end(); } else { showScenario(); }
+  }
+
+  function end() {
+    document.getElementById("scenarioText").textContent = "7 轮完成！";
+    document.getElementById("roundInfo").textContent = "完成";
+    setMsg("你答对了 " + score + " / 7 个。没有考试，玩得开心就好。可以重新开始，再玩一次。", "good");
+    document.getElementById("nextBtn").style.display = "none";
+    document.getElementById("scoreInfo").textContent = score;
+  }
+
+  function start() {
+    order = shuffle(scenarios);
+    round = 0;
+    score = 0;
+    answered = false;
+    renderChars();
+    showScenario();
+  }
+
+  document.getElementById("nextBtn").addEventListener("click", next);
+  document.getElementById("restartBtn").addEventListener("click", start);
+  start();
+})();
+</script>
+</body>
+</html>

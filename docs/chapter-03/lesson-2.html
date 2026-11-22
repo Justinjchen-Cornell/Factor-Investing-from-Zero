@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 2 课 · 便宜的果子 + 会下金蛋的树｜小松鼠的果子课</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../index.html"><span class="logo">🐿️</span><span>小松鼠的果子课</span></a>
+    <nav class="nav">
+      <a href="../index.html">首页</a>
+      <a href="../chapter-01/index.html">第 1 章</a>
+      <a href="../chapter-02/index.html">第 2 章</a>
+      <a class="active" href="index.html">第 3 章</a>
+      <a href="parent-guide.html">家长指南</a>
+      <button id="parentToggle" type="button">家长模式</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="lesson-head">
+    <div class="meta">
+      <span class="badge">第 2 课 · 价值与质量</span>
+      <h1>便宜的果子 + 会下金蛋的树</h1>
+      <p class="sub">一样好的东西买便宜的；同样的价格，选会结果子的树。</p>
+    </div>
+    <div class="lesson-tools">
+      <button class="btn secondary small" data-read-target="#story-text" type="button">🔊 读给我听</button>
+      <span class="sticker" data-progress="ch3-l2" title="第 2 课星星">⭐</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="story">
+      <h2>两个摊子，两棵树</h2>
+      <div id="story-text">
+        <p class="big">果园里有两个摊子，卖一样的苹果：一个 3 枚果币，一个 5 枚果币。</p>
+        <p>果园里还有两棵树：一棵每年结很多果子，一棵每年只结几个果子。</p>
+        <p>小松鼠想请你帮它选一选。</p>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h3>🍎 第一个摊子：一样的苹果，买哪个？</h3>
+      <div class="choice-row" data-group="same">
+        <button class="choice" data-correct="1" data-feedback="选得真好！一样甜的苹果，3 枚更划算，省下的 2 枚可以买别的东西。" type="button">
+          <div class="choice-emoji">🍎</div><div class="choice-title">苹果 A</div><div class="choice-sub">3 枚果币</div>
+        </button>
+        <button class="choice" data-correct="0" data-feedback="这个苹果也很甜，但多花了 2 枚果币。一样的东西，可以先比一比价格。" type="button">
+          <div class="choice-emoji">🍎</div><div class="choice-title">苹果 B</div><div class="choice-sub">5 枚果币</div>
+        </button>
+      </div>
+      <div class="message" id="msg-same">点一个苹果，看看小松鼠会怎么说。</div>
+    </div>
+
+    <div class="activity">
+      <h3>🌳 第二个选择：同样的价格，买哪棵树？</h3>
+      <div class="choice-row" data-group="tree">
+        <button class="choice" data-correct="1" data-feedback="同样的价格，当然选会结果子的树。投资里，这叫“盈利能力/质量”：能持续赚钱的公司更可靠。" type="button">
+          <div class="choice-emoji">🌳</div><div class="choice-title">会下金蛋的树</div><div class="choice-sub">每年结 100 个果子</div>
+        </button>
+        <button class="choice" data-correct="0" data-feedback="这棵树也能结果，但同样的价格，结得少。先看它能不能持续结果，再比价格。" type="button">
+          <div class="choice-emoji">🌱</div><div class="choice-title">只结几个果子的树</div><div class="choice-sub">每年结 10 个果子</div>
+        </button>
+      </div>
+      <div class="message" id="msg-tree">同样的价格，你会选哪棵？</div>
+    </div>
+
+    <div class="activity">
+      <h3>🍏 第三个选择：便宜的坏苹果，还是贵的好苹果？</h3>
+      <div class="choice-row" data-group="quality">
+        <button class="choice" data-correct="0" data-feedback="便宜是便宜，但苹果坏了。便宜不等于好；坏掉的东西，再便宜也不买。" type="button">
+          <div class="choice-emoji">🍏</div><div class="choice-title">便宜苹果</div><div class="choice-sub">3 枚果币 · 有点坏</div>
+        </button>
+        <button class="choice" data-correct="1" data-feedback="先看质量，再比价格。好苹果虽然贵一点，但能吃；坏苹果再便宜也没用。" type="button">
+          <div class="choice-emoji">🍎</div><div class="choice-title">好苹果</div><div class="choice-sub">5 枚果币 · 新鲜</div>
+        </button>
+      </div>
+      <div class="message" id="msg-quality">先看质量，再比价格。</div>
+    </div>
+
+    <div class="parent-note">
+      <h4>👨‍👩‍👧 家长提示：这一课真正在种什么种子？</h4>
+      <p><strong>价值 + 质量。</strong>“便宜”只有在“东西一样好”时才成立。投资里，便宜股（低估值）可能是机会，也可能是“价值陷阱”——公司本身在变坏。所以要先看质量，再比价格。</p>
+      <p>“会下金蛋的树”对应盈利能力/质量因子：能持续赚钱、现金流好的公司，通常更可靠。但好公司也可能买得太贵，所以还要看价格。</p>
+      <p>生活延伸：超市里同款商品比价；买水果先看新鲜度；问孩子：“便宜和好，哪个更重要？能不能两个都要？”</p>
+    </div>
+
+    <div class="section" style="padding-left:0;padding-right:0;">
+      <h2>问一问</h2>
+      <div class="questions">
+        <div class="question">
+          便宜的东西一定好吗？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q1" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q1">不一定。要先看它是不是一样好。一样好的东西，买便宜的；坏掉的东西，再便宜也不买。</div>
+        </div>
+        <div class="question">
+          会下金蛋的树，一定值得买吗？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q2" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q2">还要看价格。如果大家都抢着买，价格可能已经很高了。好树 + 好价格，才是好选择。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-row" style="margin-top:24px;">
+      <button class="btn" data-done="ch3-l2" type="button">⭐ 我完成了，贴上星星</button>
+      <a class="btn ghost" href="lesson-3.html">下一课：跑得快、太热闹、长新枝 →</a>
+    </div>
+
+    <div class="lesson-nav">
+      <a class="btn ghost" href="lesson-1.html">← 上一课</a>
+      <a class="btn ghost" href="../index.html">🏠 首页</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>🐿️ 第 2 课 · 价值与质量</span>
+    <span>仅供亲子启蒙，不构成投资建议</span>
+  </div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function () {
+  document.querySelectorAll(".choice-row[data-group]").forEach(function (row) {
+    const msg = document.getElementById("msg-" + row.getAttribute("data-group"));
+    row.querySelectorAll(".choice").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        row.querySelectorAll(".choice").forEach(function (b) { b.classList.remove("selected"); });
+        btn.classList.add("selected");
+        const ok = btn.getAttribute("data-correct") === "1";
+        msg.className = "message " + (ok ? "good" : "warn");
+        msg.textContent = btn.getAttribute("data-feedback");
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>

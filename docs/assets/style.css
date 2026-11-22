@@ -279,3 +279,23 @@ body.parent-mode .parent-note { display: block; }
 .rank-card:hover { transform: translateY(-3px); }
 .rank-card.picked { border-color: var(--green); background: var(--green-soft); }
 .rank-card .attr { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+/* 第 3 章：七种果子性格卡 */
+.char-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; margin: 18px 0; }
+.char-card {
+  background: #fff; border: 3px solid var(--line); border-radius: 20px;
+  padding: 16px 12px; text-align: center; cursor: pointer; font: inherit; color: inherit;
+  transition: transform .15s ease, border-color .15s ease, background .15s ease;
+}
+.char-card:hover { transform: translateY(-3px); border-color: var(--orange); }
+.char-card .char-emoji { font-size: 44px; line-height: 1.2; }
+.char-card .char-name { font-weight: 800; font-size: 17px; }
+.char-card .char-trait { font-size: 14px; color: var(--muted); line-height: 1.5; }
+.char-card.correct { border-color: var(--green); background: var(--green-soft); }
+.char-card.wrong { border-color: var(--red); background: var(--red-soft); }
+.char-card.reveal-answer { border-color: var(--orange); background: var(--orange-soft); }
+.factor-table { width: 100%; border-collapse: collapse; background: #fff; }
+.factor-table th, .factor-table td { border: 2px solid var(--line); padding: 10px 12px; text-align: left; font-size: 16px; }
+.factor-table th { background: var(--orange-soft); }
+.fruit-row.four { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 760px) { .fruit-row.four { grid-template-columns: 1fr 1fr; } }
