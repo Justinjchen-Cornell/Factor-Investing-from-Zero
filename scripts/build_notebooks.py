@@ -369,9 +369,11 @@ def main() -> None:
         nbf.write(nb, str(path))
         print(f"built {path}")
 
-    # 第2章 notebook 由独立构建脚本生成（保持章节独立、便于维护）
+    # 第2、3章 notebook 由独立构建脚本生成（保持章节独立、便于维护）
     from build_ch2_notebooks import main as build_ch2
     build_ch2()
+    from build_ch3_notebooks import main as build_ch3
+    build_ch3()
 
 
 if __name__ == "__main__":

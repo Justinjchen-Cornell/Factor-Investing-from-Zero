@@ -66,3 +66,19 @@ def test_chapter_02_present_and_complete():
         assert (ch02 / "notebooks" / name).exists(), f"第2章缺少 notebook {name}"
     assert (ch02 / "exercises" / "EXERCISES.md").exists(), "第2章缺少练习"
     assert (ch02 / "exercises" / "solutions" / "SOLUTIONS.md").exists(), "第2章缺少练习答案"
+
+
+def test_chapter_03_present_and_complete():
+    ch03 = ROOT / "chapters" / "03-mainstream-factors"
+    assert ch03.is_dir(), "第3章 chapters/03-mainstream-factors/ 尚未创建"
+    readme = (ch03 / "README.md").read_text(encoding="utf-8")
+    for marker in ["🎯", "📚", "📖", "📋", "✅"]:
+        assert marker in readme, f"第3章讲义缺少模板标记 {marker}"
+    for name in [
+        "03.1-data-and-factors.ipynb",
+        "03.2-factor-sorting.ipynb",
+        "03.3-performance-and-robustness.ipynb",
+    ]:
+        assert (ch03 / "notebooks" / name).exists(), f"第3章缺少 notebook {name}"
+    assert (ch03 / "exercises" / "EXERCISES.md").exists(), "第3章缺少练习"
+    assert (ch03 / "exercises" / "solutions" / "SOLUTIONS.md").exists(), "第3章缺少练习答案"
