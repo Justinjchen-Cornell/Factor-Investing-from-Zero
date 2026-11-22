@@ -353,3 +353,20 @@ body.parent-mode .parent-note { display: block; }
 .check-item.checked::before { content: "✅"; }
 .choice.correct { border-color: var(--green); background: var(--green-soft); }
 .choice.wrong { border-color: var(--red); background: var(--red-soft); }
+
+/* 第 7 章：果园大管家毕业项目 */
+.certificate {
+  border: 6px double var(--orange); border-radius: 24px; padding: 28px 22px;
+  text-align: center; background: #fff; box-shadow: var(--shadow);
+}
+.certificate h2 { margin: 0 0 8px; }
+.certificate .cert-name { font-size: 26px; font-weight: 900; color: var(--orange); }
+.certificate .cert-line { margin: 8px 0; }
+.plan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin: 16px 0; }
+.plan-card { background: #fff; border: 3px solid var(--line); border-radius: 18px; padding: 16px; text-align: center; }
+.plan-card .plan-emoji { font-size: 42px; }
+.plan-card .plan-title { font-weight: 800; }
+.plan-card .plan-sub { font-size: 14px; color: var(--muted); }
+.plan-card { cursor: pointer; transition: transform .15s ease, border-color .15s ease; }
+.plan-card:hover { transform: translateY(-2px); border-color: var(--orange); }
+.plan-card.selected { border-color: var(--green); background: var(--green-soft); }

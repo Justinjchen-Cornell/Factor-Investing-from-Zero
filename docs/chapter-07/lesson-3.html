@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 3 课 · 做一次复盘｜小松鼠的果子课</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../index.html"><span class="logo">🐿️</span><span>小松鼠的果子课</span></a>
+    <nav class="nav">
+      <a href="../index.html">首页</a>
+      <a href="../chapter-01/index.html">第 1 章</a>
+      <a href="../chapter-02/index.html">第 2 章</a>
+      <a href="../chapter-03/index.html">第 3 章</a>
+      <a href="../chapter-04/index.html">第 4 章</a>
+      <a href="../chapter-05/index.html">第 5 章</a>
+      <a href="../chapter-06/index.html">第 6 章</a>
+      <a class="active" href="index.html">第 7 章</a>
+      <a href="parent-guide.html">家长指南</a>
+      <button id="parentToggle" type="button">家长模式</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="lesson-head">
+    <div class="meta">
+      <span class="badge">第 3 课 · 复盘</span>
+      <h1>做一次复盘</h1>
+      <p class="sub">看完整 7 天，不只看最好的一天。复盘不是批评自己，是找出下一步。</p>
+    </div>
+    <div class="lesson-tools">
+      <button class="btn secondary small" data-read-target="#story-text" type="button">🔊 读给我听</button>
+      <span class="sticker" data-progress="ch7-l3" title="第 3 课星星">⭐</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="story">
+      <h2>7 天结束了</h2>
+      <div id="story-text">
+        <p class="big">7 天结束了，小松鼠想复盘。</p>
+        <p>它只想看最好的一天：“那天我做得特别好！”</p>
+        <p>朋友说：“看完整 7 天吧。有高有低，才是真实记录。”</p>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h3>🔎 玩一玩：怎么看这 7 天？</h3>
+      <p class="hint">点按钮，看看两种看法有什么不同。</p>
+      <div class="button-row">
+        <button class="btn" data-view="best" type="button">只看最好的一天</button>
+        <button class="btn secondary" data-view="full" type="button">看完整 7 天</button>
+      </div>
+      <div class="stats">
+        <div class="stat"><b id="bestScore">—</b><span>最好的一天</span></div>
+        <div class="stat"><b id="avgScore">—</b><span>平均分</span></div>
+      </div>
+      <div class="scoreboard" id="reviewBoard" aria-label="7 天的果园健康分"></div>
+      <div class="message" id="reviewMsg">先点一个按钮吧。</div>
+    </div>
+
+    <div class="activity">
+      <h3>📝 复盘两问</h3>
+      <div class="questions">
+        <div class="question">哪一天做得最好？为什么？</div>
+        <div class="question">哪一天可以改进？下次怎么做？</div>
+      </div>
+      <p><label for="reviewInput"><strong>写下来（可以家长代写）：</strong></label><br>
+      <textarea id="reviewInput" rows="3" style="width:100%;padding:10px;border:2px solid var(--line);border-radius:12px;font:inherit;" placeholder="我做得最好的是……下次我想改进……"></textarea></p>
+      <div class="message" id="reflectMsg">复盘不是批评自己，是找出下一步。</div>
+    </div>
+
+    <div class="parent-note">
+      <h4>👨‍👩‍👧 家长提示：这一课真正在种什么种子？</h4>
+      <p><strong>复盘 / 绩效归因。</strong>专业投资会看“收益从哪里来”，不只看最后赚没赚。孩子版就是：哪一天做得好？为什么？哪一天可以改进？下次怎么做？</p>
+      <p>重点看<strong>过程</strong>，不只看结果：有没有记录？有没有找证据？有没有看完整？做得好的地方要具体表扬，不要只说“你真棒”。</p>
+      <p>复盘不是批评会。可以说：“这次哪里做得不错？下次想试什么新方法？”让孩子自己说，家长只记录。</p>
+    </div>
+
+    <div class="section" style="padding-left:0;padding-right:0;">
+      <h2>问一问</h2>
+      <div class="questions">
+        <div class="question">
+          为什么不能只看最好的一天？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q1" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q1">因为最好的一天不代表全部。看完整 7 天，才知道哪里稳定、哪里需要改进。</div>
+        </div>
+        <div class="question">
+          复盘是为了什么？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q2" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q2">为了下一次做得更好。不是批评自己，也不是只看分数。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-row" style="margin-top:24px;">
+      <button class="btn" data-done="ch7-l3" type="button">⭐ 我完成了，贴上星星</button>
+      <a class="btn ghost" href="game.html">去玩：毕业项目 →</a>
+    </div>
+
+    <div class="lesson-nav">
+      <a class="btn ghost" href="lesson-2.html">← 上一课</a>
+      <a class="btn ghost" href="../index.html">🏠 首页</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>🐿️ 第 3 课 · 复盘</span>
+    <span>仅供亲子启蒙，不构成投资建议</span>
+  </div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function () {
+  const scores = [3, 2, 4, 3, 5, 2, 4];
+
+  function show(view) {
+    const board = document.getElementById("reviewBoard");
+    board.innerHTML = "";
+    const rows = scores.map(function (s, i) { return { day: i + 1, score: s }; });
+    const items = view === "best" ? rows.filter(function (r) { return r.score === Math.max.apply(null, scores); }) : rows;
+    items.forEach(function (r) {
+      const cell = document.createElement("span");
+      cell.className = "score-cell " + (r.score >= 4 ? "win" : r.score <= 2 ? "loss" : "");
+      cell.textContent = "第 " + r.day + " 天：" + r.score + " 分";
+      board.appendChild(cell);
+    });
+    const best = Math.max.apply(null, scores);
+    const avg = (scores.reduce(function (a, b) { return a + b; }, 0) / scores.length).toFixed(1);
+    document.getElementById("bestScore").textContent = best + " 分";
+    document.getElementById("avgScore").textContent = view === "best" ? "—" : avg + " 分";
+    const msg = document.getElementById("reviewMsg");
+    if (view === "best") {
+      msg.className = "message warn";
+      msg.textContent = "只看最好的一天：好像每天都很好。可是其他 6 天呢？";
+    } else {
+      msg.className = "message good";
+      msg.textContent = "看完整 7 天：平均 " + avg + " 分，最好 " + best + " 分，最低 2 分。有高有低，这才是真实记录。";
+    }
+  }
+
+  document.querySelectorAll("[data-view]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      show(btn.getAttribute("data-view"));
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 2 课 · 管好 7 天｜小松鼠的果子课</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../index.html"><span class="logo">🐿️</span><span>小松鼠的果子课</span></a>
+    <nav class="nav">
+      <a href="../index.html">首页</a>
+      <a href="../chapter-01/index.html">第 1 章</a>
+      <a href="../chapter-02/index.html">第 2 章</a>
+      <a href="../chapter-03/index.html">第 3 章</a>
+      <a href="../chapter-04/index.html">第 4 章</a>
+      <a href="../chapter-05/index.html">第 5 章</a>
+      <a href="../chapter-06/index.html">第 6 章</a>
+      <a class="active" href="index.html">第 7 章</a>
+      <a href="parent-guide.html">家长指南</a>
+      <button id="parentToggle" type="button">家长模式</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="lesson-head">
+    <div class="meta">
+      <span class="badge">第 2 课 · 执行</span>
+      <h1>管好 7 天</h1>
+      <p class="sub">每天四件事：看一看、记一笔、问一问、想一想。</p>
+    </div>
+    <div class="lesson-tools">
+      <button class="btn secondary small" data-read-target="#story-text" type="button">🔊 读给我听</button>
+      <span class="sticker" data-progress="ch7-l2" title="第 2 课星星">⭐</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="story">
+      <h2>7 天计划表</h2>
+      <div id="story-text">
+        <p class="big">小松鼠开始管果园了。它给自己定了 7 天的小任务。</p>
+        <p>每天不用做很多，只要四件事：看一看、记一笔、问一问、想一想。</p>
+        <p>坚持，比聪明更重要。</p>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h3>📅 玩一玩：完成 7 天任务</h3>
+      <p class="hint">点一天，看看任务；完成后点“完成这一天”。</p>
+      <div class="plan-grid" id="dayGrid"></div>
+      <div class="day-star">
+        <div class="day-emoji" id="taskEmoji">📅</div>
+        <div class="day-name" id="taskTitle">第 1 天</div>
+        <div class="day-note" id="taskText">点一天，看看任务。</div>
+      </div>
+      <div class="stats">
+        <div class="stat"><b id="doneCount">0</b><span>已完成</span></div>
+        <div class="stat"><b id="dayTotal">7</b><span>一共 7 天</span></div>
+      </div>
+      <div class="button-row">
+        <button class="btn" id="doneBtn" type="button">完成这一天</button>
+        <button class="btn ghost" id="resetBtn" type="button">重新开始</button>
+      </div>
+      <div class="message" id="dayMsg">先点一天吧。</div>
+    </div>
+
+    <div class="parent-note">
+      <h4>👨‍👩‍👧 家长提示：这一课真正在种什么种子？</h4>
+      <p><strong>执行与记录。</strong>投资实践的大部分时间不是“刺激的交易”，而是无聊的 routine：观察、记录、检查、复盘。孩子能坚持 7 天做小任务，比记住多少术语更重要。</p>
+      <p>建议真的用一周来做：每天花 3–5 分钟，看一看、记一笔。可以把网页上的 7 天任务打印出来，贴在冰箱上。</p>
+      <p>不要追求“每天都完美”。漏了一天也没关系，第二天继续。重点是“回来继续”，不是“从不间断”。</p>
+    </div>
+
+    <div class="section" style="padding-left:0;padding-right:0;">
+      <h2>问一问</h2>
+      <div class="questions">
+        <div class="question">
+          为什么每天只做四件小事，不要一次做很多？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q1" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q1">小事容易坚持。每天做一点，7 天下来就有完整的记录；一次做太多，容易放弃。</div>
+        </div>
+        <div class="question">
+          漏了一天，是不是就失败了？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q2" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q2">不是。第二天继续就好。重要的是“回来继续”，不是“从不间断”。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-row" style="margin-top:24px;">
+      <button class="btn" data-done="ch7-l2" type="button">⭐ 我完成了，贴上星星</button>
+      <a class="btn ghost" href="lesson-3.html">下一课：做一次复盘 →</a>
+    </div>
+
+    <div class="lesson-nav">
+      <a class="btn ghost" href="lesson-1.html">← 上一课</a>
+      <a class="btn ghost" href="../index.html">🏠 首页</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>🐿️ 第 2 课 · 执行</span>
+    <span>仅供亲子启蒙，不构成投资建议</span>
+  </div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function () {
+  const tasks = [
+    { emoji: "🌤️", title: "第 1 天 · 看一看", text: "今天果园天气怎么样？所有果子一起动了吗？" },
+    { emoji: "✏️", title: "第 2 天 · 记一笔", text: "今天果子的价格是多少？画一个上箭头或下箭头。" },
+    { emoji: "❓", title: "第 3 天 · 问一问", text: "今天听到什么说法？有证据吗？" },
+    { emoji: "🔍", title: "第 4 天 · 想一想", text: "今天有没有只看一个指标？还有别的角度吗？" },
+    { emoji: "📊", title: "第 5 天 · 排一排", text: "把 3 个果子按价格排队，再看看谁在前、谁在后。" },
+    { emoji: "🤝", title: "第 6 天 · 组个队", text: "选 3 位小伙伴帮忙，说说你为什么选他们。" },
+    { emoji: "🔎", title: "第 7 天 · 复个盘", text: "看完整 7 天，不只看最好的一天。哪件事做得好？哪件事要改进？" }
+  ];
+
+  let current = 0;
+  const done = new Set();
+
+  function renderDays() {
+    const grid = document.getElementById("dayGrid");
+    grid.innerHTML = "";
+    tasks.forEach(function (t, i) {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "plan-card" + (done.has(i) ? " selected" : "");
+      btn.innerHTML = '<div class="plan-emoji">' + (done.has(i) ? "✅" : "📅") + '</div>'
+        + '<div class="plan-title">第 ' + (i + 1) + ' 天</div>'
+        + '<div class="plan-sub">' + (done.has(i) ? "已完成" : "点我看看") + '</div>';
+      btn.addEventListener("click", function () { selectDay(i); });
+      grid.appendChild(btn);
+    });
+    document.getElementById("doneCount").textContent = done.size;
+  }
+
+  function selectDay(i) {
+    current = i;
+    const t = tasks[i];
+    document.getElementById("taskEmoji").textContent = t.emoji;
+    document.getElementById("taskTitle").textContent = t.title;
+    document.getElementById("taskText").textContent = t.text;
+    const msg = document.getElementById("dayMsg");
+    msg.className = "message";
+    msg.textContent = done.has(i) ? "这一天已经完成了。可以再看看任务，或者选下一天。" : "读完任务，点“完成这一天”。";
+  }
+
+  document.getElementById("doneBtn").addEventListener("click", function () {
+    done.add(current);
+    renderDays();
+    const msg = document.getElementById("dayMsg");
+    msg.className = "message good";
+    msg.textContent = "第 " + (current + 1) + " 天完成！已经完成 " + done.size + " / 7 天。";
+    if (done.size === 7) {
+      msg.textContent = "7 天都完成了！接下来做一次复盘吧。";
+    }
+  });
+
+  document.getElementById("resetBtn").addEventListener("click", function () {
+    done.clear();
+    current = 0;
+    renderDays();
+    selectDay(0);
+    const msg = document.getElementById("dayMsg");
+    msg.className = "message";
+    msg.textContent = "重新开始。先点一天吧。";
+  });
+
+  renderDays();
+  selectDay(0);
+})();
+</script>
+</body>
+</html>

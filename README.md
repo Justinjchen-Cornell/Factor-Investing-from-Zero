@@ -22,7 +22,7 @@
 
 ## 🧸 亲子版教学网页 / Parent-Child Web Course
 
-给 4–7 岁孩子的第 1–6 章：**不讲公式，只种种子。** 用水果摊、松果、三个篮子、排队、公平比较、七种果子性格、组队游戏、果园怪事和传言侦探，陪孩子体验「观察、等待、分散、比较、多角度看、合作、看怪事、辨传言」。
+给 4–7 岁孩子的第 1–7 章：**不讲公式，只种种子。** 用水果摊、松果、三个篮子、排队、公平比较、七种果子性格、组队游戏、果园怪事和传言侦探，最后用一个 7 天毕业项目，陪孩子体验「观察、等待、分散、比较、多角度看、合作、看怪事、辨传言、复盘」。
 
 👉 **[打开亲子版教学网页](docs/index.html)** ｜ 线上版：https://justinjchen-cornell.github.io/Factor-Investing-from-Zero/
 
@@ -63,6 +63,12 @@
 | [第 3 课：机器说的，也要检查](docs/chapter-06/lesson-3.html) | 背答案 vs 真会做——过拟合/训练集与测试集 |
 | [果园传言侦探](docs/chapter-06/game.html) | 3 个传言案件 + 可打印检测表、完整记录表、机器测试表 |
 | [第 6 章家长指南](docs/chapter-06/parent-guide.html) | 三个传言对照表、4 周计划、话术、书单 |
+| **[第 7 章 · 果园大管家（毕业项目）](docs/chapter-07/index.html)** | **计划、执行、复盘——把前六章用一遍** |
+| [第 1 课：做一份果园计划](docs/chapter-07/lesson-1.html) | 选目标、分果币——投资计划/资产配置启蒙 |
+| [第 2 课：管好 7 天](docs/chapter-07/lesson-2.html) | 每天四件小事——执行与记录 |
+| [第 3 课：做一次复盘](docs/chapter-07/lesson-3.html) | 看完整 7 天——绩效归因启蒙 |
+| [果园大管家毕业项目](docs/chapter-07/game.html) | 7 关综合挑战 + 可打印毕业证书、7 天计划表、复盘表 |
+| [第 7 章家长指南](docs/chapter-07/parent-guide.html) | 一周家庭安排、复盘话术、毕业仪式、FAQ |
 
 > 每次 10 分钟，家长陪同，不涉及真实金钱。星星进度保存在本机浏览器。
 > *10 minutes per session, parent-led, no real money. Progress is stored locally in the browser.*

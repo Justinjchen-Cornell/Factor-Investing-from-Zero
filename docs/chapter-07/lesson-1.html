@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 1 课 · 做一份果园计划｜小松鼠的果子课</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../index.html"><span class="logo">🐿️</span><span>小松鼠的果子课</span></a>
+    <nav class="nav">
+      <a href="../index.html">首页</a>
+      <a href="../chapter-01/index.html">第 1 章</a>
+      <a href="../chapter-02/index.html">第 2 章</a>
+      <a href="../chapter-03/index.html">第 3 章</a>
+      <a href="../chapter-04/index.html">第 4 章</a>
+      <a href="../chapter-05/index.html">第 5 章</a>
+      <a href="../chapter-06/index.html">第 6 章</a>
+      <a class="active" href="index.html">第 7 章</a>
+      <a href="parent-guide.html">家长指南</a>
+      <button id="parentToggle" type="button">家长模式</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="lesson-head">
+    <div class="meta">
+      <span class="badge">第 1 课 · 做计划</span>
+      <h1>做一份果园计划</h1>
+      <p class="sub">先想清楚：我要什么？果币怎么分？为什么这么分？</p>
+    </div>
+    <div class="lesson-tools">
+      <button class="btn secondary small" data-read-target="#story-text" type="button">🔊 读给我听</button>
+      <span class="sticker" data-progress="ch7-l1" title="第 1 课星星">⭐</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="story">
+      <h2>小松鼠要管果园了</h2>
+      <div id="story-text">
+        <p class="big">小松鼠要管果园 7 天。</p>
+        <p>它手里有 10 枚果币，可以分给三个篮子：稳、长、省。</p>
+        <p>老园丁说：“先做计划。计划不是预测，是提醒自己为什么做选择。”</p>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h3>📋 第一步：选一个目标</h3>
+      <p class="hint">没有标准答案。选一个你现在最想要的。</p>
+      <div class="plan-grid" id="goalGrid">
+        <button class="plan-card" data-goal="steady" type="button">
+          <div class="plan-emoji">🌳</div><div class="plan-title">稳稳长大</div><div class="plan-sub">不要大起大落</div>
+        </button>
+        <button class="plan-card" data-goal="growth" type="button">
+          <div class="plan-emoji">🌱</div><div class="plan-title">多结果子</div><div class="plan-sub">愿意多冒一点险</div>
+        </button>
+        <button class="plan-card" data-goal="resilient" type="button">
+          <div class="plan-emoji">🛡️</div><div class="plan-title">不怕风雨</div><div class="plan-sub">刮风下雨也能撑住</div>
+        </button>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h3>💰 第二步：分果币</h3>
+      <p class="hint">10 枚果币，分给三个篮子。选一个分配方案。</p>
+      <div class="plan-grid" id="planGrid">
+        <button class="plan-card" data-plan="balanced" type="button">
+          <div class="plan-emoji">⚖️</div><div class="plan-title">平衡型</div><div class="plan-sub">稳 5 ｜ 长 3 ｜ 省 2</div>
+        </button>
+        <button class="plan-card" data-plan="growth" type="button">
+          <div class="plan-emoji">🚀</div><div class="plan-title">进攻型</div><div class="plan-sub">稳 2 ｜ 长 6 ｜ 省 2</div>
+        </button>
+        <button class="plan-card" data-plan="cautious" type="button">
+          <div class="plan-emoji">🧺</div><div class="plan-title">保守型</div><div class="plan-sub">稳 4 ｜ 长 2 ｜ 省 4</div>
+        </button>
+      </div>
+      <div class="message" id="planMsg">先选目标，再选分配方案。</div>
+    </div>
+
+    <div class="card" id="planSummary">
+      <h2>我的计划</h2>
+      <p id="summaryText">还没有选好。选一个目标和一个分配方案吧。</p>
+      <p><label for="whyInput"><strong>为什么这么分？</strong></label><br>
+      <textarea id="whyInput" rows="2" style="width:100%;padding:10px;border:2px solid var(--line);border-radius:12px;font:inherit;" placeholder="因为……"></textarea></p>
+      <p class="tiny">计划没有标准答案。重要的是：写清楚、能坚持、能复盘。</p>
+    </div>
+
+    <div class="parent-note">
+      <h4>👨‍👩‍👧 家长提示：这一课真正在种什么种子？</h4>
+      <p><strong>投资计划 / IPS（投资政策声明）。</strong>专业投资先写清楚：目标、约束、能承受多大波动、怎么分散。孩子版就是：我想要什么、10 枚果币怎么分、为什么。</p>
+      <p>不要说“这个方案最好”。三个方案都可以，关键是<strong>“目标—分配—理由”能对上</strong>。比如想“多结果子”，进攻型更匹配；想“不怕风雨”，保守型更匹配。</p>
+      <p>生活延伸：出门前做计划（带什么、去哪、几点回）；零花钱做计划（花/存/分享）。</p>
+    </div>
+
+    <div class="section" style="padding-left:0;padding-right:0;">
+      <h2>问一问</h2>
+      <div class="questions">
+        <div class="question">
+          为什么先做计划，再开始？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q1" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q1">因为计划能提醒你“我想要什么”“为什么这么分”。没有计划，就容易看到什么就追什么。</div>
+        </div>
+        <div class="question">
+          计划能保证一定成功吗？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q2" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q2">不能。计划不是预测，是导航。路上会变，计划也要跟着调整。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-row" style="margin-top:24px;">
+      <button class="btn" data-done="ch7-l1" type="button">⭐ 我完成了，贴上星星</button>
+      <a class="btn ghost" href="lesson-2.html">下一课：管好 7 天 →</a>
+    </div>
+
+    <div class="lesson-nav">
+      <a class="btn ghost" href="index.html">← 返回第 7 章</a>
+      <a class="btn ghost" href="../index.html">🏠 首页</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>🐿️ 第 1 课 · 做计划</span>
+    <span>仅供亲子启蒙，不构成投资建议</span>
+  </div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function () {
+  const goals = { steady: "稳稳长大", growth: "多结果子", resilient: "不怕风雨" };
+  const plans = {
+    balanced: "稳 5 ｜ 长 3 ｜ 省 2",
+    growth: "稳 2 ｜ 长 6 ｜ 省 2",
+    cautious: "稳 4 ｜ 长 2 ｜ 省 4"
+  };
+  let goal = null;
+  let plan = null;
+
+  function update() {
+    const summary = document.getElementById("summaryText");
+    const msg = document.getElementById("planMsg");
+    if (goal && plan) {
+      summary.textContent = "我的目标：" + goals[goal] + "；我的分配：" + plans[plan] + "。";
+      msg.className = "message good";
+      msg.textContent = "计划写好了。接下来 7 天，按计划做，也要记得每天记录。";
+    } else if (goal) {
+      summary.textContent = "我的目标：" + goals[goal] + "；还没有选分配方案。";
+      msg.className = "message";
+      msg.textContent = "再选一个分配方案吧。";
+    } else if (plan) {
+      summary.textContent = "我的分配：" + plans[plan] + "；还没有选目标。";
+      msg.className = "message";
+      msg.textContent = "再选一个目标吧。";
+    } else {
+      summary.textContent = "还没有选好。选一个目标和一个分配方案吧。";
+      msg.className = "message";
+      msg.textContent = "先选目标，再选分配方案。";
+    }
+  }
+
+  document.querySelectorAll("[data-goal]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      document.querySelectorAll("[data-goal]").forEach(function (b) { b.classList.remove("selected"); });
+      btn.classList.add("selected");
+      goal = btn.getAttribute("data-goal");
+      update();
+    });
+  });
+
+  document.querySelectorAll("[data-plan]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      document.querySelectorAll("[data-plan]").forEach(function (b) { b.classList.remove("selected"); });
+      btn.classList.add("selected");
+      plan = btn.getAttribute("data-plan");
+      update();
+    });
+  });
+})();
+</script>
+</body>
+</html>

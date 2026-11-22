@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>果园大管家毕业项目｜小松鼠的果子课</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../index.html"><span class="logo">🐿️</span><span>小松鼠的果子课</span></a>
+    <nav class="nav">
+      <a href="../index.html">首页</a>
+      <a href="../chapter-01/index.html">第 1 章</a>
+      <a href="../chapter-02/index.html">第 2 章</a>
+      <a href="../chapter-03/index.html">第 3 章</a>
+      <a href="../chapter-04/index.html">第 4 章</a>
+      <a href="../chapter-05/index.html">第 5 章</a>
+      <a href="../chapter-06/index.html">第 6 章</a>
+      <a class="active" href="index.html">第 7 章</a>
+      <a href="parent-guide.html">家长指南</a>
+      <button id="parentToggle" type="button">家长模式</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="lesson-head">
+    <div class="meta">
+      <span class="badge">第 7 章 · 毕业项目</span>
+      <h1>果园大管家</h1>
+      <p class="sub">7 个事件，把前六章用一遍。完成后有一张毕业证书。</p>
+    </div>
+    <div class="lesson-tools">
+      <button class="btn secondary small" data-read-target="#game-intro" type="button">🔊 读给我听</button>
+      <span class="sticker" data-progress="ch7-game" title="毕业项目星星">⭐</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="story">
+      <h2>毕业项目</h2>
+      <div id="game-intro">
+        <p class="big">恭喜你，来到了最后一关。</p>
+        <p>接下来有 7 个事件，每个事件都来自前面的一章。</p>
+        <p>做出你的选择，最后会得到一张“果园小管家”毕业证书。</p>
+        <p class="tiny">没有考试压力。答错也没关系，看看提示，继续下一关。</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <label for="kidName"><strong>小管家的名字：</strong></label>
+      <input id="kidName" type="text" placeholder="写上名字" style="font:inherit;padding:10px 14px;border:2px solid var(--line);border-radius:12px;min-width:220px;">
+      <p class="tiny">名字只用于页面上的毕业证书，不会上传。</p>
+    </div>
+
+    <div class="activity">
+      <h3>🏆 开始毕业项目</h3>
+      <div class="stats">
+        <div class="stat"><b id="caseNum">1 / 7</b><span>第几关</span></div>
+        <div class="stat"><b id="scoreNum">0</b><span>答对</span></div>
+      </div>
+      <div class="story" style="background:var(--orange-soft);box-shadow:none;margin:16px 0;">
+        <p class="big" id="caseText" style="margin:0;">加载中…</p>
+      </div>
+      <div class="choice-row" id="options"></div>
+      <div class="message" id="caseMsg">选一个答案吧。</div>
+      <div class="button-row">
+        <button class="btn" id="nextCase" type="button" style="display:none;">下一关 →</button>
+        <button class="btn ghost" id="restart" type="button">重新开始</button>
+      </div>
+    </div>
+
+    <div id="certBox" style="display:none;">
+      <div class="certificate">
+        <h2>🎓 果园小管家毕业证书</h2>
+        <p class="cert-name" id="certName">小小果园管家</p>
+        <p class="cert-line" id="certScore">答对 0 / 7</p>
+        <p>你学会了：观察、比较、多角度看、组队、看怪事、辨传言、复盘。</p>
+        <p class="cert-line" id="certDate">日期：____</p>
+        <p class="tiny">这不是投资证书，是好奇心与验证习惯的纪念。</p>
+      </div>
+    </div>
+
+    <div class="parent-note">
+      <h4>👨‍👩‍👧 家长提示：毕业项目怎么用？</h4>
+      <p>这 7 关对应前六章 + 复盘。孩子答对几题不重要，重要的是能说出“为什么”。答错时问：“你觉得这个事件最关键的信息是什么？”</p>
+      <p>完成后可以打印毕业证书，办一个小仪式：让孩子讲讲“我学到的最重要的一件事”。</p>
+      <p>如果孩子想再玩一次，可以换一个名字、换一种选择，看看结果会不会不同。</p>
+    </div>
+
+    <div class="section" style="padding-left:0;padding-right:0;">
+      <h2>问一问</h2>
+      <div class="questions">
+        <div class="question">
+          这七关里，你最喜欢哪一关？为什么？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q1" data-label="看提示" type="button">看提示</button></div>
+          <div class="reveal" id="q1">没有标准答案。可以继续问：“这一关你学到了什么？”</div>
+        </div>
+        <div class="question">
+          如果让你再管一次果园，你会改变什么？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q2" data-label="看提示" type="button">看提示</button></div>
+          <div class="reveal" id="q2">可以改计划、换队员、多记录、少听传言。没有标准答案，重要的是说出理由。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-row" style="margin-top:24px;">
+      <button class="btn" data-done="ch7-game" type="button">⭐ 我完成了，贴上星星</button>
+      <a class="btn ghost" href="parent-guide.html">读家长指南 →</a>
+    </div>
+
+    <div class="lesson-nav">
+      <a class="btn ghost" href="lesson-3.html">← 上一课</a>
+      <a class="btn ghost" href="../index.html">🏠 首页</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="card">
+      <div class="section-head">
+        <h2>可打印毕业材料</h2>
+        <button class="btn ghost small" onclick="window.print()" type="button">🖨️ 打印这一页</button>
+      </div>
+      <p class="muted">打印后，和孩子一起完成 7 天计划，最后填上毕业证书。</p>
+
+      <h3>🎓 毕业证书（空白）</h3>
+      <div class="certificate">
+        <h2>果园小管家毕业证书</h2>
+        <p class="cert-line">姓名：____________________</p>
+        <p>完成了 7 天果园大管家项目，学会了观察、比较、多角度看、组队、看怪事、辨传言和复盘。</p>
+        <p class="cert-line">日期：____________________</p>
+        <p class="tiny">家长签名：____________________</p>
+      </div>
+
+      <h3 style="margin-top:28px;">📅 7 天计划表</h3>
+      <div style="overflow-x:auto;">
+        <table class="factor-table">
+          <thead>
+            <tr><th>天数</th><th>今天的小任务</th><th>完成</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>第 1 天</td><td>看一看：天气怎么样？所有果子一起动了吗？</td><td>☐</td></tr>
+            <tr><td>第 2 天</td><td>记一笔：今天价格多少？画一个箭头。</td><td>☐</td></tr>
+            <tr><td>第 3 天</td><td>问一问：听到什么说法？有证据吗？</td><td>☐</td></tr>
+            <tr><td>第 4 天</td><td>想一想：有没有只看一个指标？</td><td>☐</td></tr>
+            <tr><td>第 5 天</td><td>排一排：把 3 个果子按价格排队。</td><td>☐</td></tr>
+            <tr><td>第 6 天</td><td>组个队：选 3 位小伙伴，说说为什么。</td><td>☐</td></tr>
+            <tr><td>第 7 天</td><td>复个盘：看完整 7 天，找出做得好的和改进。</td><td>☐</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="margin-top:28px;">📝 复盘表</h3>
+      <div class="card" style="box-shadow:none;border:2px dashed var(--line);">
+        <p>我做得好的一件事：____________________________________</p>
+        <p>我可以改进的一件事：____________________________________</p>
+        <p>下次我想试试：________________________________________</p>
+        <p>我想对自己说：________________________________________</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>🐿️ 果园大管家 · 第 7 章毕业项目</span>
+    <span>仅供亲子启蒙，不构成投资建议</span>
+  </div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function () {
+  const cases = [
+    {
+      text: "第 1 关（第 1 章）：今天果园突然变天，所有果子一起涨跌。先做什么？",
+      options: [
+        { label: "先看整体天气，再找个别", correct: true, feedback: "✅ 先看共同原因，再看个别。这就是因子的视角。" },
+        { label: "只盯着一个果子", correct: false, feedback: "❌ 先看整体，再看个别。否则容易把共同原因当成个别故事。" }
+      ]
+    },
+    {
+      text: "第 2 关（第 2 章）：一个大苹果和一个小梨，怎么比才公平？",
+      options: [
+        { label: "先找一样大的，再比", correct: true, feedback: "✅ 只变一个东西，其他条件尽量一样。" },
+        { label: "直接比，谁大谁好", correct: false, feedback: "❌ 大小不一样，比出来不公平。" }
+      ]
+    },
+    {
+      text: "第 3 关（第 3 章）：客人想比一比价格，带谁去帮忙？",
+      options: [
+        { label: "便宜果子", correct: true, feedback: "✅ 便宜果子擅长比价格。每个角色有自己的本领。" },
+        { label: "跑得快果子", correct: false, feedback: "❌ 跑得快果子擅长看谁滚得快，不是比价格。" }
+      ]
+    },
+    {
+      text: "第 4 关（第 4 章）：你想办成更多事，应该怎么组队？",
+      options: [
+        { label: "选 3 位不同本领的队员", correct: true, feedback: "✅ 不同本领互相补位，但也要取舍。" },
+        { label: "只选 1 位最厉害的", correct: false, feedback: "❌ 一个人只有一种本领，忙不过来。" }
+      ]
+    },
+    {
+      text: "第 5 关（第 5 章）：一棵树果子很多，但叶子黄、根很浅。怎么判断？",
+      options: [
+        { label: "综合体检，不只看果子", correct: true, feedback: "✅ 不能只看一个指标，要综合看几项。" },
+        { label: "果子多就是好", correct: false, feedback: "❌ 果子多只是其中一项。叶子、树干、根也要看。" }
+      ]
+    },
+    {
+      text: "第 6 关（第 6 章）：听说红果子明天一定涨。先做什么？",
+      options: [
+        { label: "先找证据，试几次", correct: true, feedback: "✅ 听说的不一定真，要先找证据。" },
+        { label: "马上相信，告诉所有人", correct: false, feedback: "❌ 传来传去会变样。先验证，再决定信不信。" }
+      ]
+    },
+    {
+      text: "第 7 关（复盘）：7 天结束，怎么复盘？",
+      options: [
+        { label: "看完整 7 天，找改进", correct: true, feedback: "✅ 看完整记录，不只看最好的一天。" },
+        { label: "只看最好的一天", correct: false, feedback: "❌ 只看最好的一天，会高估自己。要看完整 7 天。" }
+      ]
+    }
+  ];
+
+  let ci = 0;
+  let score = 0;
+  let answered = false;
+
+  function setMsg(text, cls) {
+    const m = document.getElementById("caseMsg");
+    m.className = "message" + (cls ? " " + cls : "");
+    m.textContent = text;
+  }
+
+  function renderCase() {
+    if (ci >= cases.length) { end(); return; }
+    const c = cases[ci];
+    document.getElementById("caseText").textContent = c.text;
+    document.getElementById("caseNum").textContent = (ci + 1) + " / " + cases.length;
+    document.getElementById("scoreNum").textContent = score;
+    document.getElementById("nextCase").style.display = "none";
+    document.getElementById("certBox").style.display = "none";
+    setMsg("选一个答案吧。", "");
+    answered = false;
+
+    const row = document.getElementById("options");
+    row.innerHTML = "";
+    c.options.forEach(function (opt) {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "choice";
+      btn.textContent = opt.label;
+      btn.addEventListener("click", function () { answer(opt, btn); });
+      row.appendChild(btn);
+    });
+  }
+
+  function answer(opt, btn) {
+    if (answered) return;
+    answered = true;
+    btn.classList.add(opt.correct ? "correct" : "wrong");
+    if (opt.correct) {
+      score += 1;
+      setMsg(opt.feedback, "good");
+    } else {
+      setMsg(opt.feedback, "warn");
+      const buttons = document.querySelectorAll("#options .choice");
+      cases[ci].options.forEach(function (o, i) {
+        if (o.correct && buttons[i]) buttons[i].classList.add("correct");
+      });
+    }
+    document.getElementById("scoreNum").textContent = score;
+    const next = document.getElementById("nextCase");
+    next.style.display = "inline-flex";
+    next.textContent = ci === cases.length - 1 ? "领取毕业证书 →" : "下一关 →";
+  }
+
+  function next() {
+    ci += 1;
+    if (ci >= cases.length) { end(); } else { renderCase(); }
+  }
+
+  function end() {
+    document.getElementById("caseText").textContent = "7 关完成！";
+    document.getElementById("caseNum").textContent = "完成";
+    document.getElementById("options").innerHTML = "";
+    document.getElementById("nextCase").style.display = "none";
+    document.getElementById("certBox").style.display = "block";
+    const name = document.getElementById("kidName").value.trim() || "小小果园管家";
+    document.getElementById("certName").textContent = name;
+    document.getElementById("certScore").textContent = "答对 " + score + " / " + cases.length;
+    document.getElementById("certDate").textContent = "日期：" + new Date().toLocaleDateString("zh-CN");
+    setMsg("毕业啦！你答对了 " + score + " / " + cases.length + " 个。可以打印证书，或者重新开始再玩一次。", "good");
+  }
+
+  function reset() {
+    ci = 0;
+    score = 0;
+    answered = false;
+    document.getElementById("certBox").style.display = "none";
+    renderCase();
+  }
+
+  document.getElementById("nextCase").addEventListener("click", next);
+  document.getElementById("restart").addEventListener("click", reset);
+  renderCase();
+})();
+</script>
+</body>
+</html>
