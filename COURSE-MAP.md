@@ -175,6 +175,8 @@ r_p = α + β'f + ε                      # Sharpe 风格回归
 
 ## 7. 检查站与练习总表
 
+> 📘 第1章配套：[说人话学习指南](chapters/01-factor-basics/STUDY-GUIDE.md) —— 按 1.1/1.2/1.3 逐节讲解，配 notebook 输出、记忆钩子和自测题。
+
 | 章节 | 检查站 | 练习 | 答案 |
 |---|---|---|---|
 | 第1章 | [README](chapters/01-factor-basics/README.md) | [EXERCISES](chapters/01-factor-basics/exercises/EXERCISES.md) | [SOLUTIONS](chapters/01-factor-basics/exercises/solutions/SOLUTIONS.md) |

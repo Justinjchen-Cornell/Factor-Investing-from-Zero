@@ -95,7 +95,8 @@
 | 进阶 | [第6章 因子研究现状](chapters/06-current-research/) | p-hacking、因子动物园、行为金融、机器学习 |
 | 实践 | [第7章 因子投资实践](chapters/07-practice/) | 组合优化、Smart Beta、风格归因、结业项目 |
 
-> 进度：🎉 全部 7 章已发布（第1~7章）
+> 进度：🎉 全部 7 章已发布（第1~7章）  
+> 📘 第1章配套：[说人话学习指南](chapters/01-factor-basics/STUDY-GUIDE.md) —— 逐节讲解 + notebook 输出 + 记忆钩子 + 自测题
 
 ---
 
