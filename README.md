@@ -79,7 +79,8 @@
 
 一页看完 7 章、22 个 notebook、核心公式、工具库和检查站：
 
-👉 **[打开 COURSE-MAP.md](COURSE-MAP.md)**
+👉 **[打开 COURSE-MAP.md](COURSE-MAP.md)**  
+> 🤝 交接摘要：[HANDOFF.md](HANDOFF.md)
 
 ---
 
