@@ -9,9 +9,13 @@ import pandas as pd
 
 
 def monthly_returns(prices: pd.DataFrame, freq: str = "ME") -> pd.DataFrame:
-    """月末价格序列 → 月度收益率（跳过首月）。"""
-    month_end = prices.resample(freq).last()
-    return month_end.pct_change().dropna(how="all")
+    """月末价格序列 → 月度收益率（跳过首月）。
+
+    对月末价格先做前向填充，避免停牌/缺失月份产生伪缺失；
+    再显式 fill_method=None，避免 pandas 未来版本的行为变化。
+    """
+    month_end = prices.resample(freq).last().ffill()
+    return month_end.pct_change(fill_method=None).dropna(how="all")
 
 
 def momentum(monthly_ret: pd.DataFrame, lookback: int = 12, skip: int = 1) -> pd.DataFrame:
