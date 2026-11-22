@@ -50,3 +50,19 @@ def test_chapter_lecture_has_template_markers():
     readme = (ch01 / "README.md").read_text(encoding="utf-8")
     for marker in ["🎯", "📚", "📖", "📋", "✅"]:
         assert marker in readme, f"第1章讲义缺少模板标记 {marker}"
+
+
+def test_chapter_02_present_and_complete():
+    ch02 = ROOT / "chapters" / "02-methodology"
+    assert ch02.is_dir(), "第2章 chapters/02-methodology/ 尚未创建"
+    readme = (ch02 / "README.md").read_text(encoding="utf-8")
+    for marker in ["🎯", "📚", "📖", "📋", "✅"]:
+        assert marker in readme, f"第2章讲义缺少模板标记 {marker}"
+    for name in [
+        "02.1-portfolio-sorting.ipynb",
+        "02.2-regression-methods.ipynb",
+        "02.3-anomaly-and-grs.ipynb",
+    ]:
+        assert (ch02 / "notebooks" / name).exists(), f"第2章缺少 notebook {name}"
+    assert (ch02 / "exercises" / "EXERCISES.md").exists(), "第2章缺少练习"
+    assert (ch02 / "exercises" / "solutions" / "SOLUTIONS.md").exists(), "第2章缺少练习答案"
