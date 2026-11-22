@@ -316,3 +316,40 @@ body.parent-mode .parent-note { display: block; }
 }
 .team-meter .meter-cell b { font-size: 24px; display: block; line-height: 1.2; }
 .team-meter .meter-cell span { font-size: 14px; color: var(--muted); }
+
+/* 第 5 章：果园里的怪事 */
+.check-list { display: grid; gap: 8px; margin: 12px 0; }
+.check-item {
+  display: flex; align-items: center; gap: 10px; background: #fff;
+  border: 2px solid var(--line); border-radius: 14px; padding: 10px 14px;
+  cursor: pointer; font: inherit; color: inherit; text-align: left;
+}
+.check-item input { width: 22px; height: 22px; accent-color: var(--green); }
+.check-item.checked { border-color: var(--green); background: var(--green-soft); }
+.dog-track {
+  position: relative; height: 150px; margin: 18px 0; border: 2px solid var(--line);
+  border-radius: 20px; background: linear-gradient(180deg, #EAF4FF 0%, #FFF8EC 100%);
+  overflow: hidden;
+}
+.dog-track .owner {
+  position: absolute; left: 50%; top: 16px; transform: translateX(-50%);
+  text-align: center; font-size: 14px; color: var(--muted);
+}
+.dog-track .owner .owner-emoji { font-size: 40px; display: block; }
+.dog-track .dog {
+  position: absolute; top: 88px; transform: translateX(-50%);
+  font-size: 40px; transition: left .45s ease;
+}
+.dog-track .ruler {
+  position: absolute; bottom: 8px; left: 0; width: 100%; text-align: center;
+  font-size: 13px; color: var(--muted);
+}
+.tree-compare { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.tree-card { background: #fff; border: 3px solid var(--line); border-radius: 20px; padding: 16px; }
+.tree-card h3 { margin-top: 0; }
+.tree-card .tree-emoji { font-size: 54px; text-align: center; }
+.tree-card .tree-score { font-size: 18px; font-weight: 800; }
+.check-item::before { content: "☐"; font-size: 20px; }
+.check-item.checked::before { content: "✅"; }
+.choice.correct { border-color: var(--green); background: var(--green-soft); }
+.choice.wrong { border-color: var(--red); background: var(--red-soft); }

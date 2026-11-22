@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 2 课 · 跑远的小狗｜小松鼠的果子课</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../index.html"><span class="logo">🐿️</span><span>小松鼠的果子课</span></a>
+    <nav class="nav">
+      <a href="../index.html">首页</a>
+      <a href="../chapter-01/index.html">第 1 章</a>
+      <a href="../chapter-02/index.html">第 2 章</a>
+      <a href="../chapter-03/index.html">第 3 章</a>
+      <a href="../chapter-04/index.html">第 4 章</a>
+      <a class="active" href="index.html">第 5 章</a>
+      <a href="parent-guide.html">家长指南</a>
+      <button id="parentToggle" type="button">家长模式</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="lesson-head">
+    <div class="meta">
+      <span class="badge">第 2 课 · 价格与价值</span>
+      <h1>跑远的小狗</h1>
+      <p class="sub">价格像小狗，价值像主人。小狗跑远了，会回来吗？</p>
+    </div>
+    <div class="lesson-tools">
+      <button class="btn secondary small" data-read-target="#story-text" type="button">🔊 读给我听</button>
+      <span class="sticker" data-progress="ch5-l2" title="第 2 课星星">⭐</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="story">
+      <h2>小狗和主人</h2>
+      <div id="story-text">
+        <p class="big">小松鼠带小狗去散步。</p>
+        <p>主人慢慢走，小狗一会儿跑到前面，一会儿落在后面。</p>
+        <p>但小狗不会永远离开主人——跑远了，它会回头找主人。</p>
+        <p>投资里，<span class="highlight">价格像小狗，价值像主人</span>。价格会跑远，也可能回来。</p>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h3>🐕 玩一玩：小狗跑远了</h3>
+      <p class="hint">点按钮，让“价格小狗”跑一跑，看看它离“价值主人”有多远。</p>
+      <div class="dog-track">
+        <div class="owner"><span class="owner-emoji">🧍</span>价值（主人）</div>
+        <div class="dog" id="dog" style="left:50%;">🐕</div>
+        <div class="ruler">← 价格低　　　　价值　　　　价格高 →</div>
+      </div>
+      <div class="button-row">
+        <button class="btn" data-pos="85" type="button">价格跑太高</button>
+        <button class="btn secondary" data-pos="15" type="button">价格跌太低</button>
+        <button class="btn ghost" data-pos="50" type="button">回到中间</button>
+      </div>
+      <div class="message" id="dogMsg">先点一个按钮吧。</div>
+    </div>
+
+    <div class="parent-note">
+      <h4>👨‍👩‍👧 家长提示：这一课真正在种什么种子？</h4>
+      <p><strong>均值回归 / 基本面锚定。</strong>价格会围绕价值波动，跑得太远时，可能会被“拉回来”。但要注意：<strong>什么时候回来、会不会回来，没人能保证。</strong>有些价格跑远了，就再也不回来（公司基本面变坏了）。</p>
+      <p>所以这一课不是教“跌多了就买”，而是教“价格和价值不是一回事”。先看价值，再看价格离得远不远。</p>
+      <p>生活延伸：超市打折时，先看原价和品质；不要因为“涨得猛”就追，也不要因为“跌得多”就抢。</p>
+    </div>
+
+    <div class="section" style="padding-left:0;padding-right:0;">
+      <h2>问一问</h2>
+      <div class="questions">
+        <div class="question">
+          小狗跑得太远，一定会马上回来吗？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q1" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q1">不一定。可能会回来，也可能过很久才回来，甚至不回来。价格和价值的关系，不是一根精确的橡皮筋。</div>
+        </div>
+        <div class="question">
+          价格涨得很高，就是价值很高吗？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q2" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q2">不一定。价格可能跑得比价值快很多。先看价值，再看价格离得远不远。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-row" style="margin-top:24px;">
+      <button class="btn" data-done="ch5-l2" type="button">⭐ 我完成了，贴上星星</button>
+      <a class="btn ghost" href="lesson-3.html">下一课：乱蹦的果子 →</a>
+    </div>
+
+    <div class="lesson-nav">
+      <a class="btn ghost" href="lesson-1.html">← 上一课</a>
+      <a class="btn ghost" href="../index.html">🏠 首页</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>🐿️ 第 2 课 · 价格与价值</span>
+    <span>仅供亲子启蒙，不构成投资建议</span>
+  </div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function () {
+  const messages = {
+    "85": "价格跑得太高，离价值很远。可能会被“拉回来”——但不一定马上，也可能不回来。",
+    "15": "价格跌得太低，离价值很远。可能会“涨回来”——但不一定马上，也可能不回来。",
+    "50": "价格和价值差不多。小狗回到主人身边了。"
+  };
+
+  document.querySelectorAll("[data-pos]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      const pos = btn.getAttribute("data-pos");
+      document.getElementById("dog").style.left = pos + "%";
+      const msg = document.getElementById("dogMsg");
+      msg.className = "message " + (pos === "50" ? "good" : "warn");
+      msg.textContent = messages[pos];
+    });
+  });
+})();
+</script>
+</body>
+</html>

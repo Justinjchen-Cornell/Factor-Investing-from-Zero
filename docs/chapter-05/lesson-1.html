@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 1 课 · 给果树做体检｜小松鼠的果子课</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../index.html"><span class="logo">🐿️</span><span>小松鼠的果子课</span></a>
+    <nav class="nav">
+      <a href="../index.html">首页</a>
+      <a href="../chapter-01/index.html">第 1 章</a>
+      <a href="../chapter-02/index.html">第 2 章</a>
+      <a href="../chapter-03/index.html">第 3 章</a>
+      <a href="../chapter-04/index.html">第 4 章</a>
+      <a class="active" href="index.html">第 5 章</a>
+      <a href="parent-guide.html">家长指南</a>
+      <button id="parentToggle" type="button">家长模式</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="lesson-head">
+    <div class="meta">
+      <span class="badge">第 1 课 · 综合体检</span>
+      <h1>给果树做体检</h1>
+      <p class="sub">不能只看果子多；叶子、树干、根、虫，都要看。</p>
+    </div>
+    <div class="lesson-tools">
+      <button class="btn secondary small" data-read-target="#story-text" type="button">🔊 读给我听</button>
+      <span class="sticker" data-progress="ch5-l1" title="第 1 课星星">⭐</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="story">
+      <h2>只看果子多，够吗？</h2>
+      <div id="story-text">
+        <p class="big">果园要选一棵最健康的树。</p>
+        <p>小松鼠一看：树 B 结了 30 个果子，树 A 只结了 20 个。“选 B！”</p>
+        <p>老园丁摇摇头：“不能只看果子多。叶子、树干、根、有没有虫，都要看。”</p>
+        <p>于是他们给两棵树做了一次<span class="highlight">体检</span>。</p>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h3>🌳 玩一玩：给两棵树打分</h3>
+      <p class="hint">读一读每棵树的描述，把它“有的优点”勾出来。每项 1 分，满分 5 分。</p>
+      <div class="tree-compare">
+        <div class="tree-card" data-tree="A">
+          <div class="tree-emoji">🌳</div>
+          <h3>树 A</h3>
+          <p class="tiny">叶子绿油油；树干直直的；根扎得深；叶子上有几只虫；结了 20 个果子。</p>
+          <div class="check-list">
+            <button class="check-item" data-true="1" type="button">叶子绿</button>
+            <button class="check-item" data-true="1" type="button">树干直</button>
+            <button class="check-item" data-true="1" type="button">根扎得深</button>
+            <button class="check-item" data-true="0" type="button">没有虫</button>
+            <button class="check-item" data-true="1" type="button">果子多</button>
+          </div>
+          <p class="tree-score">得分：<span id="scoreA">0</span> / 5</p>
+        </div>
+        <div class="tree-card" data-tree="B">
+          <div class="tree-emoji">🌳</div>
+          <h3>树 B</h3>
+          <p class="tiny">叶子有点黄；树干弯弯的；根很浅；没有虫；结了 30 个果子。</p>
+          <div class="check-list">
+            <button class="check-item" data-true="0" type="button">叶子绿</button>
+            <button class="check-item" data-true="0" type="button">树干直</button>
+            <button class="check-item" data-true="0" type="button">根扎得深</button>
+            <button class="check-item" data-true="1" type="button">没有虫</button>
+            <button class="check-item" data-true="1" type="button">果子多</button>
+          </div>
+          <p class="tree-score">得分：<span id="scoreB">0</span> / 5</p>
+        </div>
+      </div>
+      <div class="button-row">
+        <button class="btn" id="revealBtn" type="button">揭晓答案</button>
+        <button class="btn ghost" id="resetBtn" type="button">重新打分</button>
+      </div>
+      <div class="message" id="treeMsg">先勾一勾，再揭晓答案。</div>
+    </div>
+
+    <div class="parent-note">
+      <h4>👨‍👩‍👧 家长提示：这一课真正在种什么种子？</h4>
+      <p><strong>综合评分：F-Score。</strong>F-Score 用 9 个财务信号给公司打分，而不是只看一个指标。孩子版用 5 个“果树健康信号”：叶子、树干、根、虫、果子。分数高的树更健康。</p>
+      <p>重点不是“分数高一定最好”，而是<strong>“不能只看一个指标”</strong>。树 B 果子多，但叶子黄、树干弯、根浅，综合起来不如树 A。</p>
+      <p>生活延伸：给玩具、绘本、书包做“体检表”；买水果不只看大小，也看新鲜度、有没有磕碰。</p>
+    </div>
+
+    <div class="section" style="padding-left:0;padding-right:0;">
+      <h2>问一问</h2>
+      <div class="questions">
+        <div class="question">
+          树 B 果子更多，为什么反而没有树 A 健康？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q1" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q1">因为树 B 只有“没有虫”和“果子多”两项；树 A 有四项。综合看，树 A 更健康。不能只看一个指标。</div>
+        </div>
+        <div class="question">
+          体检分数最高的，一定是最好的树吗？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q2" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q2">不一定。分数是一个帮助，还要看具体情况。但比只看“果子多”要可靠得多。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-row" style="margin-top:24px;">
+      <button class="btn" data-done="ch5-l1" type="button">⭐ 我完成了，贴上星星</button>
+      <a class="btn ghost" href="lesson-2.html">下一课：跑远的小狗 →</a>
+    </div>
+
+    <div class="lesson-nav">
+      <a class="btn ghost" href="index.html">← 返回第 5 章</a>
+      <a class="btn ghost" href="../index.html">🏠 首页</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>🐿️ 第 1 课 · 综合体检</span>
+    <span>仅供亲子启蒙，不构成投资建议</span>
+  </div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function () {
+  function updateScores() {
+    ["A", "B"].forEach(function (t) {
+      const card = document.querySelector('[data-tree="' + t + '"]');
+      const n = card.querySelectorAll(".check-item.checked").length;
+      document.getElementById("score" + t).textContent = n;
+    });
+  }
+
+  document.querySelectorAll(".check-item").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      btn.classList.toggle("checked");
+      updateScores();
+    });
+  });
+
+  document.getElementById("revealBtn").addEventListener("click", function () {
+    document.querySelectorAll(".check-item").forEach(function (btn) {
+      btn.classList.toggle("checked", btn.getAttribute("data-true") === "1");
+    });
+    updateScores();
+    const msg = document.getElementById("treeMsg");
+    msg.className = "message good";
+    msg.textContent = "树 A 4/5，树 B 2/5。树 A 更健康——虽然树 B 果子更多。不能只看一个指标，要综合看几项。";
+  });
+
+  document.getElementById("resetBtn").addEventListener("click", function () {
+    document.querySelectorAll(".check-item").forEach(function (btn) {
+      btn.classList.remove("checked");
+    });
+    updateScores();
+    const msg = document.getElementById("treeMsg");
+    msg.className = "message";
+    msg.textContent = "先勾一勾，再揭晓答案。";
+  });
+})();
+</script>
+</body>
+</html>

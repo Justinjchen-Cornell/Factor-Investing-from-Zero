@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 3 课 · 乱蹦的果子｜小松鼠的果子课</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../index.html"><span class="logo">🐿️</span><span>小松鼠的果子课</span></a>
+    <nav class="nav">
+      <a href="../index.html">首页</a>
+      <a href="../chapter-01/index.html">第 1 章</a>
+      <a href="../chapter-02/index.html">第 2 章</a>
+      <a href="../chapter-03/index.html">第 3 章</a>
+      <a href="../chapter-04/index.html">第 4 章</a>
+      <a class="active" href="index.html">第 5 章</a>
+      <a href="parent-guide.html">家长指南</a>
+      <button id="parentToggle" type="button">家长模式</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="lesson-head">
+    <div class="meta">
+      <span class="badge">第 3 课 · 波动与风险</span>
+      <h1>乱蹦的果子</h1>
+      <p class="sub">上上下下看起来很刺激，但最后一定更好吗？</p>
+    </div>
+    <div class="lesson-tools">
+      <button class="btn secondary small" data-read-target="#story-text" type="button">🔊 读给我听</button>
+      <span class="sticker" data-progress="ch5-l3" title="第 3 课星星">⭐</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="story">
+      <h2>两个果子</h2>
+      <div id="story-text">
+        <p class="big">果园里有两个果子。</p>
+        <p>“稳稳果”每天只动一点点，慢慢来。</p>
+        <p>“乱蹦果”一会儿冲得很高，一会儿又掉得很低，看起来特别刺激。</p>
+        <p>小松鼠觉得乱蹦果更厉害。可是，5 天以后，谁的结果更好呢？</p>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h3>🍎 玩一玩：看 5 天</h3>
+      <p class="hint">点按钮，看看两个果子 5 天的变化。</p>
+      <div class="button-row">
+        <button class="btn secondary" data-fruit="steady" type="button">看稳稳果 5 天</button>
+        <button class="btn" data-fruit="jumpy" type="button">看乱蹦果 5 天</button>
+      </div>
+      <div class="stats">
+        <div class="stat"><b id="finalValue">—</b><span>5 天总共</span></div>
+        <div class="stat"><b id="swingValue">—</b><span>最大单日波动</span></div>
+      </div>
+      <div class="scoreboard" id="pathBoard" aria-label="5 天的变化"></div>
+      <div class="message" id="jumpyMsg">先点一个按钮吧。</div>
+    </div>
+
+    <div class="parent-note">
+      <h4>👨‍👩‍👧 家长提示：这一课真正在种什么种子？</h4>
+      <p><strong>特质波动率：动得厉害，不一定是好事。</strong>学术研究发现，高特质波动的股票，长期收益往往不如低特质波动的股票——这就是“特质波动率之谜”。对孩子的说法：上上下下很刺激，但风险也大，最后不一定更好。</p>
+      <p>不要让孩子以为“波动大 = 不好”，而是让他知道：<strong>看收益的时候，也要看路上有多颠。</strong>稳稳果每天 +1，乱蹦果有一天 +5 也有 -4；如果中途需要用钱，感受完全不同。</p>
+      <p>生活延伸：坐车走平路 vs 走山路；存钱罐 vs 过山车。问孩子：“你更喜欢哪种？为什么？”</p>
+    </div>
+
+    <div class="section" style="padding-left:0;padding-right:0;">
+      <h2>问一问</h2>
+      <div class="questions">
+        <div class="question">
+          乱蹦果看起来更刺激，为什么最后不一定更好？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q1" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q1">因为它上上下下，虽然有一天涨得多，但也有跌得多的时候。5 天加起来，反而不如稳稳果。</div>
+        </div>
+        <div class="question">
+          看一个果子，除了看最后的结果，还要看什么？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q2" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q2">还要看它一路上有多颠。如果每天上上下下，风险更大，中途可能需要用钱时就很难受。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-row" style="margin-top:24px;">
+      <button class="btn" data-done="ch5-l3" type="button">⭐ 我完成了，贴上星星</button>
+      <a class="btn ghost" href="game.html">去玩：果园怪事侦探 →</a>
+    </div>
+
+    <div class="lesson-nav">
+      <a class="btn ghost" href="lesson-2.html">← 上一课</a>
+      <a class="btn ghost" href="../index.html">🏠 首页</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>🐿️ 第 3 课 · 波动与风险</span>
+    <span>仅供亲子启蒙，不构成投资建议</span>
+  </div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function () {
+  const paths = {
+    steady: { name: "稳稳果", changes: [1, 1, 0, 1, 0] },
+    jumpy:  { name: "乱蹦果", changes: [5, -4, 4, -3, -1] }
+  };
+
+  function show(key) {
+    const p = paths[key];
+    const board = document.getElementById("pathBoard");
+    board.innerHTML = "";
+    p.changes.forEach(function (c) {
+      const cell = document.createElement("span");
+      cell.className = "score-cell " + (c > 0 ? "win" : c < 0 ? "loss" : "");
+      cell.textContent = (c > 0 ? "+" : "") + c;
+      board.appendChild(cell);
+    });
+    const total = p.changes.reduce(function (a, b) { return a + b; }, 0);
+    const maxSwing = Math.max.apply(null, p.changes.map(function (c) { return Math.abs(c); }));
+    document.getElementById("finalValue").textContent = (total > 0 ? "+" : "") + total;
+    document.getElementById("swingValue").textContent = maxSwing;
+    const msg = document.getElementById("jumpyMsg");
+    if (key === "steady") {
+      msg.className = "message good";
+      msg.textContent = "稳稳果：+1、+1、0、+1、0，5 天总共 +3。每天动得不多，但比较稳。";
+    } else {
+      msg.className = "message warn";
+      msg.textContent = "乱蹦果：+5、-4、+4、-3、-1，5 天总共 +1。上上下下很刺激，但最后还不如稳稳果。动得厉害，不等于更好。";
+    }
+  }
+
+  document.querySelectorAll("[data-fruit]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      show(btn.getAttribute("data-fruit"));
+    });
+  });
+})();
+</script>
+</body>
+</html>

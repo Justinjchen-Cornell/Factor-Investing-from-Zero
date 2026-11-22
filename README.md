@@ -22,7 +22,7 @@
 
 ## 🧸 亲子版教学网页 / Parent-Child Web Course
 
-给 4–7 岁孩子的第 1–4 章：**不讲公式，只种种子。** 用水果摊、松果、三个篮子、排队、公平比较、七种果子性格和组队游戏，陪孩子体验「观察、等待、分散、比较、多角度看、合作」。
+给 4–7 岁孩子的第 1–5 章：**不讲公式，只种种子。** 用水果摊、松果、三个篮子、排队、公平比较、七种果子性格、组队游戏和果园怪事，陪孩子体验「观察、等待、分散、比较、多角度看、合作、看怪事」。
 
 👉 **[打开亲子版教学网页](docs/index.html)** ｜ 线上版：https://justinjchen-cornell.github.io/Factor-Investing-from-Zero/
 
@@ -51,6 +51,12 @@
 | [第 3 课：三个就够了吗？](docs/chapter-04/lesson-3.html) | 简约原则——因子不是越多越好 |
 | [果园小分队](docs/chapter-04/game.html) | 选 3 位队员挑战 6 个任务 + 可打印小队卡、挑战卡 |
 | [第 4 章家长指南](docs/chapter-04/parent-guide.html) | 三颗种子、对照表、4 周计划、话术、书单 |
+| **[第 5 章 · 果园里的怪事](docs/chapter-05/index.html)** | **综合体检、价格与价值、波动与风险——异象启蒙** |
+| [第 1 课：给果树做体检](docs/chapter-05/lesson-1.html) | 5 项健康信号综合打分——F-Score 启蒙 |
+| [第 2 课：跑远的小狗](docs/chapter-05/lesson-2.html) | 价格像小狗，价值像主人——基本面锚定反转 |
+| [第 3 课：乱蹦的果子](docs/chapter-05/lesson-3.html) | 动得厉害不等于更好——特质波动率 |
+| [果园怪事侦探](docs/chapter-05/game.html) | 3 个案件 + 可打印体检表、价格观察表、波动记录表 |
+| [第 5 章家长指南](docs/chapter-05/parent-guide.html) | 三个怪事对照表、4 周计划、话术、书单 |
 
 > 每次 10 分钟，家长陪同，不涉及真实金钱。星星进度保存在本机浏览器。
 > *10 minutes per session, parent-led, no real money. Progress is stored locally in the browser.*
