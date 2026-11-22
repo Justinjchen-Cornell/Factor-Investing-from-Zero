@@ -126,6 +126,7 @@ jupyter lab chapters/01-factor-basics/notebooks/
 - [QuantSkills](https://github.com/quantskills) —— 因子分析 Agent 技能
 - [alphalens-reloaded](https://github.com/stefan-jansen/alphalens-reloaded) —— IC/分位分析参考实现
 - [PyPortfolioOpt](https://github.com/robertmartin8/PyPortfolioOpt) —— 组合优化参考
+- [困境资产中的因子思维](articles/2026-11-22-困境资产中的因子思维.md) —— 把第 2/6/7 章方法用到困境资产投资
 
 ## 版权声明 / Copyright
 
