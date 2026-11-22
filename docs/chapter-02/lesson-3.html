@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 3 课 · 多试几次才算数｜小松鼠的果子课</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../index.html"><span class="logo">🐿️</span><span>小松鼠的果子课</span></a>
+    <nav class="nav">
+      <a href="../index.html">首页</a>
+      <a href="../chapter-01/index.html">第 1 章</a>
+      <a class="active" href="index.html">第 2 章</a>
+      <a href="parent-guide.html">家长指南</a>
+      <button id="parentToggle" type="button">家长模式</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="lesson-head">
+    <div class="meta">
+      <span class="badge">第 3 课 · 重复测试</span>
+      <h1>多试几次才算数</h1>
+      <p class="sub">一次赢，可能只是运气。多试几次，才知道是不是规律。</p>
+    </div>
+    <div class="lesson-tools">
+      <button class="btn secondary small" data-read-target="#story-text" type="button">🔊 读给我听</button>
+      <span class="sticker" data-progress="ch2-l3" title="第 3 课星星">⭐</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="story">
+      <h2>小松鼠的“大发现”</h2>
+      <div id="story-text">
+        <p class="big">小松鼠发现：红色的果子，第二天好像都会涨价。</p>
+        <p>它只看了 1 次，就跑去告诉朋友：“我找到规律啦！”</p>
+        <p>朋友问：“你试了几次？”</p>
+        <p>小松鼠说：“1 次。”</p>
+        <p>朋友笑了：“1 次，可能只是<span class="highlight">运气</span>呀。”</p>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h3>🎲 玩一玩：帮小松鼠多试几次</h3>
+      <p class="hint">假设“红色果子第二天涨价”这个规律，每次有 50% 的机会成功。点按钮测试，看看结果。</p>
+      <div class="button-row">
+        <button class="btn" data-trials="1" type="button">试 1 次</button>
+        <button class="btn secondary" data-trials="5" type="button">试 5 次</button>
+        <button class="btn ghost" data-reset="1" type="button">重新开始</button>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><b id="totalCount">0</b><span>一共试了</span></div>
+        <div class="stat"><b id="winCount">0</b><span>成功次数</span></div>
+        <div class="stat"><b id="rateNow">—</b><span>成功率</span></div>
+      </div>
+
+      <div class="scoreboard" id="scoreboard" aria-label="每次测试的结果"></div>
+      <div class="message" id="testMsg">先点“试 1 次”，看看一次能不能说明问题。</div>
+    </div>
+
+    <div class="parent-note">
+      <h4>👨‍👩‍👧 家长提示：这一课真正在种什么种子？</h4>
+      <p><strong>样本量：一次结果，说明不了规律。</strong>这是未来“回测”和“统计检验”的种子。投资里看到一个策略过去赚钱，也要问：试了多少次？换了时间还灵吗？是不是只挑了好看的时段？</p>
+      <p>生活延伸：抛硬币、掷骰子、抽卡片。让孩子先猜“下一次会怎样”，再试 10 次，数一数。重点不是猜对，而是体验“多试几次，结果会更清楚”。</p>
+      <p>也要诚实：多试几次，也不一定能得出永远正确的规律。市场会变，过去有效不代表未来有效。这一课只教“不要被一次结果骗到”。</p>
+    </div>
+
+    <div class="section" style="padding-left:0;padding-right:0;">
+      <h2>问一问</h2>
+      <div class="questions">
+        <div class="question">
+          只试 1 次，能说明“规律”吗？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q1" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q1">不能。1 次可能只是运气。要多试几次，看看成功的机会大概是多少。</div>
+        </div>
+        <div class="question">
+          多试几次，就一定能找到永远正确的规律吗？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q2" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q2">也不一定。世界会变，过去有效不代表未来有效。多试几次，是为了不被一次结果骗到，不是为了找到“永远正确”的公式。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-row" style="margin-top:24px;">
+      <button class="btn" data-done="ch2-l3" type="button">⭐ 我完成了，贴上星星</button>
+      <a class="btn ghost" href="game.html">去玩：果子排行榜 →</a>
+    </div>
+
+    <div class="lesson-nav">
+      <a class="btn ghost" href="lesson-2.html">← 上一课</a>
+      <a class="btn ghost" href="../index.html">🏠 首页</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>🐿️ 第 3 课 · 重复测试</span>
+    <span>仅供亲子启蒙，不构成投资建议</span>
+  </div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function () {
+  let total = 0;
+  let wins = 0;
+
+  function renderStats() {
+    document.getElementById("totalCount").textContent = total;
+    document.getElementById("winCount").textContent = wins;
+    document.getElementById("rateNow").textContent = total ? Math.round(wins / total * 100) + "%" : "—";
+  }
+
+  function addCell(win) {
+    const cell = document.createElement("span");
+    cell.className = "score-cell " + (win ? "win" : "loss");
+    cell.textContent = win ? "✓" : "✗";
+    document.getElementById("scoreboard").appendChild(cell);
+  }
+
+  function setMsg(text, cls) {
+    const m = document.getElementById("testMsg");
+    m.className = "message" + (cls ? " " + cls : "");
+    m.textContent = text;
+  }
+
+  function run(n) {
+    let batchWins = 0;
+    for (let i = 0; i < n; i++) {
+      const win = Math.random() < 0.5;
+      total += 1;
+      if (win) { wins += 1; batchWins += 1; }
+      addCell(win);
+    }
+    renderStats();
+    if (total < 5) {
+      setMsg("试了 " + total + " 次，成功 " + wins + " 次。1 次结果能说明规律吗？再多试几次看看。", "warn");
+    } else {
+      setMsg("这一轮试了 " + n + " 次，成功 " + batchWins + " 次；一共试了 " + total + " 次，成功率约 " + Math.round(wins / total * 100) + "%。比只看 1 次清楚多了。", "good");
+    }
+  }
+
+  document.querySelectorAll("[data-trials]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      run(Number(btn.getAttribute("data-trials")));
+    });
+  });
+
+  document.querySelector("[data-reset]").addEventListener("click", function () {
+    total = 0; wins = 0;
+    document.getElementById("scoreboard").innerHTML = "";
+    renderStats();
+    setMsg("先点“试 1 次”，看看一次能不能说明问题。", "");
+  });
+
+  renderStats();
+})();
+</script>
+</body>
+</html>

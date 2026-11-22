@@ -247,3 +247,35 @@ body.parent-mode .parent-note { display: block; }
   .card, .story, .activity { box-shadow: none; border: 1px solid #ccc; break-inside: avoid; }
   .lesson-head { padding-top: 0; }
 }
+
+/* 第 2 章：排序与比较 */
+.rank-row { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin: 20px 0; }
+.rank-card { width: 132px; }
+.rank-card .rank-badge {
+  display: inline-block; background: var(--orange); color: #fff;
+  border-radius: 999px; padding: 1px 10px; font-size: 13px; font-weight: 800; margin-bottom: 4px;
+}
+.rank-card .rank-badge.first { background: var(--green); }
+.fair-grid { display: grid; gap: 14px; }
+.fair-item {
+  background: #fff; border: 2px solid var(--line); border-radius: 18px; padding: 16px 18px;
+}
+.fair-item .fair-scenario { font-weight: 700; margin-bottom: 8px; }
+.fair-item .fair-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.fair-item .fair-feedback { margin-top: 8px; font-size: 15px; font-weight: 700; min-height: 22px; }
+.fair-item .fair-feedback.good { color: var(--green); }
+.fair-item .fair-feedback.bad { color: var(--red); }
+.scoreboard { display: flex; gap: 10px; flex-wrap: wrap; margin: 12px 0; }
+.score-cell {
+  background: #fff; border: 2px solid var(--line); border-radius: 14px;
+  padding: 8px 14px; font-weight: 800;
+}
+.score-cell.win { border-color: var(--green); background: var(--green-soft); }
+.score-cell.loss { border-color: var(--red); background: var(--red-soft); }
+.fruit-card.cheap { border-color: var(--green); background: var(--green-soft); }
+.fruit-card.expensive { border-color: var(--orange); background: var(--orange-soft); }
+.btn.selected { background: var(--green-soft); border-color: var(--green); color: var(--ink); }
+.rank-card { cursor: pointer; transition: transform .15s ease, border-color .15s ease; }
+.rank-card:hover { transform: translateY(-3px); }
+.rank-card.picked { border-color: var(--green); background: var(--green-soft); }
+.rank-card .attr { font-size: 14px; color: var(--muted); line-height: 1.5; }

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 2 课 · 公平地比一比｜小松鼠的果子课</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../index.html"><span class="logo">🐿️</span><span>小松鼠的果子课</span></a>
+    <nav class="nav">
+      <a href="../index.html">首页</a>
+      <a href="../chapter-01/index.html">第 1 章</a>
+      <a class="active" href="index.html">第 2 章</a>
+      <a href="parent-guide.html">家长指南</a>
+      <button id="parentToggle" type="button">家长模式</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="lesson-head">
+    <div class="meta">
+      <span class="badge">第 2 课 · 公平比较</span>
+      <h1>公平地比一比</h1>
+      <p class="sub">比一比的时候，只能变一个东西；其他条件要一样。</p>
+    </div>
+    <div class="lesson-tools">
+      <button class="btn secondary small" data-read-target="#story-text" type="button">🔊 读给我听</button>
+      <span class="sticker" data-progress="ch2-l2" title="第 2 课星星">⭐</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="story">
+      <h2>大苹果和小梨</h2>
+      <div id="story-text">
+        <p class="big">小松鼠想比一比：苹果和梨，哪个更甜？</p>
+        <p>它拿了一个很大的苹果，和一个小小的梨。</p>
+        <p>“苹果更甜！”小松鼠说。</p>
+        <p>可是，这样比<span class="highlight">公平</span>吗？</p>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h3>⚖️ 玩一玩：公平还是不公平？</h3>
+      <p class="hint">读一读每个场景，点“公平”或“不公平”。</p>
+      <div class="fair-grid">
+        <div class="fair-item" data-answer="unfair" data-why="大小不一样，甜不甜可能被大小影响。要先找一样大的。">
+          <div class="fair-scenario">① 一个大苹果，和一个小梨。谁更甜？</div>
+          <div class="fair-actions">
+            <button class="btn ghost small" data-val="fair" type="button">公平</button>
+            <button class="btn ghost small" data-val="unfair" type="button">不公平</button>
+          </div>
+          <div class="fair-feedback"></div>
+        </div>
+        <div class="fair-item" data-answer="fair" data-why="大小一样，只比种类，公平。">
+          <div class="fair-scenario">② 两个一样大的苹果，和两个一样大的梨。谁更甜？</div>
+          <div class="fair-actions">
+            <button class="btn ghost small" data-val="fair" type="button">公平</button>
+            <button class="btn ghost small" data-val="unfair" type="button">不公平</button>
+          </div>
+          <div class="fair-feedback"></div>
+        </div>
+        <div class="fair-item" data-answer="unfair" data-why="新鲜度不一样，要先让它们一样新。">
+          <div class="fair-scenario">③ 刚摘的苹果，和放了 10 天的梨。谁更好吃？</div>
+          <div class="fair-actions">
+            <button class="btn ghost small" data-val="fair" type="button">公平</button>
+            <button class="btn ghost small" data-val="unfair" type="button">不公平</button>
+          </div>
+          <div class="fair-feedback"></div>
+        </div>
+        <div class="fair-item" data-answer="fair" data-why="苹果一样，只是放的地方不同，公平。">
+          <div class="fair-scenario">④ 同一棵树的 6 个苹果：3 个放阳光下，3 个放阴凉处。哪边更甜？</div>
+          <div class="fair-actions">
+            <button class="btn ghost small" data-val="fair" type="button">公平</button>
+            <button class="btn ghost small" data-val="unfair" type="button">不公平</button>
+          </div>
+          <div class="fair-feedback"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="parent-note">
+      <h4>👨‍👩‍👧 家长提示：这一课真正在种什么种子？</h4>
+      <p><strong>控制变量：只变一个东西。</strong>这是科学实验，也是因子研究最核心的规矩。投资里比较“便宜股”和“贵股”，也要尽量让行业、规模、时间一样，否则比出来的差异可能来自别的原因。</p>
+      <p>生活延伸：比两个小朋友谁跑得快——要同一条跑道、同样距离、同时跑；比两杯果汁哪杯甜——要同样多的糖、同样多的水。让孩子自己设计一个“公平的比法”。</p>
+      <p>不要说“你这样想不对”。先问：“还有没有别的不同？”孩子找到第二个不同点，就已经在像研究者一样思考了。</p>
+    </div>
+
+    <div class="section" style="padding-left:0;padding-right:0;">
+      <h2>问一问</h2>
+      <div class="questions">
+        <div class="question">
+          怎样才算“公平地比一比”？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q1" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q1">只变一个东西，其他条件尽量一样。比如比甜度，就让大小、新鲜度都一样，只比种类。</div>
+        </div>
+        <div class="question">
+          生活里，你见过哪些“不公平的比较”？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q2" data-label="看提示" type="button">看提示</button></div>
+          <div class="reveal" id="q2">比如：一个小朋友穿跑鞋，一个穿拖鞋，比谁跑得快；两杯果汁，一杯加糖一杯不加，比谁甜。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-row" style="margin-top:24px;">
+      <button class="btn" data-done="ch2-l2" type="button">⭐ 我完成了，贴上星星</button>
+      <a class="btn ghost" href="lesson-3.html">下一课：多试几次才算数 →</a>
+    </div>
+
+    <div class="lesson-nav">
+      <a class="btn ghost" href="lesson-1.html">← 上一课</a>
+      <a class="btn ghost" href="../index.html">🏠 首页</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>🐿️ 第 2 课 · 公平比较</span>
+    <span>仅供亲子启蒙，不构成投资建议</span>
+  </div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function () {
+  document.querySelectorAll(".fair-item").forEach(function (item) {
+    const answer = item.getAttribute("data-answer");
+    const why = item.getAttribute("data-why");
+    item.querySelectorAll("[data-val]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        item.querySelectorAll("[data-val]").forEach(function (b) { b.classList.remove("selected"); });
+        btn.classList.add("selected");
+        const fb = item.querySelector(".fair-feedback");
+        const ok = btn.getAttribute("data-val") === answer;
+        fb.className = "fair-feedback " + (ok ? "good" : "bad");
+        fb.textContent = (ok ? "✅ 答对了！" : "❌ 再想想。") + why;
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>

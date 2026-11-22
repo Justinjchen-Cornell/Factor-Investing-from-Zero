@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>果子排行榜 · 亲子游戏｜小松鼠的果子课</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../index.html"><span class="logo">🐿️</span><span>小松鼠的果子课</span></a>
+    <nav class="nav">
+      <a href="../index.html">首页</a>
+      <a href="../chapter-01/index.html">第 1 章</a>
+      <a class="active" href="index.html">第 2 章</a>
+      <a href="parent-guide.html">家长指南</a>
+      <button id="parentToggle" type="button">家长模式</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="lesson-head">
+    <div class="meta">
+      <span class="badge">第 2 章 · 亲子游戏</span>
+      <h1>果子排行榜</h1>
+      <p class="sub">按价格排一次，再按甜度排一次。两把尺子，两个结果。</p>
+    </div>
+    <div class="lesson-tools">
+      <button class="btn secondary small" data-read-target="#game-intro" type="button">🔊 读给我听</button>
+      <span class="sticker" data-progress="ch2-game" title="游戏星星">⭐</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="story">
+      <h2>两把尺子</h2>
+      <div id="game-intro">
+        <p class="big">小松鼠有 4 个果子：香蕉、梨、苹果、橘子。</p>
+        <p>每个果子有两个数字：价格、甜度。</p>
+        <p>按价格排，和按甜度排，顺序会一样吗？</p>
+        <p class="tiny">玩法：先选一把“尺子”，再按顺序点 4 个果子。</p>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h3>🏆 你来排一排</h3>
+      <div class="button-row">
+        <button class="btn" data-mode="price" type="button">按价格排（便宜 → 贵）</button>
+        <button class="btn secondary" data-mode="sweet" type="button">按甜度排（甜 → 不甜）</button>
+        <button class="btn ghost" data-reset="1" type="button">重新开始</button>
+      </div>
+      <p class="hint" id="gamePrompt">先选一把尺子，然后按顺序点果子。</p>
+      <div class="rank-row" id="gameRow"></div>
+      <div class="message" id="gameMsg">准备好了吗？选一把尺子开始吧。</div>
+    </div>
+
+    <div class="parent-note">
+      <h4>👨‍👩‍👧 家长提示：这一课真正在种什么种子？</h4>
+      <p><strong>不同的“尺子”，会排出不同的顺序。</strong>投资里按价值、动量、规模、质量排序，会得到不同的组合。没有哪把尺子永远最好，关键是想清楚“你在比什么”。</p>
+      <p>孩子排错时，不要急着说“错了”。问：“你用的是哪把尺子？”“这个果子的价格是多少？”让他自己发现顺序。</p>
+      <p>生活延伸：把玩具按颜色排、按大小排、按喜欢程度排；每次换一把尺子，看看顺序变不变。</p>
+    </div>
+
+    <div class="section" style="padding-left:0;padding-right:0;">
+      <h2>问一问</h2>
+      <div class="questions">
+        <div class="question">
+          为什么按价格排和按甜度排，顺序不一样？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q1" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q1">因为用的是两把不同的尺子。价格和甜度不是一回事，所以排出来的顺序也不同。</div>
+        </div>
+        <div class="question">
+          哪一把尺子“最好”？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q2" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q2">没有绝对最好。想买便宜的，就用价格尺；想吃甜的，就用甜度尺。先想清楚目的，再选尺子。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-row" style="margin-top:24px;">
+      <button class="btn" data-done="ch2-game" type="button">⭐ 我完成了，贴上星星</button>
+      <a class="btn ghost" href="parent-guide.html">读家长指南 →</a>
+    </div>
+
+    <div class="lesson-nav">
+      <a class="btn ghost" href="lesson-3.html">← 上一课</a>
+      <a class="btn ghost" href="../index.html">🏠 首页</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="card">
+      <div class="section-head">
+        <h2>可打印亲子卡片</h2>
+        <button class="btn ghost small" onclick="window.print()" type="button">🖨️ 打印这一页</button>
+      </div>
+      <p class="muted">打印后剪开，和孩子玩“排队”“分组”“公平比较”。</p>
+
+      <h3>🍌 果子属性卡（剪开，按价格或甜度排队）</h3>
+      <div class="fruit-row">
+        <div class="fruit-card"><div class="fruit-emoji">🍌</div><div class="fruit-name">香蕉</div><div class="attr">价格 1 ｜ 甜度 3</div></div>
+        <div class="fruit-card"><div class="fruit-emoji">🍐</div><div class="fruit-name">梨</div><div class="attr">价格 2 ｜ 甜度 2</div></div>
+        <div class="fruit-card"><div class="fruit-emoji">🍎</div><div class="fruit-name">苹果</div><div class="attr">价格 3 ｜ 甜度 4</div></div>
+        <div class="fruit-card"><div class="fruit-emoji">🍊</div><div class="fruit-name">橘子</div><div class="attr">价格 4 ｜ 甜度 5</div></div>
+      </div>
+
+      <h3 style="margin-top:28px;">🏆 我的排行榜</h3>
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;background:#fff;">
+          <thead>
+            <tr>
+              <th style="border:2px solid var(--line);padding:10px;">排名</th>
+              <th style="border:2px solid var(--line);padding:10px;">果子</th>
+              <th style="border:2px solid var(--line);padding:10px;">价格</th>
+              <th style="border:2px solid var(--line);padding:10px;">甜度</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="border:2px solid var(--line);padding:14px;">第 1 名</td><td style="border:2px solid var(--line);"></td><td style="border:2px solid var(--line);"></td><td style="border:2px solid var(--line);"></td></tr>
+            <tr><td style="border:2px solid var(--line);padding:14px;">第 2 名</td><td style="border:2px solid var(--line);"></td><td style="border:2px solid var(--line);"></td><td style="border:2px solid var(--line);"></td></tr>
+            <tr><td style="border:2px solid var(--line);padding:14px;">第 3 名</td><td style="border:2px solid var(--line);"></td><td style="border:2px solid var(--line);"></td><td style="border:2px solid var(--line);"></td></tr>
+            <tr><td style="border:2px solid var(--line);padding:14px;">第 4 名</td><td style="border:2px solid var(--line);"></td><td style="border:2px solid var(--line);"></td><td style="border:2px solid var(--line);"></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="margin-top:28px;">⚖️ 公平比较检查表</h3>
+      <div class="card" style="box-shadow:none;border:2px dashed var(--line);">
+        <p>☐ 它们一样大吗？</p>
+        <p>☐ 它们一样新吗？</p>
+        <p>☐ 它们的数量一样多吗？</p>
+        <p>☐ 是不是只变了一个东西？</p>
+      </div>
+
+      <h3 style="margin-top:28px;">🎲 10 次测试记录表</h3>
+      <div class="scoreboard">
+        <span class="score-cell">1 ☐</span><span class="score-cell">2 ☐</span><span class="score-cell">3 ☐</span><span class="score-cell">4 ☐</span><span class="score-cell">5 ☐</span>
+        <span class="score-cell">6 ☐</span><span class="score-cell">7 ☐</span><span class="score-cell">8 ☐</span><span class="score-cell">9 ☐</span><span class="score-cell">10 ☐</span>
+      </div>
+      <p class="tiny" style="margin-top:10px;">每试一次，在方框里画 ✓ 或 ✗。最后数一数：成功几次？</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>🐿️ 果子排行榜 · 第 2 章亲子游戏</span>
+    <span>仅供亲子启蒙，不构成投资建议</span>
+  </div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function () {
+  const fruits = [
+    { key: "banana", name: "香蕉", emoji: "🍌", price: 1, sweet: 3 },
+    { key: "pear",   name: "梨",   emoji: "🍐", price: 2, sweet: 2 },
+    { key: "apple",  name: "苹果", emoji: "🍎", price: 3, sweet: 4 },
+    { key: "orange", name: "橘子", emoji: "🍊", price: 4, sweet: 5 }
+  ];
+  let mode = null;
+  let picks = [];
+  let displayOrder = fruits.slice();
+
+  function shuffle(arr) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+
+  function byKey(key) {
+    return fruits.find(function (f) { return f.key === key; });
+  }
+
+  function render() {
+    const row = document.getElementById("gameRow");
+    row.innerHTML = "";
+    displayOrder.forEach(function (f) {
+      const card = document.createElement("div");
+      card.className = "fruit-card rank-card";
+      const idx = picks.indexOf(f.key);
+      if (idx >= 0) card.classList.add("picked");
+      card.innerHTML = (idx >= 0 ? '<span class="rank-badge">第 ' + (idx + 1) + ' 名</span>' : "")
+        + '<div class="fruit-emoji">' + f.emoji + '</div>'
+        + '<div class="fruit-name">' + f.name + '</div>'
+        + '<div class="attr">价格 ' + f.price + ' ｜ 甜度 ' + f.sweet + '</div>';
+      card.addEventListener("click", function () { pick(f.key); });
+      row.appendChild(card);
+    });
+  }
+
+  function setMsg(text, cls) {
+    const m = document.getElementById("gameMsg");
+    m.className = "message" + (cls ? " " + cls : "");
+    m.textContent = text;
+  }
+
+  function expectedKeys() {
+    const sorted = fruits.slice().sort(function (a, b) {
+      return mode === "price" ? a.price - b.price : b.sweet - a.sweet;
+    });
+    return sorted.map(function (f) { return f.key; });
+  }
+
+  function evaluate() {
+    const exp = expectedKeys();
+    const ok = picks.every(function (k, i) { return k === exp[i]; });
+    const names = function (keys) { return keys.map(function (k) { return byKey(k).name; }).join(" → "); };
+    setMsg((ok ? "✅ 排对啦！" : "❌ 顺序不太对。")
+      + " 你排的是：" + names(picks) + "。正确顺序是：" + names(exp) + "。", ok ? "good" : "warn");
+    document.getElementById("gamePrompt").textContent = ok
+      ? "真棒！换一把尺子，再排一次试试。"
+      : "没关系，再试一次。先看看每个果子的数字。";
+  }
+
+  function pick(key) {
+    if (!mode) {
+      setMsg("先选一把尺子：按价格，还是按甜度？", "warn");
+      return;
+    }
+    if (picks.indexOf(key) >= 0) return;
+    picks.push(key);
+    render();
+    if (picks.length === 4) {
+      evaluate();
+    } else {
+      document.getElementById("gamePrompt").textContent =
+        "已经选了 " + picks.length + " 个，继续点第 " + (picks.length + 1) + " 个。";
+    }
+  }
+
+  function setMode(m) {
+    mode = m;
+    picks = [];
+    displayOrder = shuffle(fruits);
+    render();
+    document.getElementById("gamePrompt").textContent = m === "price"
+      ? "按价格从便宜到贵，依次点 4 个果子。"
+      : "按甜度从最甜到最不甜，依次点 4 个果子。";
+    setMsg(m === "price" ? "现在用的是“价格尺”。" : "现在用的是“甜度尺”。", "");
+  }
+
+  document.querySelectorAll("[data-mode]").forEach(function (btn) {
+    btn.addEventListener("click", function () { setMode(btn.getAttribute("data-mode")); });
+  });
+
+  document.querySelector("[data-reset]").addEventListener("click", function () {
+    mode = null; picks = []; displayOrder = shuffle(fruits); render();
+    document.getElementById("gamePrompt").textContent = "先选一把尺子，然后按顺序点果子。";
+    setMsg("准备好了吗？选一把尺子开始吧。", "");
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>

@@ -22,7 +22,7 @@
 
 ## 🧸 亲子版教学网页 / Parent-Child Web Course
 
-给 4–7 岁孩子的第 1 章：**不讲公式，只种种子。** 用水果摊、松果和三个篮子，陪孩子体验「观察、等待、分散、比较、记录」。
+给 4–7 岁孩子的第 1–2 章：**不讲公式，只种种子。** 用水果摊、松果、三个篮子、排队和公平比较，陪孩子体验「观察、等待、分散、比较、记录」。
 
 👉 **[打开亲子版教学网页](docs/index.html)** ｜ 线上版：https://justinjchen-cornell.github.io/Factor-Investing-from-Zero/
 
@@ -32,7 +32,13 @@
 | [第 2 课：耐心的小松鼠](docs/chapter-01/lesson-2.html) | 秋天存松果，冬天不挨饿——体验等待与准备 |
 | [第 3 课：三个篮子](docs/chapter-01/lesson-3.html) | 不要把果子全放一个篮子；一样的东西比价格 |
 | [果子小管家](docs/chapter-01/game.html) | 5 分钟亲子游戏 + 可打印水果卡、三个罐子、7 天价格表 |
-| [家长指南](docs/chapter-01/parent-guide.html) | 五颗种子、10 分钟课堂模板、4 周计划、话术与书单 |
+| [第 1 章家长指南](docs/chapter-01/parent-guide.html) | 五颗种子、10 分钟课堂模板、4 周计划、话术与书单 |
+| **[第 2 章 · 比一比，排一排](docs/chapter-02/index.html)** | **排序、公平比较、多试几次** |
+| [第 1 课：给果子排队](docs/chapter-02/lesson-1.html) | 按价格排队，再分成两档——排序法启蒙 |
+| [第 2 课：公平地比一比](docs/chapter-02/lesson-2.html) | 只变一个东西——控制变量启蒙 |
+| [第 3 课：多试几次才算数](docs/chapter-02/lesson-3.html) | 一次赢可能只是运气——样本量启蒙 |
+| [果子排行榜](docs/chapter-02/game.html) | 按价格排 vs 按甜度排 + 可打印排行榜、公平检查表、10 次测试表 |
+| [第 2 章家长指南](docs/chapter-02/parent-guide.html) | 三颗种子、10 分钟模板、4 周计划、话术与书单 |
 
 > 每次 10 分钟，家长陪同，不涉及真实金钱。星星进度保存在本机浏览器。
 > *10 minutes per session, parent-led, no real money. Progress is stored locally in the browser.*

@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 1 课 · 给果子排队｜小松鼠的果子课</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../index.html"><span class="logo">🐿️</span><span>小松鼠的果子课</span></a>
+    <nav class="nav">
+      <a href="../index.html">首页</a>
+      <a href="../chapter-01/index.html">第 1 章</a>
+      <a class="active" href="index.html">第 2 章</a>
+      <a href="parent-guide.html">家长指南</a>
+      <button id="parentToggle" type="button">家长模式</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="lesson-head">
+    <div class="meta">
+      <span class="badge">第 1 课 · 排序</span>
+      <h1>给果子排队</h1>
+      <p class="sub">先排队，再比较。今天只学一件事：把东西按一个标准排好。</p>
+    </div>
+    <div class="lesson-tools">
+      <button class="btn secondary small" data-read-target="#story-text" type="button">🔊 读给我听</button>
+      <span class="sticker" data-progress="ch2-l1" title="第 1 课星星">⭐</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="story">
+      <h2>小松鼠的难题</h2>
+      <div id="story-text">
+        <p class="big">小松鼠有 4 个果子，想按价格排好队。</p>
+        <p>可是它们现在乱糟糟的：苹果、香蕉、橘子、梨。</p>
+        <p>“谁最便宜？谁最贵？”小松鼠看来看去，头都晕了。</p>
+        <p>你能帮它<span class="highlight">排好队</span>吗？排好队，才能公平地比一比。</p>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h3>📊 玩一玩：排一排</h3>
+      <p class="hint">点下面的按钮，看看果子怎么排队。</p>
+      <div class="button-row">
+        <button class="btn" data-sort="asc" type="button">从便宜到贵 ↑</button>
+        <button class="btn secondary" data-sort="desc" type="button">从贵到便宜 ↓</button>
+        <button class="btn ghost" data-group="1" type="button">分成两档</button>
+        <button class="btn ghost" data-reset="1" type="button">打乱重来</button>
+      </div>
+
+      <div class="rank-row" id="rankRow"></div>
+      <div class="message" id="rankMsg">先点“从便宜到贵”，帮果子排队吧。</div>
+    </div>
+
+    <div class="parent-note">
+      <h4>👨‍👩‍👧 家长提示：这一课真正在种什么种子？</h4>
+      <p><strong>排序 + 分组。</strong>投资里的“排序法”就是：按某个指标把股票排队，再分成几档，比较不同档的表现。孩子现在不需要知道“分位数”，只需要体验“先排队，再分组”。</p>
+      <p>生活延伸：把玩具按大小排一排；把鞋子按长短排一排；把水果按价格排一排。每次只用一个标准，问孩子“第一名是谁？最后一名是谁？”</p>
+      <p>如果孩子排错了，不要急着纠正。问他：“你是怎么想的？”排序没有绝对对错，关键是“有没有一个统一的标准”。</p>
+    </div>
+
+    <div class="section" style="padding-left:0;padding-right:0;">
+      <h2>问一问</h2>
+      <div class="questions">
+        <div class="question">
+          为什么要先排队，再比较？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q1" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q1">排好队，顺序清楚了，才能知道谁在第一、谁在最后，比较起来才不会乱。</div>
+        </div>
+        <div class="question">
+          如果按“甜度”排队，顺序会和按价格一样吗？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q2" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q2">不一定。按价格排和按甜度排，是两把不同的尺子。尺子不同，排队的结果就可能不同。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-row" style="margin-top:24px;">
+      <button class="btn" data-done="ch2-l1" type="button">⭐ 我完成了，贴上星星</button>
+      <a class="btn ghost" href="lesson-2.html">下一课：公平地比一比 →</a>
+    </div>
+
+    <div class="lesson-nav">
+      <a class="btn ghost" href="index.html">← 返回第 2 章</a>
+      <a class="btn ghost" href="../index.html">🏠 首页</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>🐿️ 第 1 课 · 排序</span>
+    <span>仅供亲子启蒙，不构成投资建议</span>
+  </div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function () {
+  const fruits = {
+    banana: { name: "香蕉", emoji: "🍌", price: 1 },
+    pear:   { name: "梨",   emoji: "🍐", price: 2 },
+    apple:  { name: "苹果", emoji: "🍎", price: 3 },
+    orange: { name: "橘子", emoji: "🍊", price: 4 }
+  };
+  let order = ["apple", "banana", "orange", "pear"];
+  let showRanks = false;
+  let grouped = false;
+
+  function render() {
+    const row = document.getElementById("rankRow");
+    row.innerHTML = "";
+    order.forEach(function (key, i) {
+      const f = fruits[key];
+      const card = document.createElement("div");
+      card.className = "fruit-card rank-card";
+      if (grouped) card.classList.add(i < 2 ? "cheap" : "expensive");
+      let badge = "";
+      if (showRanks) {
+        badge = '<span class="rank-badge ' + (i === 0 ? "first" : "") + '">第 ' + (i + 1) + ' 名</span>';
+      }
+      card.innerHTML = badge
+        + '<div class="fruit-emoji">' + f.emoji + '</div>'
+        + '<div class="fruit-name">' + f.name + '</div>'
+        + '<div class="price">' + f.price + ' 枚果币</div>';
+      row.appendChild(card);
+    });
+  }
+
+  function setMsg(text, cls) {
+    const m = document.getElementById("rankMsg");
+    m.className = "message" + (cls ? " " + cls : "");
+    m.textContent = text;
+  }
+
+  document.querySelectorAll("[data-sort]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      const dir = btn.getAttribute("data-sort");
+      order.sort(function (a, b) {
+        return dir === "asc" ? fruits[a].price - fruits[b].price : fruits[b].price - fruits[a].price;
+      });
+      showRanks = true; grouped = false; render();
+      setMsg(dir === "asc"
+        ? "从便宜到贵：香蕉 1 → 梨 2 → 苹果 3 → 橘子 4。第 1 名最便宜，第 4 名最贵。"
+        : "从贵到便宜：橘子 4 → 苹果 3 → 梨 2 → 香蕉 1。第 1 名最贵，第 4 名最便宜。", "good");
+    });
+  });
+
+  document.querySelector("[data-group]").addEventListener("click", function () {
+    order.sort(function (a, b) { return fruits[a].price - fruits[b].price; });
+    showRanks = true; grouped = true; render();
+    setMsg("分成两档：前两名（香蕉、梨）是“便宜的一半”，后两名（苹果、橘子）是“贵的一半”。投资里，这就是排序法。", "good");
+  });
+
+  document.querySelector("[data-reset]").addEventListener("click", function () {
+    order = ["apple", "banana", "orange", "pear"];
+    showRanks = false; grouped = false; render();
+    setMsg("先点“从便宜到贵”，帮果子排队吧。", "");
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
