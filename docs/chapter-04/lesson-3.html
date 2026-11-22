@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 3 课 · 三个就够了吗？｜小松鼠的果子课</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../index.html"><span class="logo">🐿️</span><span>小松鼠的果子课</span></a>
+    <nav class="nav">
+      <a href="../index.html">首页</a>
+      <a href="../chapter-01/index.html">第 1 章</a>
+      <a href="../chapter-02/index.html">第 2 章</a>
+      <a href="../chapter-03/index.html">第 3 章</a>
+      <a class="active" href="index.html">第 4 章</a>
+      <a href="parent-guide.html">家长指南</a>
+      <button id="parentToggle" type="button">家长模式</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="lesson-head">
+    <div class="meta">
+      <span class="badge">第 3 课 · 够用就好</span>
+      <h1>三个就够了吗？</h1>
+      <p class="sub">人太少忙不过来，人太多乱成一团。三个人的小队，刚刚好。</p>
+    </div>
+    <div class="lesson-tools">
+      <button class="btn secondary small" data-read-target="#story-text" type="button">🔊 读给我听</button>
+      <span class="sticker" data-progress="ch4-l3" title="第 3 课星星">⭐</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="story">
+      <h2>太挤了</h2>
+      <div id="story-text">
+        <p class="big">小松鼠想请所有 7 位朋友来帮忙。</p>
+        <p>结果果园里太挤了：大家挤来挤去，反而乱成一团。</p>
+        <p>它试着只请 3 位朋友：分工清楚，刚刚好。</p>
+        <p>原来，队友不是<span class="highlight">越多越好</span>。</p>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h3>🎯 玩一玩：几个人刚刚好？</h3>
+      <p class="hint">点按钮，看看不同人数的小队表现。</p>
+      <div class="button-row">
+        <button class="btn" data-size="1" type="button">1 个人</button>
+        <button class="btn secondary" data-size="3" type="button">3 个人</button>
+        <button class="btn ghost" data-size="7" type="button">7 个人</button>
+      </div>
+
+      <div class="day-star">
+        <div class="day-emoji" id="teamEmoji">👤</div>
+        <div class="day-name" id="teamTitle">一个人</div>
+        <div class="day-note" id="teamNote">只有一种本领，忙不过来。</div>
+      </div>
+      <div class="team-meter">
+        <div class="meter-cell"><b id="tasksDone">1</b><span>能做完的任务</span></div>
+        <div class="meter-cell"><b id="messLevel">0</b><span>混乱程度</span></div>
+      </div>
+      <div class="message" id="teamMsg">先点一个按钮吧。</div>
+    </div>
+
+    <div class="parent-note">
+      <h4>👨‍👩‍👧 家长提示：这一课真正在种什么种子？</h4>
+      <p><strong>简约原则：不是因子越多越好。</strong>多因子模型常用 3–5 个因子，因为因子太多会互相打架、增加噪声，还可能“过度拟合”历史数据。就像七个人挤在一起，反而乱成一团。</p>
+      <p>“三个刚刚好”是一个比喻，不是绝对数字。重点是让孩子体验：<strong>够用就好，不要为了多而多。</strong></p>
+      <p>生活延伸：画画时颜色不是越多越好；搭积木不是块数越多越好；做一件事，先想“我需要哪几种本领”。</p>
+    </div>
+
+    <div class="section" style="padding-left:0;padding-right:0;">
+      <h2>问一问</h2>
+      <div class="questions">
+        <div class="question">
+          为什么 7 个人反而乱成一团？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q1" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q1">人太多，大家挤在一起，分工反而不清楚。因子太多也一样，会互相打架、增加噪声。</div>
+        </div>
+        <div class="question">
+          是不是所有事情都要 3 个人？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q2" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q2">不是。要看任务：一个人能做的，就一个人做；需要几种本领，就请几个人。够用就好。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-row" style="margin-top:24px;">
+      <button class="btn" data-done="ch4-l3" type="button">⭐ 我完成了，贴上星星</button>
+      <a class="btn ghost" href="game.html">去玩：果园小分队 →</a>
+    </div>
+
+    <div class="lesson-nav">
+      <a class="btn ghost" href="lesson-2.html">← 上一课</a>
+      <a class="btn ghost" href="../index.html">🏠 首页</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>🐿️ 第 3 课 · 够用就好</span>
+    <span>仅供亲子启蒙，不构成投资建议</span>
+  </div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function () {
+  const teams = {
+    "1": {
+      emoji: "👤", title: "一个人", note: "只有一种本领，忙不过来。",
+      tasks: 1, mess: 0, cls: "warn",
+      msg: "一个人只有一种本领，忙不过来。"
+    },
+    "3": {
+      emoji: "👤👤👤", title: "三个人的小队", note: "分工清楚，刚刚好。",
+      tasks: 3, mess: 1, cls: "good",
+      msg: "三个人分工清楚，刚刚好。投资里，多因子模型常用 3–5 个因子，够用就好。"
+    },
+    "7": {
+      emoji: "👤👤👤👤👤👤👤", title: "七个人全来", note: "太挤了，反而乱成一团。",
+      tasks: 4, mess: 4, cls: "warn",
+      msg: "七个人挤在一起，反而乱成一团。因子太多，也会互相打架、变得嘈杂。"
+    }
+  };
+
+  document.querySelectorAll("[data-size]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      const t = teams[btn.getAttribute("data-size")];
+      document.getElementById("teamEmoji").textContent = t.emoji;
+      document.getElementById("teamTitle").textContent = t.title;
+      document.getElementById("teamNote").textContent = t.note;
+      document.getElementById("tasksDone").textContent = t.tasks;
+      document.getElementById("messLevel").textContent = t.mess;
+      const msg = document.getElementById("teamMsg");
+      msg.className = "message " + t.cls;
+      msg.textContent = t.msg;
+    });
+  });
+})();
+</script>
+</body>
+</html>

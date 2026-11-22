@@ -299,3 +299,20 @@ body.parent-mode .parent-note { display: block; }
 .factor-table th { background: var(--orange-soft); }
 .fruit-row.four { grid-template-columns: repeat(4, 1fr); }
 @media (max-width: 760px) { .fruit-row.four { grid-template-columns: 1fr 1fr; } }
+
+/* 第 4 章：果园小分队 */
+.char-card.selected { border-color: var(--blue); background: var(--blue-soft); }
+.day-star {
+  text-align: center; background: var(--orange-soft); border-radius: 20px;
+  padding: 24px 18px; margin: 16px 0;
+}
+.day-star .day-emoji { font-size: 64px; line-height: 1.2; }
+.day-star .day-name { font-size: 24px; font-weight: 900; }
+.day-star .day-note { color: var(--muted); }
+.team-meter { display: flex; gap: 10px; flex-wrap: wrap; margin: 12px 0; }
+.team-meter .meter-cell {
+  background: #fff; border: 2px solid var(--line); border-radius: 14px;
+  padding: 10px 14px; min-width: 120px;
+}
+.team-meter .meter-cell b { font-size: 24px; display: block; line-height: 1.2; }
+.team-meter .meter-cell span { font-size: 14px; color: var(--muted); }

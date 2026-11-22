@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 1 课 · 一个人不够，组个队｜小松鼠的果子课</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../index.html"><span class="logo">🐿️</span><span>小松鼠的果子课</span></a>
+    <nav class="nav">
+      <a href="../index.html">首页</a>
+      <a href="../chapter-01/index.html">第 1 章</a>
+      <a href="../chapter-02/index.html">第 2 章</a>
+      <a href="../chapter-03/index.html">第 3 章</a>
+      <a class="active" href="index.html">第 4 章</a>
+      <a href="parent-guide.html">家长指南</a>
+      <button id="parentToggle" type="button">家长模式</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="lesson-head">
+    <div class="meta">
+      <span class="badge">第 1 课 · 组队</span>
+      <h1>一个人不够，组个队</h1>
+      <p class="sub">一个人只有一种本领；几个人合作，能办成更多事。</p>
+    </div>
+    <div class="lesson-tools">
+      <button class="btn secondary small" data-read-target="#story-text" type="button">🔊 读给我听</button>
+      <span class="sticker" data-progress="ch4-l1" title="第 1 课星星">⭐</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="story">
+      <h2>果园大丰收</h2>
+      <div id="story-text">
+        <p class="big">果园大丰收，事情一下子多了起来。</p>
+        <p>要有人看天气，要有人招呼客人比价，还要有人搬果子。</p>
+        <p>小松鼠想一个人搞定，结果忙得团团转。</p>
+        <p>它请来两位朋友：一位会看天气，一位会算价格。三个人分工，事情就顺了。</p>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h3>🤝 玩一玩：一个人 vs 三个人</h3>
+      <p class="hint">点按钮，看看一个人和三个人分别能完成哪些任务。</p>
+      <div class="button-row">
+        <button class="btn" data-mode="solo" type="button">一个人试试</button>
+        <button class="btn secondary" data-mode="team" type="button">三个人试试</button>
+      </div>
+      <div style="overflow-x:auto;">
+        <table class="factor-table" id="taskTable">
+          <thead>
+            <tr><th>果园任务</th><th>一个人（小果子）</th><th>三个人（小果子 + 市场果子 + 便宜果子）</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>天气突然变了</td><td data-solo="❌" data-team="✅">?</td><td data-solo="❌" data-team="✅">?</td></tr>
+            <tr><td>客人想比价格</td><td data-solo="❌" data-team="✅">?</td><td data-solo="❌" data-team="✅">?</td></tr>
+            <tr><td>把果子搬回仓库</td><td data-solo="✅" data-team="✅">?</td><td data-solo="✅" data-team="✅">?</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="message" id="teamMsg">先点“一个人试试”，再点“三个人试试”。</div>
+    </div>
+
+    <div class="parent-note">
+      <h4>👨‍👩‍👧 家长提示：这一课真正在种什么种子？</h4>
+      <p><strong>多因子模型 = 让几个因子一起工作。</strong>只用市场一个因子，很多收益差异解释不了；加上规模、价值、盈利等因子，就能解释得更多。就像一个人只有一种本领，几个人合作能办成更多事。</p>
+      <p>但要注意：组队不是“人越多越好”。第 3 课会讲“够用就好”。这一课只让孩子体验“不同本领的人合作，能覆盖更多任务”。</p>
+      <p>生活延伸：家庭分工——谁做饭、谁洗碗、谁倒垃圾；幼儿园小组——有人画画、有人讲故事、有人收拾。问孩子：“如果只有一个人，会怎样？”</p>
+    </div>
+
+    <div class="section" style="padding-left:0;padding-right:0;">
+      <h2>问一问</h2>
+      <div class="questions">
+        <div class="question">
+          为什么一个人忙不过来？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q1" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q1">因为一个人只有一种本领。看天气、比价格、搬果子，需要不同的本领。</div>
+        </div>
+        <div class="question">
+          三个人为什么能办成更多事？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q2" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q2">因为三个人各有一样本领，合在一起，就能覆盖更多任务。投资里的多因子模型，也是让几个因子一起工作。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-row" style="margin-top:24px;">
+      <button class="btn" data-done="ch4-l1" type="button">⭐ 我完成了，贴上星星</button>
+      <a class="btn ghost" href="lesson-2.html">下一课：轮到谁表现？ →</a>
+    </div>
+
+    <div class="lesson-nav">
+      <a class="btn ghost" href="index.html">← 返回第 4 章</a>
+      <a class="btn ghost" href="../index.html">🏠 首页</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>🐿️ 第 1 课 · 组队</span>
+    <span>仅供亲子启蒙，不构成投资建议</span>
+  </div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function () {
+  const results = {
+    solo: ["❌", "❌", "✅"],
+    team: ["✅", "✅", "✅"]
+  };
+
+  document.querySelectorAll("[data-mode]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      const mode = btn.getAttribute("data-mode");
+      document.querySelectorAll("#taskTable tbody tr").forEach(function (tr, i) {
+        tr.children[1].textContent = results.solo[i];
+        tr.children[2].textContent = mode === "team" ? results.team[i] : "?";
+      });
+      const msg = document.getElementById("teamMsg");
+      msg.className = "message " + (mode === "team" ? "good" : "warn");
+      msg.textContent = mode === "solo"
+        ? "一个人只有一种本领：会搬果子，但看不懂天气，也不会比价。"
+        : "三个人各有一样本领，三件事都办成了。投资里，多因子模型就是让几个因子一起工作。";
+    });
+  });
+})();
+</script>
+</body>
+</html>

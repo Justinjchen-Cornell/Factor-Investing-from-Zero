@@ -22,7 +22,7 @@
 
 ## 🧸 亲子版教学网页 / Parent-Child Web Course
 
-给 4–7 岁孩子的第 1–3 章：**不讲公式，只种种子。** 用水果摊、松果、三个篮子、排队、公平比较和七种果子性格，陪孩子体验「观察、等待、分散、比较、多角度看」。
+给 4–7 岁孩子的第 1–4 章：**不讲公式，只种种子。** 用水果摊、松果、三个篮子、排队、公平比较、七种果子性格和组队游戏，陪孩子体验「观察、等待、分散、比较、多角度看、合作」。
 
 👉 **[打开亲子版教学网页](docs/index.html)** ｜ 线上版：https://justinjchen-cornell.github.io/Factor-Investing-from-Zero/
 
@@ -45,6 +45,12 @@
 | [第 3 课：跑得快、太热闹、长新枝](docs/chapter-03/lesson-3.html) | 动量、拥挤、投资——“看起来很好”不等于“一定好” |
 | [七种性格卡](docs/chapter-03/game.html) | 7 轮配对游戏 + 可打印角色卡、果园观察表 |
 | [第 3 章家长指南](docs/chapter-03/parent-guide.html) | 七个角色对照表、4 周计划、话术、书单 |
+| **[第 4 章 · 果园小分队](docs/chapter-04/index.html)** | **组队、轮换、够用就好——多因子模型启蒙** |
+| [第 1 课：一个人不够，组个队](docs/chapter-04/lesson-1.html) | 单因子 vs 多因子——几个本领一起工作 |
+| [第 2 课：轮到谁表现？](docs/chapter-04/lesson-2.html) | 因子轮动——没有谁能天天赢 |
+| [第 3 课：三个就够了吗？](docs/chapter-04/lesson-3.html) | 简约原则——因子不是越多越好 |
+| [果园小分队](docs/chapter-04/game.html) | 选 3 位队员挑战 6 个任务 + 可打印小队卡、挑战卡 |
+| [第 4 章家长指南](docs/chapter-04/parent-guide.html) | 三颗种子、对照表、4 周计划、话术、书单 |
 
 > 每次 10 分钟，家长陪同，不涉及真实金钱。星星进度保存在本机浏览器。
 > *10 minutes per session, parent-led, no real money. Progress is stored locally in the browser.*

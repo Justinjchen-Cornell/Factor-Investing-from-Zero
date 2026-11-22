@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>果园小分队 · 亲子游戏｜小松鼠的果子课</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../index.html"><span class="logo">🐿️</span><span>小松鼠的果子课</span></a>
+    <nav class="nav">
+      <a href="../index.html">首页</a>
+      <a href="../chapter-01/index.html">第 1 章</a>
+      <a href="../chapter-02/index.html">第 2 章</a>
+      <a href="../chapter-03/index.html">第 3 章</a>
+      <a class="active" href="index.html">第 4 章</a>
+      <a href="parent-guide.html">家长指南</a>
+      <button id="parentToggle" type="button">家长模式</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="lesson-head">
+    <div class="meta">
+      <span class="badge">第 4 章 · 亲子游戏</span>
+      <h1>果园小分队</h1>
+      <p class="sub">从七位小伙伴里选 3 位，挑战 6 个果园任务。没有完美小队。</p>
+    </div>
+    <div class="lesson-tools">
+      <button class="btn secondary small" data-read-target="#game-intro" type="button">🔊 读给我听</button>
+      <span class="sticker" data-progress="ch4-game" title="游戏星星">⭐</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="story">
+      <h2>组队吧</h2>
+      <div id="game-intro">
+        <p class="big">果园里有很多任务，一个人忙不过来。</p>
+        <p>你可以从七位小伙伴里选 3 位，组成一支小队。</p>
+        <p>选好以后，会有 6 个挑战。看看你的小队能解决几个。</p>
+        <p class="tiny">没有完美小队。选谁，就意味着放弃谁——这就是取舍。</p>
+      </div>
+    </div>
+
+    <div class="activity" id="selectPhase">
+      <h3>🤝 第一步：选 3 位小伙伴</h3>
+      <p class="hint">已选 <b id="pickCount">0</b> / 3。点卡片选择，再点一次取消。</p>
+      <div class="char-grid" id="teamGrid"></div>
+      <div class="button-row">
+        <button class="btn" id="startBtn" type="button" disabled>开始挑战 →</button>
+      </div>
+    </div>
+
+    <div class="activity" id="challengePhase" style="display:none;">
+      <h3>🎯 第二步：接受挑战</h3>
+      <div class="stats">
+        <div class="stat"><b id="challengeNum">1 / 6</b><span>第几关</span></div>
+        <div class="stat"><b id="scoreNum">0</b><span>已解决</span></div>
+      </div>
+      <div class="story" style="background:var(--orange-soft);box-shadow:none;margin:16px 0;">
+        <p class="big" id="challengeText" style="margin:0;">加载中…</p>
+      </div>
+      <p class="hint">点一位队员来帮忙：</p>
+      <div class="char-grid" id="teamPickGrid"></div>
+      <div class="message" id="challengeMsg">点一位队员吧。</div>
+      <div class="button-row">
+        <button class="btn" id="nextChallenge" type="button" style="display:none;">下一关 →</button>
+        <button class="btn ghost" id="restart" type="button">重新组队</button>
+      </div>
+    </div>
+
+    <div class="parent-note">
+      <h4>👨‍👩‍👧 家长提示：这一课真正在种什么种子？</h4>
+      <p><strong>多因子组合是取舍，不是全能。</strong>3 位队员只能覆盖 3 类任务；6 个挑战不可能全解决。投资里也一样：多因子组合不是“什么行情都赢”，而是“在不同行情里互相补位”。</p>
+      <p>孩子选谁都好。玩完问：“你放弃了谁？为什么？”“如果换一个任务，你会换队员吗？”让他体验“目标不同，队伍不同”。</p>
+      <p>不要追求满分。这个游戏的满分不是 6/6，而是孩子能说出“我为什么选这三个人”。</p>
+    </div>
+
+    <div class="section" style="padding-left:0;padding-right:0;">
+      <h2>问一问</h2>
+      <div class="questions">
+        <div class="question">
+          为什么没有一个小队能解决所有挑战？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q1" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q1">因为每个小伙伴只有一种本领，而小队只能选 3 个人。选了这 3 个，就少了另外 4 个的本领。组队就是取舍。</div>
+        </div>
+        <div class="question">
+          如果换一个目标，你会换队员吗？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q2" data-label="看提示" type="button">看提示</button></div>
+          <div class="reveal" id="q2">会的。想解决天气问题，就带市场果子；想解决比价问题，就带便宜果子。目标不同，队伍不同。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-row" style="margin-top:24px;">
+      <button class="btn" data-done="ch4-game" type="button">⭐ 我完成了，贴上星星</button>
+      <a class="btn ghost" href="parent-guide.html">读家长指南 →</a>
+    </div>
+
+    <div class="lesson-nav">
+      <a class="btn ghost" href="lesson-3.html">← 上一课</a>
+      <a class="btn ghost" href="../index.html">🏠 首页</a>
+    </div>
+  </section>
+
+  <section class="section" id="endBox" style="display:none;">
+    <div class="card" style="text-align:center;background:var(--green-soft);">
+      <h2>挑战结束！</h2>
+      <p class="big" id="endText">你的小队解决了 0 / 6 个挑战。</p>
+      <p>没有一个小队能解决所有问题——组队就是取舍。</p>
+      <div class="button-row" style="justify-content:center;">
+        <button class="btn" onclick="location.reload()" type="button">再玩一次</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="card">
+      <div class="section-head">
+        <h2>可打印小队卡片</h2>
+        <button class="btn ghost small" onclick="window.print()" type="button">🖨️ 打印这一页</button>
+      </div>
+      <p class="muted">打印后剪开，玩“组队”和“挑战”游戏。</p>
+
+      <h3>🤝 七位小伙伴（剪开）</h3>
+      <div class="char-grid">
+        <div class="char-card"><div class="char-emoji">🌤️</div><div class="char-name">市场果子</div><div class="char-trait">擅长：看果园天气</div></div>
+        <div class="char-card"><div class="char-emoji">🍎</div><div class="char-name">小果子</div><div class="char-trait">擅长：发现小果子</div></div>
+        <div class="char-card"><div class="char-emoji">💰</div><div class="char-name">便宜果子</div><div class="char-trait">擅长：比价格</div></div>
+        <div class="char-card"><div class="char-emoji">🏃</div><div class="char-name">跑得快果子</div><div class="char-trait">擅长：看谁滚得快</div></div>
+        <div class="char-card"><div class="char-emoji">🌳</div><div class="char-name">金蛋树</div><div class="char-trait">擅长：找会结果的树</div></div>
+        <div class="char-card"><div class="char-emoji">🌱</div><div class="char-name">新枝树</div><div class="char-trait">擅长：看新枝长得好不好</div></div>
+        <div class="char-card"><div class="char-emoji">🧺</div><div class="char-name">热闹果子</div><div class="char-trait">擅长：看排队长短</div></div>
+      </div>
+
+      <h3 style="margin-top:28px;">🎯 六个挑战（剪开）</h3>
+      <div class="questions">
+        <div class="question">果园突然变天，所有果子一起涨跌。谁最懂天气？</div>
+        <div class="question">客人想比一比价格，谁最会算？</div>
+        <div class="question">一个果子滚得飞快，谁最懂它会不会继续滚？</div>
+        <div class="question">摊子前排了很长的队，谁最懂热闹？</div>
+        <div class="question">大家想找一棵每年都结很多果子的树，谁最懂？</div>
+        <div class="question">一阵风吹来，小果子容易被吹落，谁最懂小果子？</div>
+      </div>
+
+      <h3 style="margin-top:28px;">📋 我的小队</h3>
+      <div class="card" style="box-shadow:none;border:2px dashed var(--line);">
+        <p>我的 3 位队员：☐ __________　☐ __________　☐ __________</p>
+        <p>我放弃了：____________________________________</p>
+        <p>因为：________________________________________</p>
+        <p>解决的挑战：☐ 1　☐ 2　☐ 3　☐ 4　☐ 5　☐ 6</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>🐿️ 果园小分队 · 第 4 章亲子游戏</span>
+    <span>仅供亲子启蒙，不构成投资建议</span>
+  </div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function () {
+  const chars = [
+    { key: "market",    name: "市场果子",   emoji: "🌤️", skill: "看果园天气" },
+    { key: "small",     name: "小果子",     emoji: "🍎", skill: "发现小果子" },
+    { key: "cheap",     name: "便宜果子",   emoji: "💰", skill: "比价格" },
+    { key: "momentum",  name: "跑得快果子", emoji: "🏃", skill: "看谁滚得快" },
+    { key: "gold",      name: "金蛋树",     emoji: "🌳", skill: "找会结果的树" },
+    { key: "newbranch", name: "新枝树",     emoji: "🌱", skill: "看新枝" },
+    { key: "crowd",     name: "热闹果子",   emoji: "🧺", skill: "看排队" }
+  ];
+  const challenges = [
+    { text: "果园突然变天，所有果子一起涨跌。谁最懂天气？", answer: "market" },
+    { text: "客人想比一比价格，谁最会算？", answer: "cheap" },
+    { text: "一个果子滚得飞快，谁最懂它会不会继续滚？", answer: "momentum" },
+    { text: "摊子前排了很长的队，谁最懂热闹？", answer: "crowd" },
+    { text: "大家想找一棵每年都结很多果子的树，谁最懂？", answer: "gold" },
+    { text: "一阵风吹来，小果子容易被吹落，谁最懂小果子？", answer: "small" }
+  ];
+
+  let selected = [];
+  let ci = 0;
+  let score = 0;
+  let answered = false;
+
+  function byKey(key) {
+    return chars.find(function (c) { return c.key === key; });
+  }
+
+  function renderTeamGrid() {
+    const grid = document.getElementById("teamGrid");
+    grid.innerHTML = "";
+    chars.forEach(function (c) {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "char-card" + (selected.indexOf(c.key) >= 0 ? " selected" : "");
+      btn.innerHTML = '<div class="char-emoji">' + c.emoji + '</div>'
+        + '<div class="char-name">' + c.name + '</div>'
+        + '<div class="char-trait">擅长：' + c.skill + '</div>';
+      btn.addEventListener("click", function () { toggle(c.key); });
+      grid.appendChild(btn);
+    });
+    document.getElementById("pickCount").textContent = selected.length;
+    document.getElementById("startBtn").disabled = selected.length !== 3;
+  }
+
+  function toggle(key) {
+    if (selected.indexOf(key) >= 0) {
+      selected = selected.filter(function (k) { return k !== key; });
+    } else if (selected.length < 3) {
+      selected.push(key);
+    }
+    renderTeamGrid();
+  }
+
+  function renderChallenge() {
+    const ch = challenges[ci];
+    document.getElementById("challengeText").textContent = ch.text;
+    document.getElementById("challengeNum").textContent = (ci + 1) + " / " + challenges.length;
+    document.getElementById("scoreNum").textContent = score;
+    document.getElementById("challengeMsg").className = "message";
+    document.getElementById("challengeMsg").textContent = "点一位队员吧。";
+    document.getElementById("nextChallenge").style.display = "none";
+    answered = false;
+
+    const grid = document.getElementById("teamPickGrid");
+    grid.innerHTML = "";
+    selected.forEach(function (key) {
+      const c = byKey(key);
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "char-card";
+      btn.innerHTML = '<div class="char-emoji">' + c.emoji + '</div>'
+        + '<div class="char-name">' + c.name + '</div>'
+        + '<div class="char-trait">擅长：' + c.skill + '</div>';
+      btn.addEventListener("click", function () { answer(key, btn); });
+      grid.appendChild(btn);
+    });
+  }
+
+  function answer(key, btn) {
+    if (answered) return;
+    answered = true;
+    const ch = challenges[ci];
+    const msg = document.getElementById("challengeMsg");
+    if (key === ch.answer) {
+      score += 1;
+      btn.classList.add("correct");
+      msg.className = "message good";
+      msg.textContent = "✅ 答对了！「" + byKey(ch.answer).name + "」的强项就是" + byKey(ch.answer).skill + "。";
+    } else {
+      btn.classList.add("wrong");
+      msg.className = "message warn";
+      msg.textContent = "❌ 这次是「" + byKey(ch.answer).name + "」的强项：" + byKey(ch.answer).skill + "。";
+    }
+    document.getElementById("scoreNum").textContent = score;
+    const next = document.getElementById("nextChallenge");
+    next.style.display = "inline-flex";
+    next.textContent = ci === challenges.length - 1 ? "看结果 →" : "下一关 →";
+  }
+
+  function next() {
+    ci += 1;
+    if (ci >= challenges.length) {
+      document.getElementById("challengePhase").style.display = "none";
+      document.getElementById("endBox").style.display = "block";
+      document.getElementById("endText").textContent =
+        "你的小队解决了 " + score + " / " + challenges.length + " 个挑战。";
+    } else {
+      renderChallenge();
+    }
+  }
+
+  function resetGame() {
+    selected = [];
+    ci = 0;
+    score = 0;
+    answered = false;
+    document.getElementById("selectPhase").style.display = "block";
+    document.getElementById("challengePhase").style.display = "none";
+    document.getElementById("endBox").style.display = "none";
+    renderTeamGrid();
+  }
+
+  document.getElementById("startBtn").addEventListener("click", function () {
+    if (selected.length !== 3) return;
+    document.getElementById("selectPhase").style.display = "none";
+    document.getElementById("challengePhase").style.display = "block";
+    document.getElementById("endBox").style.display = "none";
+    ci = 0;
+    score = 0;
+    renderChallenge();
+  });
+  document.getElementById("nextChallenge").addEventListener("click", next);
+  document.getElementById("restart").addEventListener("click", resetGame);
+
+  renderTeamGrid();
+})();
+</script>
+</body>
+</html>

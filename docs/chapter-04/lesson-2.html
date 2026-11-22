@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 2 课 · 轮到谁表现？｜小松鼠的果子课</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../index.html"><span class="logo">🐿️</span><span>小松鼠的果子课</span></a>
+    <nav class="nav">
+      <a href="../index.html">首页</a>
+      <a href="../chapter-01/index.html">第 1 章</a>
+      <a href="../chapter-02/index.html">第 2 章</a>
+      <a href="../chapter-03/index.html">第 3 章</a>
+      <a class="active" href="index.html">第 4 章</a>
+      <a href="parent-guide.html">家长指南</a>
+      <button id="parentToggle" type="button">家长模式</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="lesson-head">
+    <div class="meta">
+      <span class="badge">第 2 课 · 轮换</span>
+      <h1>轮到谁表现？</h1>
+      <p class="sub">今天你表现，明天我表现。没有谁能天天赢。</p>
+    </div>
+    <div class="lesson-tools">
+      <button class="btn secondary small" data-read-target="#story-text" type="button">🔊 读给我听</button>
+      <span class="sticker" data-progress="ch4-l2" title="第 2 课星星">⭐</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="story">
+      <h2>今日之星</h2>
+      <div id="story-text">
+        <p class="big">七位小伙伴都想当“今日之星”。</p>
+        <p>星期一，市场果子最风光；星期二，便宜果子受欢迎；星期三，跑得快果子出尽风头……</p>
+        <p>小松鼠问：“谁能每天都赢？”</p>
+        <p>你猜猜看。</p>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h3>📅 玩一玩：七天“今日之星”</h3>
+      <p class="hint">点“下一天”，看看今天谁最风光。七天结束后，数一数谁赢得多。</p>
+      <div class="day-star">
+        <div class="day-emoji" id="dayEmoji">🌤️</div>
+        <div class="day-name" id="dayName">市场果子</div>
+        <div class="day-note" id="dayNote">今天果园天气好，所有果子都涨。</div>
+      </div>
+      <div class="stats">
+        <div class="stat"><b id="dayCount">1</b><span>第几天</span></div>
+        <div class="stat"><b id="starCount">1</b><span>已经当过今日之星</span></div>
+      </div>
+      <div class="scoreboard" id="tally"></div>
+      <div class="button-row">
+        <button class="btn" id="nextDay" type="button">下一天 →</button>
+        <button class="btn ghost" id="restart" type="button">重新开始</button>
+      </div>
+      <div class="message" id="dayMsg">点“下一天”，看看明天轮到谁。</div>
+    </div>
+
+    <div class="parent-note">
+      <h4>👨‍👩‍👧 家长提示：这一课真正在种什么种子？</h4>
+      <p><strong>因子轮动：没有哪个因子永远最好。</strong>价值、动量、小盘、质量……都会轮流表现，也会轮流落后。去年最好的因子，今年可能垫底。</p>
+      <p>这一课不是教“预测明天谁赢”，而是教“接受轮换”。如果只押一个因子，就会有时开心、有时失望；多因子组合的意义，是让不同因子互相补位。</p>
+      <p>生活延伸：班里轮流当值日生；游戏里轮流当队长；一年四季轮流穿不同的衣服。问孩子：“谁能天天当第一？”</p>
+    </div>
+
+    <div class="section" style="padding-left:0;padding-right:0;">
+      <h2>问一问</h2>
+      <div class="questions">
+        <div class="question">
+          有没有哪个小伙伴每天都赢？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q1" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q1">没有。七位小伙伴轮流当“今日之星”。每个都有风光的时候，也有落后的时候。</div>
+        </div>
+        <div class="question">
+          如果只选一个小伙伴，会怎样？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q2" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q2">有时候开心，有时候失望。因为你不知道明天轮到谁。组个队，不同性格互相补位，会更稳。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-row" style="margin-top:24px;">
+      <button class="btn" data-done="ch4-l2" type="button">⭐ 我完成了，贴上星星</button>
+      <a class="btn ghost" href="lesson-3.html">下一课：三个就够了吗？ →</a>
+    </div>
+
+    <div class="lesson-nav">
+      <a class="btn ghost" href="lesson-1.html">← 上一课</a>
+      <a class="btn ghost" href="../index.html">🏠 首页</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>🐿️ 第 2 课 · 轮换</span>
+    <span>仅供亲子启蒙，不构成投资建议</span>
+  </div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function () {
+  const stars = [
+    { emoji: "🌤️", name: "市场果子", note: "今天果园天气好，所有果子都涨。" },
+    { emoji: "🍎", name: "小果子", note: "今天风不大，小果子长得最快。" },
+    { emoji: "💰", name: "便宜果子", note: "今天大家都想省钱，便宜果子最受欢迎。" },
+    { emoji: "🏃", name: "跑得快果子", note: "今天它滚得最快，大家都追它。" },
+    { emoji: "🌳", name: "金蛋树", note: "今天大家比谁结果多，金蛋树赢了。" },
+    { emoji: "🌱", name: "新枝树", note: "今天大家比谁长得快，新枝树赢了。" },
+    { emoji: "🧺", name: "热闹果子", note: "今天摊子前排队最长，热闹果子最风光。" }
+  ];
+
+  let order = [];
+  let day = 0;
+
+  function shuffle(arr) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+
+  function render() {
+    const s = order[day];
+    document.getElementById("dayEmoji").textContent = s.emoji;
+    document.getElementById("dayName").textContent = s.name;
+    document.getElementById("dayNote").textContent = s.note;
+    document.getElementById("dayCount").textContent = day + 1;
+    document.getElementById("starCount").textContent = day + 1;
+
+    const tally = document.getElementById("tally");
+    tally.innerHTML = "";
+    order.forEach(function (x, i) {
+      const cell = document.createElement("span");
+      cell.className = "score-cell" + (i <= day ? " win" : "");
+      cell.textContent = (i <= day ? "⭐ " : "") + x.name;
+      tally.appendChild(cell);
+    });
+
+    const msg = document.getElementById("dayMsg");
+    const btn = document.getElementById("nextDay");
+    if (day === 6) {
+      msg.className = "message good";
+      msg.textContent = "七天结束：七位小伙伴各当过一次今日之星。没有谁能天天赢。投资里，因子也会轮换。";
+      btn.disabled = true;
+      btn.textContent = "七天结束";
+    } else {
+      msg.className = "message";
+      msg.textContent = s.note;
+      btn.disabled = false;
+      btn.textContent = "下一天 →";
+    }
+  }
+
+  function next() {
+    if (day < 6) { day += 1; render(); }
+  }
+
+  function start() {
+    order = shuffle(stars);
+    day = 0;
+    render();
+  }
+
+  document.getElementById("nextDay").addEventListener("click", next);
+  document.getElementById("restart").addEventListener("click", start);
+  start();
+})();
+</script>
+</body>
+</html>
