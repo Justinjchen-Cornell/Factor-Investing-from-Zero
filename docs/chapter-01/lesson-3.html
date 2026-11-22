@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 3 课 · 三个篮子｜小松鼠的果子课</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../index.html"><span class="logo">🐿️</span><span>小松鼠的果子课</span></a>
+    <nav class="nav">
+      <a href="../index.html">首页</a>
+      <a class="active" href="index.html">第 1 章</a>
+      <a href="parent-guide.html">家长指南</a>
+      <button id="parentToggle" type="button">家长模式</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="lesson-head">
+    <div class="meta">
+      <span class="badge">第 3 课 · 分散与比较</span>
+      <h1>三个篮子</h1>
+      <p class="sub">果子不要全放一个篮子；一样好的东西，记得比一比价格。</p>
+    </div>
+    <div class="lesson-tools">
+      <button class="btn secondary small" data-read-target="#story-text" type="button">🔊 读给我听</button>
+      <span class="sticker" data-progress="ch1-l3" title="第 3 课星星">⭐</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="story">
+      <h2>小松鼠分果子</h2>
+      <div id="story-text">
+        <p class="big">小松鼠有 6 颗果子，要放进篮子里。</p>
+        <p>如果全部放在一个篮子，篮子倒了，6 颗全没了。</p>
+        <p>如果分开放，一个篮子倒了，还有其他篮子。</p>
+        <p>这就是<span class="highlight">“不要把所有的果子放在一个篮子里”</span>。</p>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h3>🧺 玩一玩：你会怎么放？</h3>
+      <p class="hint">先选一种放法，再让一个篮子倒下来看看。</p>
+      <div class="button-row">
+        <button class="btn" data-mode="one" type="button">全部放一个篮子</button>
+        <button class="btn secondary" data-mode="split" type="button">分开放三个篮子</button>
+      </div>
+
+      <div class="basket-row" id="basketRow">
+        <div class="basket"><div class="basket-icon">🧺</div><div class="basket-fruits"></div></div>
+        <div class="basket"><div class="basket-icon">🧺</div><div class="basket-fruits"></div></div>
+        <div class="basket"><div class="basket-icon">🧺</div><div class="basket-fruits"></div></div>
+      </div>
+
+      <div class="button-row">
+        <button class="btn ghost" id="tipBtn" type="button">💥 一个篮子倒了</button>
+        <button class="btn ghost" id="resetBtn" type="button">重新放</button>
+      </div>
+      <div class="message" id="basketMsg">先选一种放法吧。</div>
+    </div>
+
+    <div class="activity">
+      <h3>🍎 再玩一个：一样甜的苹果，买哪个？</h3>
+      <p class="hint">两个苹果一样大、一样甜。一个 5 枚果币，一个 3 枚果币。</p>
+      <div class="choice-row">
+        <button class="choice" data-price="5" type="button">
+          <div class="choice-emoji">🍎</div>
+          <div class="choice-title">苹果 A</div>
+          <div class="choice-sub">5 枚果币</div>
+        </button>
+        <button class="choice" data-price="3" type="button">
+          <div class="choice-emoji">🍎</div>
+          <div class="choice-title">苹果 B</div>
+          <div class="choice-sub">3 枚果币</div>
+        </button>
+      </div>
+      <div class="message" id="priceMsg">点一个苹果，看看小松鼠会怎么说。</div>
+    </div>
+
+    <div class="parent-note">
+      <h4>👨‍👩‍👧 家长提示：这一课真正在种什么种子？</h4>
+      <p><strong>分散：</strong>“不要把鸡蛋放在一个篮子里。”不是让孩子背这句话，而是让他体验“一个篮子倒了，还有其他篮子”。生活里可以玩：把积木分三堆放，抽掉一堆看看还剩多少。</p>
+      <p><strong>比较价格：</strong>注意补一句——“便宜”的前提是“东西一样好”。如果苹果坏了，再便宜也不买。这是未来“价值投资”与“价值陷阱”的分界线，现在种下“先看质量，再比价格”的顺序就够了。</p>
+      <p>不要把这些讲成“买股票一定赚钱”。这一课只教两个生活习惯：分开放、比一比。</p>
+    </div>
+
+    <div class="section" style="padding-left:0;padding-right:0;">
+      <h2>问一问</h2>
+      <div class="questions">
+        <div class="question">
+          为什么不能把 6 颗果子都放在一个篮子里？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q1" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q1">因为篮子可能会倒。全放一起，一次意外就全没了；分开放，一次意外只损失一部分。</div>
+        </div>
+        <div class="question">
+          便宜的东西一定好吗？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q2" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q2">不一定。要先看它是不是一样好。一样好的东西，买便宜的；坏掉的东西，再便宜也不买。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-row" style="margin-top:24px;">
+      <button class="btn" data-done="ch1-l3" type="button">⭐ 我完成了，贴上星星</button>
+      <a class="btn ghost" href="game.html">去玩：果子小管家 →</a>
+    </div>
+
+    <div class="lesson-nav">
+      <a class="btn ghost" href="lesson-2.html">← 上一课</a>
+      <a class="btn ghost" href="../index.html">🏠 首页</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>🐿️ 第 3 课 · 分散与比较</span>
+    <span>仅供亲子启蒙，不构成投资建议</span>
+  </div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function () {
+  const layouts = {
+    one: ["🍎🍎🍎🍐🍐🍊", "", ""],
+    split: ["🍎🍎", "🍐🍐", "🍊🍊"]
+  };
+  let mode = null;
+
+  function renderBaskets() {
+    const row = document.getElementById("basketRow");
+    row.querySelectorAll(".basket").forEach(function (basket, i) {
+      basket.classList.remove("tipped");
+      basket.querySelector(".basket-fruits").textContent = mode ? layouts[mode][i] : "";
+    });
+    const msg = document.getElementById("basketMsg");
+    msg.className = "message";
+    msg.textContent = mode
+      ? (mode === "one" ? "所有果子都在一个篮子里。现在让篮子倒下来试试。" : "果子分放在三个篮子里。现在让一个篮子倒下来试试。")
+      : "先选一种放法吧。";
+  }
+
+  document.querySelectorAll("[data-mode]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      mode = btn.getAttribute("data-mode");
+      renderBaskets();
+    });
+  });
+
+  document.getElementById("tipBtn").addEventListener("click", function () {
+    if (!mode) {
+      document.getElementById("basketMsg").textContent = "先选一种放法吧。";
+      return;
+    }
+    const baskets = document.querySelectorAll("#basketRow .basket");
+    const idx = Math.floor(Math.random() * 3);
+    baskets.forEach(function (b) { b.classList.remove("tipped"); });
+    baskets[idx].classList.add("tipped");
+    const lost = layouts[mode][idx].length / 2;
+    const msg = document.getElementById("basketMsg");
+    msg.className = "message " + (lost === 0 ? "good" : "warn");
+    if (lost === 0) {
+      msg.textContent = "这个篮子是空的——运气真好，一颗果子都没丢！";
+    } else if (mode === "one") {
+      msg.textContent = "唯一的篮子倒了，" + lost + " 颗果子全没了……一次意外就全军覆没。";
+    } else {
+      msg.textContent = "一个篮子倒了，丢了 " + lost + " 颗果子；另外两个篮子里还有 " + (6 - lost) + " 颗，安全！";
+    }
+  });
+
+  document.getElementById("resetBtn").addEventListener("click", function () {
+    mode = null;
+    renderBaskets();
+  });
+
+  document.querySelectorAll("[data-price]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      document.querySelectorAll("[data-price]").forEach(function (b) { b.classList.remove("selected"); });
+      btn.classList.add("selected");
+      const price = Number(btn.getAttribute("data-price"));
+      const msg = document.getElementById("priceMsg");
+      if (price === 3) {
+        msg.className = "message good";
+        msg.textContent = "选得真好！一样甜的苹果，3 枚果币更划算，省下的 2 枚可以买别的东西。";
+      } else {
+        msg.className = "message warn";
+        msg.textContent = "这个苹果也很甜，但多花了 2 枚果币。一样的东西，可以先比一比价格再决定。";
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

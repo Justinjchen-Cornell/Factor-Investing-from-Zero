@@ -1,7 +1,8 @@
 # Factor-Investing-from-Zero · 从零开始学因子
 
 > 一本把《因子投资：方法与实践》讲成"开源课程"的仓库 —— 每一章都有讲义、可运行的代码和练习。
-> *An open course built from "Factor Investing: Methods and Practice" — lecture + code + exercises for every chapter.*
+> 另附**给 4–7 岁孩子的亲子版教学网页**：用水果摊、松果和三个篮子，种下第一颗种子。
+> *An open course built from "Factor Investing: Methods and Practice" — lecture + code + exercises for every chapter, plus a parent-child storybook web course for ages 4–7.*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
@@ -16,6 +17,25 @@
 **A stock is a basket of factor exposures: E[R] = βλ + α.**
 
 本仓库用"比喻式精讲 + 可运行代码 + 检查站练习"三件套，带你从零认识因子、学会方法、读懂 A 股实证、最终上手实践。
+
+---
+
+## 🧸 亲子版教学网页 / Parent-Child Web Course
+
+给 4–7 岁孩子的第 1 章：**不讲公式，只种种子。** 用水果摊、松果和三个篮子，陪孩子体验「观察、等待、分散、比较、记录」。
+
+👉 **[打开亲子版教学网页](docs/index.html)** ｜ 线上版：https://justinjchen-cornell.github.io/Factor-Investing-from-Zero/
+
+| 页面 | 内容 |
+|---|---|
+| [第 1 课：果子为什么一起涨价？](docs/chapter-01/lesson-1.html) | 天气一变，三种果子一起动——找“共同的原因” |
+| [第 2 课：耐心的小松鼠](docs/chapter-01/lesson-2.html) | 秋天存松果，冬天不挨饿——体验等待与准备 |
+| [第 3 课：三个篮子](docs/chapter-01/lesson-3.html) | 不要把果子全放一个篮子；一样的东西比价格 |
+| [果子小管家](docs/chapter-01/game.html) | 5 分钟亲子游戏 + 可打印水果卡、三个罐子、7 天价格表 |
+| [家长指南](docs/chapter-01/parent-guide.html) | 五颗种子、10 分钟课堂模板、4 周计划、话术与书单 |
+
+> 每次 10 分钟，家长陪同，不涉及真实金钱。星星进度保存在本机浏览器。
+> *10 minutes per session, parent-led, no real money. Progress is stored locally in the browser.*
 
 ---
 

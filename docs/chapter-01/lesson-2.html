@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 2 课 · 耐心的小松鼠｜小松鼠的果子课</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../index.html"><span class="logo">🐿️</span><span>小松鼠的果子课</span></a>
+    <nav class="nav">
+      <a href="../index.html">首页</a>
+      <a class="active" href="index.html">第 1 章</a>
+      <a href="parent-guide.html">家长指南</a>
+      <button id="parentToggle" type="button">家长模式</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="lesson-head">
+    <div class="meta">
+      <span class="badge">第 2 课 · 等待与准备</span>
+      <h1>耐心的小松鼠</h1>
+      <p class="sub">秋天有很多松果，冬天可能很冷。留一点，还是全部吃掉？</p>
+    </div>
+    <div class="lesson-tools">
+      <button class="btn secondary small" data-read-target="#story-text" type="button">🔊 读给我听</button>
+      <span class="sticker" data-progress="ch1-l2" title="第 2 课星星">⭐</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="story">
+      <h2>小松鼠的秋天</h2>
+      <div id="story-text">
+        <p class="big">秋天到了，小松鼠采了 10 颗松果。</p>
+        <p>它有两个选择：现在全部吃掉，或者留一些到冬天。</p>
+        <p>冬天很冷，能找到的食物很少。存下来的松果，就是小松鼠的<span class="highlight">“过冬钱”</span>。</p>
+        <p>愿意等一等、为以后做准备，是一种很重要的能力。</p>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h3>🌰 玩一玩：你帮小松鼠存几颗？</h3>
+      <p class="hint">先选一个“存起来的数量”，再过冬看看会发生什么。</p>
+      <div class="button-row">
+        <button class="btn ghost" data-store="0" type="button">全部吃掉（存 0 颗）</button>
+        <button class="btn ghost" data-store="2" type="button">存 2 颗</button>
+        <button class="btn ghost" data-store="4" type="button">存 4 颗</button>
+        <button class="btn ghost" data-store="6" type="button">存 6 颗</button>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><b id="storeCount">3</b><span>留到冬天</span></div>
+        <div class="stat"><b id="eatCount">7</b><span>现在吃掉</span></div>
+        <div class="stat"><b id="winterNeed">?</b><span>冬天需要</span></div>
+      </div>
+
+      <div class="acorn-row" id="acornRow" aria-label="10 颗松果"></div>
+
+      <div class="button-row">
+        <button class="btn" id="winterBtn" type="button">❄️ 过冬啦</button>
+        <button class="btn ghost" id="resetBtn" type="button">再试一次</button>
+      </div>
+      <div class="message" id="winterMsg">选好存几颗，然后点“过冬啦”。</div>
+    </div>
+
+    <div class="parent-note">
+      <h4>👨‍👩‍👧 家长提示：这一课真正在种什么种子？</h4>
+      <p><strong>延迟满足 + 为不确定的未来做准备。</strong>不要把它讲成“存钱一定赚”。可以问孩子：“如果冬天不冷，存的松果会浪费吗？”——不会浪费，可以以后再吃；但等待是有成本的。</p>
+      <p>投资里的“风险溢价”也是类似的意思：愿意承担不确定性、把钱放到更长时间里，可能得到补偿；但<strong>不是每次都一定有回报</strong>。这一点要诚实地说给孩子听。</p>
+      <p>生活延伸：三个罐子——现在花、存起来、分享给别人。每次拿到零花钱，让孩子自己分一分。</p>
+    </div>
+
+    <div class="section" style="padding-left:0;padding-right:0;">
+      <h2>问一问</h2>
+      <div class="questions">
+        <div class="question">
+          如果全部吃掉，冬天很冷，小松鼠会怎么样？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q1" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q1">它可能会饿肚子。全部吃掉很痛快，但没有为以后做准备。</div>
+        </div>
+        <div class="question">
+          存的松果越多越好吗？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q2" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q2">不一定。存太多，现在就要少吃；而且冬天不一定那么冷。找到“够用就好”的数量，比一味多存更重要。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-row" style="margin-top:24px;">
+      <button class="btn" data-done="ch1-l2" type="button">⭐ 我完成了，贴上星星</button>
+      <a class="btn ghost" href="lesson-3.html">下一课：三个篮子 →</a>
+    </div>
+
+    <div class="lesson-nav">
+      <a class="btn ghost" href="lesson-1.html">← 上一课</a>
+      <a class="btn ghost" href="../index.html">🏠 首页</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>🐿️ 第 2 课 · 等待与准备</span>
+    <span>仅供亲子启蒙，不构成投资建议</span>
+  </div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function () {
+  let stored = 3;
+  const TOTAL = 10;
+  const winters = [
+    { name: '❄️ 不太冷的冬天', need: 2 },
+    { name: '❄️❄️ 寒冷的冬天', need: 4 },
+    { name: '❄️❄️❄️ 特别冷的冬天', need: 5 }
+  ];
+
+  function renderAcorns() {
+    const row = document.getElementById('acornRow');
+    row.innerHTML = '';
+    for (let i = 0; i < TOTAL; i++) {
+      const span = document.createElement('span');
+      span.textContent = '🌰';
+      span.className = i < stored ? 'stored' : 'eaten';
+      row.appendChild(span);
+    }
+    document.getElementById('storeCount').textContent = stored;
+    document.getElementById('eatCount').textContent = TOTAL - stored;
+    document.getElementById('winterNeed').textContent = '?';
+    document.getElementById('winterMsg').className = 'message';
+    document.getElementById('winterMsg').textContent = '选好存几颗，然后点“过冬啦”。';
+  }
+
+  document.querySelectorAll('[data-store]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      stored = Number(btn.getAttribute('data-store'));
+      renderAcorns();
+    });
+  });
+
+  document.getElementById('winterBtn').addEventListener('click', function () {
+    const winter = winters[Math.floor(Math.random() * winters.length)];
+    const msg = document.getElementById('winterMsg');
+    document.getElementById('winterNeed').textContent = winter.need;
+    if (stored >= winter.need) {
+      msg.className = 'message good';
+      msg.textContent = winter.name + '，需要 ' + winter.need + ' 颗松果。你存了 ' + stored + ' 颗——小松鼠暖暖和和地过冬啦！';
+    } else {
+      msg.className = 'message warn';
+      msg.textContent = winter.name + '，需要 ' + winter.need + ' 颗松果。你只存了 ' + stored + ' 颗——小松鼠有点饿，但没关系，明年再试一次。';
+    }
+  });
+
+  document.getElementById('resetBtn').addEventListener('click', renderAcorns);
+  renderAcorns();
+})();
+</script>
+</body>
+</html>

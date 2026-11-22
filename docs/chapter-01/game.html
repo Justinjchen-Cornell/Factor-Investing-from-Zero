@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>果子小管家 · 5 分钟亲子游戏｜小松鼠的果子课</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../index.html"><span class="logo">🐿️</span><span>小松鼠的果子课</span></a>
+    <nav class="nav">
+      <a href="../index.html">首页</a>
+      <a class="active" href="index.html">第 1 章</a>
+      <a href="parent-guide.html">家长指南</a>
+      <button id="parentToggle" type="button">家长模式</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="lesson-head">
+    <div class="meta">
+      <span class="badge">第 1 章 · 亲子游戏</span>
+      <h1>果子小管家</h1>
+      <p class="sub">10 枚果币，5 天时间。买一个，还是等一等？没有输赢，只有体验。</p>
+    </div>
+    <div class="lesson-tools">
+      <button class="btn secondary small" data-read-target="#game-intro" type="button">🔊 读给我听</button>
+      <span class="sticker" data-progress="ch1-game" title="游戏星星">⭐</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="story">
+      <h2>怎么玩</h2>
+      <div id="game-intro">
+        <p class="big">你是果子小管家。你有 10 枚果币，想买一些苹果。</p>
+        <p>每天苹果的价格会变。你可以选择“买一个”，也可以“等一等”。</p>
+        <p>5 天结束后，看看你买到了几个苹果、还剩几枚果币。</p>
+        <p class="tiny">没有正确答案。玩完以后，和家长聊一聊：你为什么买？为什么等？</p>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h3>🛒 开始游戏</h3>
+      <div class="stats">
+        <div class="stat"><b id="dayCount">1</b><span>第几天（共 5 天）</span></div>
+        <div class="stat"><b id="coinCount">10</b><span>果币</span></div>
+        <div class="stat"><b id="appleCount">0</b><span>苹果</span></div>
+        <div class="stat"><b id="priceNow">?</b><span>今天价格</span></div>
+      </div>
+      <div class="button-row">
+        <button class="btn" id="buyBtn" type="button">🍎 买一个</button>
+        <button class="btn secondary" id="waitBtn" type="button">⏳ 等一等</button>
+        <button class="btn ghost" id="restartBtn" type="button">🔄 重新开始</button>
+      </div>
+      <div class="message" id="gameMsg">点“买一个”或“等一等”，开始第 1 天。</div>
+      <div id="log" class="questions" style="margin-top:14px;"></div>
+    </div>
+
+    <div class="parent-note">
+      <h4>👨‍👩‍👧 家长提示：游戏后聊什么？</h4>
+      <p>不要问“你赚了吗”，可以问：<strong>“你今天是根据什么做决定的？”“等的时候，你心里什么感觉？”“如果明天更贵，你会后悔吗？”</strong></p>
+      <p>这个游戏只训练三件事：看价格、做选择、承担结果。苹果价格是随机的，所以“等”不一定更好，“买”也不一定更差——这正是投资里最真实的部分：<strong>你不知道明天会发生什么。</strong></p>
+      <p>如果孩子想全部买光，也没关系。让他体验“买完没钱了”的结果，比说教更有效。</p>
+    </div>
+
+    <div class="section" style="padding-left:0;padding-right:0;">
+      <h2>问一问</h2>
+      <div class="questions">
+        <div class="question">
+          今天价格很低，你会买吗？为什么？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#gq1" data-label="看提示" type="button">看提示</button></div>
+          <div class="reveal" id="gq1">价格低是一个好理由，但还要看：你需不需要？钱够不够？明天会不会更便宜？没有标准答案。</div>
+        </div>
+        <div class="question">
+          如果等了一天，价格反而涨了，你会怎么办？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#gq2" data-label="看提示" type="button">看提示</button></div>
+          <div class="reveal" id="gq2">可以有点后悔，但不要因为后悔就追着买。下一次重新看价格、重新做决定。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-row" style="margin-top:24px;">
+      <button class="btn" data-done="ch1-game" type="button">⭐ 我完成了，贴上星星</button>
+      <a class="btn ghost" href="parent-guide.html">读家长指南 →</a>
+    </div>
+
+    <div class="lesson-nav">
+      <a class="btn ghost" href="lesson-3.html">← 上一课</a>
+      <a class="btn ghost" href="../index.html">🏠 首页</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="card">
+      <div class="section-head">
+        <h2>可打印亲子卡片</h2>
+        <button class="btn ghost small" onclick="window.print()" type="button">🖨️ 打印这一页</button>
+      </div>
+      <p class="muted">打印后剪开，和孩子玩“分类”“分篮子”“记价格”。</p>
+
+      <h3>🍎 水果分类卡（剪开，按颜色 / 大小 / 种类分一分）</h3>
+      <div class="fruit-row">
+        <div class="fruit-card"><div class="fruit-emoji">🍎</div><div class="fruit-name">苹果</div></div>
+        <div class="fruit-card"><div class="fruit-emoji">🍐</div><div class="fruit-name">梨</div></div>
+        <div class="fruit-card"><div class="fruit-emoji">🍊</div><div class="fruit-name">橘子</div></div>
+        <div class="fruit-card"><div class="fruit-emoji">🍌</div><div class="fruit-name">香蕉</div></div>
+        <div class="fruit-card"><div class="fruit-emoji">🍇</div><div class="fruit-name">葡萄</div></div>
+        <div class="fruit-card"><div class="fruit-emoji">🍓</div><div class="fruit-name">草莓</div></div>
+        <div class="fruit-card"><div class="fruit-emoji">🍉</div><div class="fruit-name">西瓜</div></div>
+        <div class="fruit-card"><div class="fruit-emoji">🍑</div><div class="fruit-name">桃子</div></div>
+        <div class="fruit-card"><div class="fruit-emoji">🍒</div><div class="fruit-name">樱桃</div></div>
+        <div class="fruit-card"><div class="fruit-emoji">🥝</div><div class="fruit-name">猕猴桃</div></div>
+        <div class="fruit-card"><div class="fruit-emoji">🍍</div><div class="fruit-name">菠萝</div></div>
+        <div class="fruit-card"><div class="fruit-emoji">🥥</div><div class="fruit-name">椰子</div></div>
+      </div>
+
+      <h3 style="margin-top:28px;">🫙 三个罐子标签（花 / 存 / 分享）</h3>
+      <div class="basket-row">
+        <div class="basket"><div class="basket-icon">🫙</div><div class="basket-fruits">现在花</div></div>
+        <div class="basket"><div class="basket-icon">🫙</div><div class="basket-fruits">存起来</div></div>
+        <div class="basket"><div class="basket-icon">🫙</div><div class="basket-fruits">分享</div></div>
+      </div>
+
+      <h3 style="margin-top:28px;">📋 7 天价格观察表</h3>
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;background:#fff;">
+          <thead>
+            <tr>
+              <th style="border:2px solid var(--line);padding:10px;">日期</th>
+              <th style="border:2px solid var(--line);padding:10px;">价格（果币）</th>
+              <th style="border:2px solid var(--line);padding:10px;">比昨天 ↑ / ↓</th>
+              <th style="border:2px solid var(--line);padding:10px;">我想说的一句话</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="border:2px solid var(--line);padding:14px;">第 1 天</td><td style="border:2px solid var(--line);"></td><td style="border:2px solid var(--line);"></td><td style="border:2px solid var(--line);"></td></tr>
+            <tr><td style="border:2px solid var(--line);padding:14px;">第 2 天</td><td style="border:2px solid var(--line);"></td><td style="border:2px solid var(--line);"></td><td style="border:2px solid var(--line);"></td></tr>
+            <tr><td style="border:2px solid var(--line);padding:14px;">第 3 天</td><td style="border:2px solid var(--line);"></td><td style="border:2px solid var(--line);"></td><td style="border:2px solid var(--line);"></td></tr>
+            <tr><td style="border:2px solid var(--line);padding:14px;">第 4 天</td><td style="border:2px solid var(--line);"></td><td style="border:2px solid var(--line);"></td><td style="border:2px solid var(--line);"></td></tr>
+            <tr><td style="border:2px solid var(--line);padding:14px;">第 5 天</td><td style="border:2px solid var(--line);"></td><td style="border:2px solid var(--line);"></td><td style="border:2px solid var(--line);"></td></tr>
+            <tr><td style="border:2px solid var(--line);padding:14px;">第 6 天</td><td style="border:2px solid var(--line);"></td><td style="border:2px solid var(--line);"></td><td style="border:2px solid var(--line);"></td></tr>
+            <tr><td style="border:2px solid var(--line);padding:14px;">第 7 天</td><td style="border:2px solid var(--line);"></td><td style="border:2px solid var(--line);"></td><td style="border:2px solid var(--line);"></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="tiny" style="margin-top:10px;">小提示：价格可以让孩子自己写，箭头自己画。重点不是数字，是“每天都看一眼”的习惯。</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>🐿️ 果子小管家 · 第 1 章亲子游戏</span>
+    <span>仅供亲子启蒙，不构成投资建议</span>
+  </div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function () {
+  const TOTAL_DAYS = 5;
+  let day, coins, apples, price, over;
+
+  function newPrice() {
+    return 1 + Math.floor(Math.random() * 3);
+  }
+
+  function render() {
+    document.getElementById("dayCount").textContent = Math.min(day, TOTAL_DAYS);
+    document.getElementById("coinCount").textContent = coins;
+    document.getElementById("appleCount").textContent = apples;
+    document.getElementById("priceNow").textContent = over ? "—" : price;
+  }
+
+  function log(text) {
+    const item = document.createElement("div");
+    item.className = "question";
+    item.textContent = text;
+    document.getElementById("log").prepend(item);
+  }
+
+  function nextDay() {
+    if (day >= TOTAL_DAYS) {
+      over = true;
+      render();
+      const msg = document.getElementById("gameMsg");
+      msg.className = "message good";
+      msg.textContent = "5 天结束！你买了 " + apples + " 个苹果，还剩 " + coins + " 枚果币。没有输赢，只有你的选择。";
+      document.getElementById("buyBtn").disabled = true;
+      document.getElementById("waitBtn").disabled = true;
+      return;
+    }
+    day += 1;
+    price = newPrice();
+    render();
+    document.getElementById("gameMsg").className = "message";
+    document.getElementById("gameMsg").textContent = "第 " + day + " 天：今天苹果 " + price + " 枚果币。买一个，还是等一等？";
+  }
+
+  function reset() {
+    day = 1;
+    coins = 10;
+    apples = 0;
+    over = false;
+    price = newPrice();
+    document.getElementById("log").innerHTML = "";
+    document.getElementById("buyBtn").disabled = false;
+    document.getElementById("waitBtn").disabled = false;
+    const msg = document.getElementById("gameMsg");
+    msg.className = "message";
+    msg.textContent = "第 1 天：今天苹果 " + price + " 枚果币。买一个，还是等一等？";
+    render();
+  }
+
+  document.getElementById("buyBtn").addEventListener("click", function () {
+    if (over) return;
+    if (coins < price) {
+      const msg = document.getElementById("gameMsg");
+      msg.className = "message warn";
+      msg.textContent = "果币不够啦，今天只能等一等。";
+      return;
+    }
+    coins -= price;
+    apples += 1;
+    log("第 " + day + " 天：花 " + price + " 枚果币，买了 1 个苹果。");
+    nextDay();
+  });
+
+  document.getElementById("waitBtn").addEventListener("click", function () {
+    if (over) return;
+    log("第 " + day + " 天：价格 " + price + " 枚果币，我选择等一等。");
+    nextDay();
+  });
+
+  document.getElementById("restartBtn").addEventListener("click", reset);
+  reset();
+})();
+</script>
+</body>
+</html>
