@@ -175,7 +175,8 @@ r_p = α + β'f + ε                      # Sharpe 风格回归
 
 ## 7. 检查站与练习总表
 
-> 📘 第1章配套：[说人话学习指南](chapters/01-factor-basics/STUDY-GUIDE.md) —— 按 1.1/1.2/1.3 逐节讲解，配 notebook 输出、记忆钩子和自测题。
+> 📘 第1章配套：[说人话学习指南](chapters/01-factor-basics/STUDY-GUIDE.md) —— 按 1.1/1.2/1.3 逐节讲解，配 notebook 输出、记忆钩子和自测题。  
+> 📘 第2章配套：[说人话学习指南](chapters/02-methodology/STUDY-GUIDE.md) —— 排序法/回归/NW/GRS/正交化/GMM 逐节讲解。
 
 | 章节 | 检查站 | 练习 | 答案 |
 |---|---|---|---|

@@ -1,6 +1,7 @@
 # 第2章 因子投资方法论
 
-> 对应原书：第2章（2.1~2.8 节）｜ 配套代码：`notebooks/02.1-portfolio-sorting.ipynb`、`02.2-regression-methods.ipynb`、`02.3-anomaly-and-grs.ipynb` ｜ 练习：`exercises/`
+> 对应原书：第2章（2.1~2.8 节）｜ 配套代码：`notebooks/02.1-portfolio-sorting.ipynb`、`02.2-regression-methods.ipynb`、`02.3-anomaly-and-grs.ipynb` ｜ 练习：`exercises/`  
+> 🧠 觉得公式抽象？先读 **[说人话学习指南](STUDY-GUIDE.md)**：按 2.1~2.8 逐节讲解，配 notebook 输出、记忆钩子和自测题。
 
 ## 🎯 本章目标
 
