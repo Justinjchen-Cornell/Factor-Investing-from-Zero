@@ -127,6 +127,7 @@ jupyter lab chapters/01-factor-basics/notebooks/
 - [alphalens-reloaded](https://github.com/stefan-jansen/alphalens-reloaded) —— IC/分位分析参考实现
 - [PyPortfolioOpt](https://github.com/robertmartin8/PyPortfolioOpt) —— 组合优化参考
 - [困境资产中的因子思维](articles/2026-11-22-困境资产中的因子思维.md) —— 把第 2/6/7 章方法用到困境资产投资
+  - [30 分钟分享大纲](articles/2026-11-22-困境资产中的因子思维-30分钟分享大纲.md) ｜ [PPTX](articles/assets/困境资产中的因子思维-30分钟分享.pptx) ｜ [工作流图](articles/assets/distressed-factor-workflow.png)
 
 ## 版权声明 / Copyright
 
