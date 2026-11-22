@@ -65,11 +65,15 @@ def grs_test(
     """
     T, N = residuals.shape
     K = factor_ret.shape[1]
+    if T - N - K <= 0:
+        raise ValueError(f"GRS 需要 T > N + K，当前 T={T}, N={N}, K={K}")
     mu = factor_ret.mean(axis=0)
     Sigma_f = np.cov(factor_ret, rowvar=False)
     Sigma_e = np.cov(residuals, rowvar=False)
-    scalar = (T - N - K) / N * (1 + mu @ np.linalg.inv(Sigma_f) @ mu) ** (-1)
-    F = scalar * (alphas @ np.linalg.inv(Sigma_e) @ alphas)
+    # 测试资产可能高度相关，Sigma_e 近似奇异；用 pinv 保证数值稳定
+    scalar = (T - N - K) / N * (1 + mu @ np.linalg.pinv(Sigma_f) @ mu) ** (-1)
+    F = scalar * float(alphas @ np.linalg.pinv(Sigma_e) @ alphas)
+    F = max(F, 0.0)
     p = 1 - stats.f.cdf(F, N, T - N - K)
     return float(F), float(p)
 
