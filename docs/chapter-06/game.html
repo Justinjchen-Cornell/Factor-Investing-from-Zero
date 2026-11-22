@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>果园传言侦探 · 亲子游戏｜小松鼠的果子课</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../index.html"><span class="logo">🐿️</span><span>小松鼠的果子课</span></a>
+    <nav class="nav">
+      <a href="../index.html">首页</a>
+      <a href="../chapter-01/index.html">第 1 章</a>
+      <a href="../chapter-02/index.html">第 2 章</a>
+      <a href="../chapter-03/index.html">第 3 章</a>
+      <a href="../chapter-04/index.html">第 4 章</a>
+      <a href="../chapter-05/index.html">第 5 章</a>
+      <a class="active" href="index.html">第 6 章</a>
+      <a href="parent-guide.html">家长指南</a>
+      <button id="parentToggle" type="button">家长模式</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="lesson-head">
+    <div class="meta">
+      <span class="badge">第 6 章 · 亲子游戏</span>
+      <h1>果园传言侦探</h1>
+      <p class="sub">三个传言，看看哪个证据更可信。不考记忆力，只练怀疑和验证。</p>
+    </div>
+    <div class="lesson-tools">
+      <button class="btn secondary small" data-read-target="#game-intro" type="button">🔊 读给我听</button>
+      <span class="sticker" data-progress="ch6-game" title="游戏星星">⭐</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="story">
+      <h2>侦探任务</h2>
+      <div id="game-intro">
+        <p class="big">果园里流传着三个说法。</p>
+        <p>有的听起来很厉害，有的可能是真的。请你当侦探，找出更可信的证据。</p>
+        <p class="tiny">点选项作答。答错没关系，看看提示，再试下一案。</p>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h3>🔍 开始破案</h3>
+      <div class="stats">
+        <div class="stat"><b id="caseNum">1 / 3</b><span>第几案</span></div>
+        <div class="stat"><b id="scoreNum">0</b><span>答对</span></div>
+      </div>
+      <div class="story" style="background:var(--orange-soft);box-shadow:none;margin:16px 0;">
+        <p class="big" id="caseText" style="margin:0;">加载中…</p>
+      </div>
+      <div class="choice-row" id="options"></div>
+      <div class="message" id="caseMsg">选一个答案吧。</div>
+      <div class="button-row">
+        <button class="btn" id="nextCase" type="button" style="display:none;">下一案 →</button>
+        <button class="btn ghost" id="restart" type="button">重新开始</button>
+      </div>
+    </div>
+
+    <div class="parent-note">
+      <h4>👨‍👩‍👧 家长提示：这一课真正在种什么种子？</h4>
+      <p>三个案件分别对应：数据窥探/因子动物园（听说）、挑选区间（只看一段）、过拟合（机器背答案）。孩子不需要记术语，只要能说出“要有证据”“要看完整记录”“要考新题”。</p>
+      <p>答错时问：“你觉得哪个证据更可靠？为什么？”让孩子先比较证据，再一起看答案。</p>
+      <p>三张传言卡可以打印出来，当成家庭聊天卡：每天抽一张，说说生活里的类似说法。</p>
+    </div>
+
+    <div class="section" style="padding-left:0;padding-right:0;">
+      <h2>问一问</h2>
+      <div class="questions">
+        <div class="question">
+          为什么“很多人都在说”不等于“真的”？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q1" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q1">很多人可能只是互相传，没有人真正验证过。要问：“是谁说的？有什么证据？”</div>
+        </div>
+        <div class="question">
+          怎样才算“比较可信”？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q2" data-label="看提示" type="button">看提示</button></div>
+          <div class="reveal" id="q2">试过很多次、换了时间还成立、用没见过的数据也有效、能看到完整记录。满足越多，越可信。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-row" style="margin-top:24px;">
+      <button class="btn" data-done="ch6-game" type="button">⭐ 我完成了，贴上星星</button>
+      <a class="btn ghost" href="parent-guide.html">读家长指南 →</a>
+    </div>
+
+    <div class="lesson-nav">
+      <a class="btn ghost" href="lesson-3.html">← 上一课</a>
+      <a class="btn ghost" href="../index.html">🏠 首页</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="card">
+      <div class="section-head">
+        <h2>可打印侦探卡片</h2>
+        <button class="btn ghost small" onclick="window.print()" type="button">🖨️ 打印这一页</button>
+      </div>
+      <p class="muted">打印后剪开，和孩子玩“找证据”和“做记录”。</p>
+
+      <h3>🔍 三个传言（剪开）</h3>
+      <div class="questions">
+        <div class="question">传言 1：听说红果子第二天一定涨。哪种证据更可信？</div>
+        <div class="question">传言 2：小松鼠说自己总是第一。哪种看法更对？</div>
+        <div class="question">传言 3：预测机说它过去 100% 准。怎么判断它真会预测？</div>
+      </div>
+
+      <h3 style="margin-top:28px;">📋 传言检测表</h3>
+      <div class="card" style="box-shadow:none;border:2px dashed var(--line);">
+        <p>说法：____________________________________________</p>
+        <p>证据：____________________________________________</p>
+        <p>结论：☐ 可信　☐ 再试试　☐ 不可信</p>
+        <p>我还想问：________________________________________</p>
+      </div>
+
+      <h3 style="margin-top:28px;">🏅 完整记录表</h3>
+      <div style="overflow-x:auto;">
+        <table class="factor-table">
+          <thead>
+            <tr><th>第几次</th><th>结果</th><th>备注</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>第 1 次</td><td></td><td></td></tr>
+            <tr><td>第 2 次</td><td></td><td></td></tr>
+            <tr><td>第 3 次</td><td></td><td></td></tr>
+            <tr><td>第 4 次</td><td></td><td></td></tr>
+            <tr><td>第 5 次</td><td></td><td></td></tr>
+            <tr><td>第 6 次</td><td></td><td></td></tr>
+            <tr><td>第 7 次</td><td></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="margin-top:28px;">🤖 机器测试表</h3>
+      <div class="card" style="box-shadow:none;border:2px dashed var(--line);">
+        <p>学过的 5 天：答对 ____ / 5</p>
+        <p>没学过的 5 天：答对 ____ / 5</p>
+        <p>结论：☐ 它会做题　☐ 它只是背答案　☐ 还要再试</p>
+      </div>
+      <p class="tiny" style="margin-top:10px;">小提示：重点不是答对多少，而是“换新题还准不准”。</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>🐿️ 果园传言侦探 · 第 6 章亲子游戏</span>
+    <span>仅供亲子启蒙，不构成投资建议</span>
+  </div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function () {
+  const cases = [
+    {
+      text: "传言 1：听说红果子第二天一定涨。哪种证据更可信？",
+      options: [
+        { label: "只试了 1 次，刚好涨了", correct: false, feedback: "❌ 1 次可能只是运气。要试很多次，还要换不同时间。" },
+        { label: "试了 100 次，换了不同时间也有效", correct: true, feedback: "✅ 试得多、换了时间还成立，才更可信。" }
+      ]
+    },
+    {
+      text: "传言 2：小松鼠说自己总是第一。哪种看法更对？",
+      options: [
+        { label: "看它墙上挂的 1 张奖状", correct: false, feedback: "❌ 只看了最好的一天。其他 6 次呢？" },
+        { label: "看完整 7 次比赛记录", correct: true, feedback: "✅ 完整记录才可靠。7 次里赢 1 次，不是“总是第一”。" }
+      ]
+    },
+    {
+      text: "传言 3：预测机说它过去 100% 准。怎么判断它真会预测？",
+      options: [
+        { label: "考它学过的 5 天", correct: false, feedback: "❌ 它可能只是背答案。学过的题考得好，不代表会做新题。" },
+        { label: "考它没学过的 5 天", correct: true, feedback: "✅ 用没见过的数据测试，才知道它是不是真的会。" }
+      ]
+    }
+  ];
+
+  let ci = 0;
+  let score = 0;
+  let answered = false;
+
+  function setMsg(text, cls) {
+    const m = document.getElementById("caseMsg");
+    m.className = "message" + (cls ? " " + cls : "");
+    m.textContent = text;
+  }
+
+  function renderCase() {
+    if (ci >= cases.length) { end(); return; }
+    const c = cases[ci];
+    document.getElementById("caseText").textContent = c.text;
+    document.getElementById("caseNum").textContent = (ci + 1) + " / " + cases.length;
+    document.getElementById("scoreNum").textContent = score;
+    document.getElementById("nextCase").style.display = "none";
+    setMsg("选一个答案吧。", "");
+    answered = false;
+
+    const row = document.getElementById("options");
+    row.innerHTML = "";
+    c.options.forEach(function (opt) {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "choice";
+      btn.textContent = opt.label;
+      btn.addEventListener("click", function () { answer(opt, btn); });
+      row.appendChild(btn);
+    });
+  }
+
+  function answer(opt, btn) {
+    if (answered) return;
+    answered = true;
+    btn.classList.add(opt.correct ? "correct" : "wrong");
+    if (opt.correct) {
+      score += 1;
+      setMsg(opt.feedback, "good");
+    } else {
+      setMsg(opt.feedback, "warn");
+      const buttons = document.querySelectorAll("#options .choice");
+      cases[ci].options.forEach(function (o, i) {
+        if (o.correct && buttons[i]) buttons[i].classList.add("correct");
+      });
+    }
+    document.getElementById("scoreNum").textContent = score;
+    const next = document.getElementById("nextCase");
+    next.style.display = "inline-flex";
+    next.textContent = ci === cases.length - 1 ? "看结果 →" : "下一案 →";
+  }
+
+  function next() {
+    ci += 1;
+    if (ci >= cases.length) { end(); } else { renderCase(); }
+  }
+
+  function end() {
+    document.getElementById("caseText").textContent = "三个传言破案完成！";
+    document.getElementById("caseNum").textContent = "完成";
+    setMsg("你答对了 " + score + " / " + cases.length + " 个。听到说法，先找证据。可以重新开始，再破一次案。", "good");
+    document.getElementById("options").innerHTML = "";
+    document.getElementById("nextCase").style.display = "none";
+  }
+
+  function reset() {
+    ci = 0;
+    score = 0;
+    answered = false;
+    renderCase();
+  }
+
+  document.getElementById("nextCase").addEventListener("click", next);
+  document.getElementById("restart").addEventListener("click", reset);
+  renderCase();
+})();
+</script>
+</body>
+</html>

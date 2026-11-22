@@ -22,7 +22,7 @@
 
 ## 🧸 亲子版教学网页 / Parent-Child Web Course
 
-给 4–7 岁孩子的第 1–5 章：**不讲公式，只种种子。** 用水果摊、松果、三个篮子、排队、公平比较、七种果子性格、组队游戏和果园怪事，陪孩子体验「观察、等待、分散、比较、多角度看、合作、看怪事」。
+给 4–7 岁孩子的第 1–6 章：**不讲公式，只种种子。** 用水果摊、松果、三个篮子、排队、公平比较、七种果子性格、组队游戏、果园怪事和传言侦探，陪孩子体验「观察、等待、分散、比较、多角度看、合作、看怪事、辨传言」。
 
 👉 **[打开亲子版教学网页](docs/index.html)** ｜ 线上版：https://justinjchen-cornell.github.io/Factor-Investing-from-Zero/
 
@@ -57,6 +57,12 @@
 | [第 3 课：乱蹦的果子](docs/chapter-05/lesson-3.html) | 动得厉害不等于更好——特质波动率 |
 | [果园怪事侦探](docs/chapter-05/game.html) | 3 个案件 + 可打印体检表、价格观察表、波动记录表 |
 | [第 5 章家长指南](docs/chapter-05/parent-guide.html) | 三个怪事对照表、4 周计划、话术、书单 |
+| **[第 6 章 · 果园里的传言](docs/chapter-06/index.html)** | **听说、只看一段、机器背答案——研究现状启蒙** |
+| [第 1 课：听说的，不一定真](docs/chapter-06/lesson-1.html) | 传话游戏——数据窥探/因子动物园 |
+| [第 2 课：只看好看的那一段](docs/chapter-06/lesson-2.html) | 完整记录 vs 只挑最好——挑选区间/发表偏差 |
+| [第 3 课：机器说的，也要检查](docs/chapter-06/lesson-3.html) | 背答案 vs 真会做——过拟合/训练集与测试集 |
+| [果园传言侦探](docs/chapter-06/game.html) | 3 个传言案件 + 可打印检测表、完整记录表、机器测试表 |
+| [第 6 章家长指南](docs/chapter-06/parent-guide.html) | 三个传言对照表、4 周计划、话术、书单 |
 
 > 每次 10 分钟，家长陪同，不涉及真实金钱。星星进度保存在本机浏览器。
 > *10 minutes per session, parent-led, no real money. Progress is stored locally in the browser.*

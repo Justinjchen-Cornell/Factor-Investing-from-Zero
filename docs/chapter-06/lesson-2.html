@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 2 课 · 只看好看的那一段｜小松鼠的果子课</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../index.html"><span class="logo">🐿️</span><span>小松鼠的果子课</span></a>
+    <nav class="nav">
+      <a href="../index.html">首页</a>
+      <a href="../chapter-01/index.html">第 1 章</a>
+      <a href="../chapter-02/index.html">第 2 章</a>
+      <a href="../chapter-03/index.html">第 3 章</a>
+      <a href="../chapter-04/index.html">第 4 章</a>
+      <a href="../chapter-05/index.html">第 5 章</a>
+      <a class="active" href="index.html">第 6 章</a>
+      <a href="parent-guide.html">家长指南</a>
+      <button id="parentToggle" type="button">家长模式</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="lesson-head">
+    <div class="meta">
+      <span class="badge">第 2 课 · 只看一段</span>
+      <h1>只看好看的那一段</h1>
+      <p class="sub">7 次比赛只赢 1 次，只挂那张奖状，就说“我总是第一”。</p>
+    </div>
+    <div class="lesson-tools">
+      <button class="btn secondary small" data-read-target="#story-text" type="button">🔊 读给我听</button>
+      <span class="sticker" data-progress="ch6-l2" title="第 2 课星星">⭐</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="story">
+      <h2>墙上的奖状</h2>
+      <div id="story-text">
+        <p class="big">小松鼠参加了 7 次比赛，只有 1 次拿到第一名。</p>
+        <p>它把那张奖状挂在墙上，说：“我总是第一！”</p>
+        <p>朋友翻开它的比赛记录：第 5 名、第 3 名、第 1 名、第 4 名、第 2 名、第 6 名、第 3 名。</p>
+        <p>小松鼠脸红了。</p>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h3>🏅 玩一玩：只看一段，还是看完整？</h3>
+      <p class="hint">点按钮，看看两种看法有什么不同。</p>
+      <div class="button-row">
+        <button class="btn" data-view="best" type="button">只看最好的一天</button>
+        <button class="btn secondary" data-view="full" type="button">看完整 7 天</button>
+      </div>
+      <div class="stats">
+        <div class="stat"><b id="bestCount">—</b><span>第一名次数</span></div>
+        <div class="stat"><b id="avgRank">—</b><span>平均排名</span></div>
+      </div>
+      <div class="scoreboard" id="raceBoard" aria-label="7 次比赛成绩"></div>
+      <div class="message" id="raceMsg">先点一个按钮吧。</div>
+    </div>
+
+    <div class="parent-note">
+      <h4>👨‍👩‍👧 家长提示：这一课真正在种什么种子？</h4>
+      <p><strong>数据窥探 / 挑选区间。</strong>只看表现最好的那一段，就会高估一个策略。学术研究里，这对应“发表偏差”和“p-hacking”：挑一个好看的窗口，总能找到“显著”的结果。</p>
+      <p>对孩子来说，重点是<strong>“看完整记录”</strong>：7 次里赢 1 次，就是 1/7，不是“总是第一”。不要因为一次好成绩，就改变对自己的判断；也不要因为一次坏成绩，就否定自己。</p>
+      <p>生活延伸：看成绩单要看全部科目；看比赛要看整个赛季；看一个人，不要只看他最好的一天。</p>
+    </div>
+
+    <div class="section" style="padding-left:0;padding-right:0;">
+      <h2>问一问</h2>
+      <div class="questions">
+        <div class="question">
+          小松鼠说“我总是第一”，对吗？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q1" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q1">不对。7 次里只有 1 次第一，平均第 3 名左右。它只看了最好的一天。</div>
+        </div>
+        <div class="question">
+          为什么只看一段会骗自己？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q2" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q2">因为最好的一段不代表全部。只挑好看的那一段，就会忽略其他不好的时候。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-row" style="margin-top:24px;">
+      <button class="btn" data-done="ch6-l2" type="button">⭐ 我完成了，贴上星星</button>
+      <a class="btn ghost" href="lesson-3.html">下一课：机器说的，也要检查 →</a>
+    </div>
+
+    <div class="lesson-nav">
+      <a class="btn ghost" href="lesson-1.html">← 上一课</a>
+      <a class="btn ghost" href="../index.html">🏠 首页</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>🐿️ 第 2 课 · 只看一段</span>
+    <span>仅供亲子启蒙，不构成投资建议</span>
+  </div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function () {
+  const results = [
+    { day: 1, rank: 5 }, { day: 2, rank: 3 }, { day: 3, rank: 1 }, { day: 4, rank: 4 },
+    { day: 5, rank: 2 }, { day: 6, rank: 6 }, { day: 7, rank: 3 }
+  ];
+
+  function show(view) {
+    const board = document.getElementById("raceBoard");
+    board.innerHTML = "";
+    const items = view === "best" ? results.filter(function (r) { return r.rank === 1; }) : results;
+    items.forEach(function (r) {
+      const cell = document.createElement("span");
+      cell.className = "score-cell " + (r.rank === 1 ? "win" : r.rank >= 5 ? "loss" : "");
+      cell.textContent = "第 " + r.day + " 天：第 " + r.rank + " 名";
+      board.appendChild(cell);
+    });
+
+    const bestCount = results.filter(function (r) { return r.rank === 1; }).length;
+    const avg = (results.reduce(function (a, b) { return a + b.rank; }, 0) / results.length).toFixed(1);
+    document.getElementById("bestCount").textContent = bestCount;
+    document.getElementById("avgRank").textContent = view === "best" ? "—" : avg;
+
+    const msg = document.getElementById("raceMsg");
+    if (view === "best") {
+      msg.className = "message warn";
+      msg.textContent = "只看这一段：小松鼠好像总是第一。可是其他 6 天呢？";
+    } else {
+      msg.className = "message good";
+      msg.textContent = "看完整 7 天：7 次里只有 1 次第一，平均第 " + avg + " 名。只看一段，会骗自己。";
+    }
+  }
+
+  document.querySelectorAll("[data-view]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      show(btn.getAttribute("data-view"));
+    });
+  });
+})();
+</script>
+</body>
+</html>

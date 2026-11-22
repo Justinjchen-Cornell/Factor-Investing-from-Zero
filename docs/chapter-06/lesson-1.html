@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 1 课 · 听说的，不一定真｜小松鼠的果子课</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../index.html"><span class="logo">🐿️</span><span>小松鼠的果子课</span></a>
+    <nav class="nav">
+      <a href="../index.html">首页</a>
+      <a href="../chapter-01/index.html">第 1 章</a>
+      <a href="../chapter-02/index.html">第 2 章</a>
+      <a href="../chapter-03/index.html">第 3 章</a>
+      <a href="../chapter-04/index.html">第 4 章</a>
+      <a href="../chapter-05/index.html">第 5 章</a>
+      <a class="active" href="index.html">第 6 章</a>
+      <a href="parent-guide.html">家长指南</a>
+      <button id="parentToggle" type="button">家长模式</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="lesson-head">
+    <div class="meta">
+      <span class="badge">第 1 课 · 传言</span>
+      <h1>听说的，不一定真</h1>
+      <p class="sub">一句话传三个人，就变了样。听到的，不一定是原话。</p>
+    </div>
+    <div class="lesson-tools">
+      <button class="btn secondary small" data-read-target="#story-text" type="button">🔊 读给我听</button>
+      <span class="sticker" data-progress="ch6-l1" title="第 1 课星星">⭐</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="story">
+      <h2>红果子的传言</h2>
+      <div id="story-text">
+        <p class="big">小松鼠听到一个传言：“红果子明天可能会涨价。”</p>
+        <p>它没有自己试，就告诉了小兔。小兔告诉小鹿，小鹿告诉小刺猬……</p>
+        <p>传来传去，变成了：“红果子明天一定涨十倍！”</p>
+        <p>结果第二天，红果子跌了。</p>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h3>🗣️ 玩一玩：传话游戏</h3>
+      <p class="hint">点“传下去”，看看一句话会变成什么样。</p>
+      <div class="day-star">
+        <div class="day-emoji" id="speakerEmoji">🐿️</div>
+        <div class="day-name" id="speakerName">小松鼠</div>
+        <div class="day-note" id="rumorText">我听说，红果子明天可能涨价。</div>
+      </div>
+      <div class="stats">
+        <div class="stat"><b id="chainCount">第 1 棒</b><span>传话进度</span></div>
+      </div>
+      <div class="button-row">
+        <button class="btn" id="nextBtn" type="button">传下去 →</button>
+        <button class="btn ghost" id="restartBtn" type="button">重新开始</button>
+      </div>
+      <div class="message" id="rumorMsg">先点“传下去”吧。</div>
+    </div>
+
+    <div class="parent-note">
+      <h4>👨‍👩‍👧 家长提示：这一课真正在种什么种子？</h4>
+      <p><strong>“听说”不是证据。</strong>投资里有很多“听说”：听说这个因子很灵、听说那个指标一定涨。学术上，这对应“数据窥探”和“因子动物园”：试了很多次，总有几个看起来显著，但可能只是运气。</p>
+      <p>不要让孩子变成“什么都不信”，而是学会问：<strong>“你是怎么知道的？”“试了多少次？”“换了时间还成立吗？”</strong></p>
+      <p>生活延伸：玩传话游戏；听到一个说法，问“是谁说的？有证据吗？”；不要因为很多人都在说，就当成真的。</p>
+    </div>
+
+    <div class="section" style="padding-left:0;padding-right:0;">
+      <h2>问一问</h2>
+      <div class="questions">
+        <div class="question">
+          为什么一句话传来传去就变样了？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q1" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q1">每个人都会加一点自己的理解、忘掉一点细节，传的人越多，变化越大。</div>
+        </div>
+        <div class="question">
+          听到一个“一定涨”的说法，应该先做什么？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q2" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q2">先别急着信。问：“是谁说的？试了多少次？有没有完整记录？换了时间还成立吗？”</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-row" style="margin-top:24px;">
+      <button class="btn" data-done="ch6-l1" type="button">⭐ 我完成了，贴上星星</button>
+      <a class="btn ghost" href="lesson-2.html">下一课：只看好看的那一段 →</a>
+    </div>
+
+    <div class="lesson-nav">
+      <a class="btn ghost" href="index.html">← 返回第 6 章</a>
+      <a class="btn ghost" href="../index.html">🏠 首页</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>🐿️ 第 1 课 · 传言</span>
+    <span>仅供亲子启蒙，不构成投资建议</span>
+  </div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function () {
+  const chain = [
+    { emoji: "🐿️", name: "小松鼠", text: "我听说，红果子明天可能涨价。" },
+    { emoji: "🐰", name: "小兔", text: "红果子明天会涨价！" },
+    { emoji: "🦌", name: "小鹿", text: "红果子明天一定涨！" },
+    { emoji: "🦔", name: "小刺猬", text: "红果子明天一定涨十倍！" }
+  ];
+
+  let idx = 0;
+
+  function render() {
+    const c = chain[idx];
+    document.getElementById("speakerEmoji").textContent = c.emoji;
+    document.getElementById("speakerName").textContent = c.name;
+    document.getElementById("rumorText").textContent = c.text;
+    document.getElementById("chainCount").textContent = "第 " + (idx + 1) + " 棒";
+    const btn = document.getElementById("nextBtn");
+    btn.disabled = idx >= chain.length - 1;
+    btn.textContent = idx >= chain.length - 1 ? "已经传到底了" : "传下去 →";
+    const msg = document.getElementById("rumorMsg");
+    if (idx >= chain.length - 1) {
+      msg.className = "message warn";
+      msg.textContent = "传着传着就变样了。听到的，不一定是原话。要自己验证。";
+    } else {
+      msg.className = "message";
+      msg.textContent = "先点“传下去”吧。";
+    }
+  }
+
+  document.getElementById("nextBtn").addEventListener("click", function () {
+    if (idx < chain.length - 1) {
+      idx += 1;
+      render();
+    }
+  });
+
+  document.getElementById("restartBtn").addEventListener("click", function () {
+    idx = 0;
+    render();
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>

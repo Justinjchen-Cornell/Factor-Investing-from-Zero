@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 3 课 · 机器说的，也要检查｜小松鼠的果子课</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../index.html"><span class="logo">🐿️</span><span>小松鼠的果子课</span></a>
+    <nav class="nav">
+      <a href="../index.html">首页</a>
+      <a href="../chapter-01/index.html">第 1 章</a>
+      <a href="../chapter-02/index.html">第 2 章</a>
+      <a href="../chapter-03/index.html">第 3 章</a>
+      <a href="../chapter-04/index.html">第 4 章</a>
+      <a href="../chapter-05/index.html">第 5 章</a>
+      <a class="active" href="index.html">第 6 章</a>
+      <a href="parent-guide.html">家长指南</a>
+      <button id="parentToggle" type="button">家长模式</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="lesson-head">
+    <div class="meta">
+      <span class="badge">第 3 课 · 机器与过拟合</span>
+      <h1>机器说的，也要检查</h1>
+      <p class="sub">背下过去 5 天，不等于看懂第 6 天。</p>
+    </div>
+    <div class="lesson-tools">
+      <button class="btn secondary small" data-read-target="#story-text" type="button">🔊 读给我听</button>
+      <span class="sticker" data-progress="ch6-l3" title="第 3 课星星">⭐</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="story">
+      <h2>预测机</h2>
+      <div id="story-text">
+        <p class="big">小松鼠造了一台“预测机”。</p>
+        <p>它把过去 5 天的果子价格全背了下来。</p>
+        <p>考它这 5 天，它全对！“太厉害了！”</p>
+        <p>可是第 6 天，它完全猜错。</p>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h3>🤖 玩一玩：考考预测机</h3>
+      <p class="hint">点按钮，看看它考“学过的题”和“没学过的题”有什么不同。</p>
+      <div class="button-row">
+        <button class="btn secondary" data-test="learned" type="button">考它学过的 5 天</button>
+        <button class="btn" data-test="new" type="button">考它没学过的 5 天</button>
+      </div>
+      <div class="stats">
+        <div class="stat"><b id="machineScore">—</b><span>答对</span></div>
+        <div class="stat"><b id="machineLabel">—</b><span>测试类型</span></div>
+      </div>
+      <div class="scoreboard" id="machineBoard" aria-label="预测结果"></div>
+      <div class="message" id="machineMsg">先点一个按钮吧。</div>
+    </div>
+
+    <div class="parent-note">
+      <h4>👨‍👩‍👧 家长提示：这一课真正在种什么种子？</h4>
+      <p><strong>过拟合 / 训练集与测试集。</strong>机器可以把过去背得很熟，但真正要看的，是它在“没见过的新数据”上表现如何。投资里的回测也一样：在历史上很准，不代表未来有效。</p>
+      <p>这一课不是让孩子害怕机器，而是学会问：<strong>“它是在背答案，还是真的会做题？”“换没见过的题，它还准吗？”</strong></p>
+      <p>生活延伸：做过的题考 100 分，不说明真会；换一道新题试试。背课文很熟，不说明能自己写。</p>
+    </div>
+
+    <div class="section" style="padding-left:0;padding-right:0;">
+      <h2>问一问</h2>
+      <div class="questions">
+        <div class="question">
+          预测机考学过的 5 天全对，说明它很会预测吗？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q1" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q1">不一定。它可能只是把答案背下来了。要看它能不能考好“没见过的题”。</div>
+        </div>
+        <div class="question">
+          怎么判断一台机器是真的会，还是只是背答案？
+          <div><button class="btn ghost small reveal-btn" data-reveal="#q2" data-label="看答案" type="button">看答案</button></div>
+          <div class="reveal" id="q2">用它没见过的新数据考它。新题也做得好，才更可信。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-row" style="margin-top:24px;">
+      <button class="btn" data-done="ch6-l3" type="button">⭐ 我完成了，贴上星星</button>
+      <a class="btn ghost" href="game.html">去玩：果园传言侦探 →</a>
+    </div>
+
+    <div class="lesson-nav">
+      <a class="btn ghost" href="lesson-2.html">← 上一课</a>
+      <a class="btn ghost" href="../index.html">🏠 首页</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>🐿️ 第 3 课 · 机器与过拟合</span>
+    <span>仅供亲子启蒙，不构成投资建议</span>
+  </div>
+</footer>
+
+<script src="../assets/app.js"></script>
+<script>
+(function () {
+  const tests = {
+    learned: [
+      { p: "涨", a: "涨" }, { p: "跌", a: "跌" }, { p: "涨", a: "涨" },
+      { p: "跌", a: "跌" }, { p: "涨", a: "涨" }
+    ],
+    fresh: [
+      { p: "涨", a: "跌" }, { p: "跌", a: "涨" }, { p: "涨", a: "跌" },
+      { p: "跌", a: "跌" }, { p: "涨", a: "跌" }
+    ]
+  };
+
+  function run(key) {
+    const data = tests[key];
+    let correct = 0;
+    const board = document.getElementById("machineBoard");
+    board.innerHTML = "";
+    data.forEach(function (d, i) {
+      const ok = d.p === d.a;
+      if (ok) correct += 1;
+      const cell = document.createElement("span");
+      cell.className = "score-cell " + (ok ? "win" : "loss");
+      cell.textContent = "第 " + (i + 1) + " 天：预测" + d.p + " / 实际" + d.a + (ok ? " ✓" : " ✗");
+      board.appendChild(cell);
+    });
+    document.getElementById("machineScore").textContent = correct + " / 5";
+    document.getElementById("machineLabel").textContent = key === "learned" ? "学过的题" : "没学过的题";
+    const msg = document.getElementById("machineMsg");
+    if (key === "learned") {
+      msg.className = "message warn";
+      msg.textContent = "5 / 5 全对！可是考的都是它见过的题。它只是背答案。";
+    } else {
+      msg.className = "message good";
+      msg.textContent = "换没见过的题，只答对 " + correct + " / 5。背答案不等于会做题，机器也要用新数据检查。";
+    }
+  }
+
+  document.querySelectorAll("[data-test]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      run(btn.getAttribute("data-test") === "learned" ? "learned" : "fresh");
+    });
+  });
+})();
+</script>
+</body>
+</html>
